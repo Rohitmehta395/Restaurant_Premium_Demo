@@ -1,0 +1,47 @@
+{
+  "page_title": "Our Story",
+  "page_subtitle": "From Idea to Reality",
+  "meta_title": "Our Story | FARMform",
+  "meta_description": "Discover the story behind FARMform.",
+  "hero_image_ref": "/images/story/story-hero.jpg",
+  "chapters": [
+    {
+      "slug": "the-beginning",
+      "heading": "The Seed of an Idea",
+      "date_label": "2018",
+      "image_ref": "/images/story/story-1.jpg",
+      "image_alt": "The old farmhouse",
+      "image_position": "left"
+    },
+    {
+      "slug": "the-renovation",
+      "heading": "Breaking Ground",
+      "date_label": "2020",
+      "image_ref": "/images/story/story-2.jpg",
+      "image_alt": "Renovation process",
+      "image_position": "right"
+    },
+    {
+      "slug": "opening",
+      "heading": "Opening Our Doors",
+      "date_label": "2022",
+      "image_ref": "/images/story/story-3.jpg",
+      "image_alt": "Grand opening",
+      "image_position": "below"
+    },
+    {
+      "slug": "today",
+      "heading": "FARMform Today",
+      "date_label": "Present",
+      "image_ref": "/images/story/story-4.jpg",
+      "image_alt": "FARMform currently",
+      "image_position": "right"
+    }
+  ],
+  "founder_note": {
+    "show": true,
+    "heading": "A note from the founder",
+    "member_ref": "andra-delanoye",
+    "closing_salutation": "Warm regards,"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "heading": "Join Our Community",
+  "subheading": "Be the first to experience FARMform – where work meets comfort. Get inspiration, updates and behind-the-scenes stories.",
+  "input_placeholder": "Email address",
+  "submit_label": "Subscribe",
+  "consent_text": "I agree to the <a href=\"/privacy\" class=\"underline\">privacy policy</a>.",
+  "loading_label": "Subscribing...",
+  "success_message": "Subscribed! Welcome to the community.",
+  "error_message": "There was an error subscribing. Please try again.",
+  "notice_label": "We respect your privacy.",
+  "show_on_all_pages": true
+}

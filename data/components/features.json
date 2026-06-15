@@ -1,0 +1,173 @@
+{
+  "feature_groups": [
+    {
+      "slug": "why-choose",
+      "display_layout": "card-grid",
+      "items": [
+        {
+          "slug": "freedom-to-tailor",
+          "label": "Freedom to Tailor",
+          "body": "Tailor to your needs.",
+          "sort_order": 1
+        },
+        {
+          "slug": "eco-friendly",
+          "label": "Eco-Friendly",
+          "body": "Green.",
+          "sort_order": 2
+        },
+        {
+          "slug": "convenient",
+          "label": "Convenient",
+          "body": "Accessible.",
+          "sort_order": 3
+        },
+        {
+          "slug": "one-price",
+          "label": "One-Price",
+          "body": "No hidden fees.",
+          "sort_order": 4
+        },
+        {
+          "slug": "nature-infused",
+          "label": "Nature-Infused",
+          "body": "Green spaces.",
+          "sort_order": 5
+        },
+        {
+          "slug": "equipped-for-professionals",
+          "label": "Equipped for Professionals",
+          "body": "Professional.",
+          "sort_order": 6
+        },
+        {
+          "slug": "multilingual-team",
+          "label": "Multilingual Team",
+          "body": "Many languages.",
+          "sort_order": 7
+        }
+      ]
+    },
+    {
+      "slug": "technologies",
+      "display_layout": "icon-grid",
+      "note": "We ensure everything runs smoothly. Adapters and technical support are always on standby.",
+      "items": [
+        {
+          "slug": "smart-tv",
+          "label": "Screen Smart TV",
+          "descriptor": "crisp visuals",
+          "sort_order": 1
+        },
+        {
+          "slug": "sound",
+          "label": "High-Quality Sound",
+          "descriptor": "immersive audio",
+          "sort_order": 2
+        },
+        {
+          "slug": "clickshare",
+          "label": "Barco ClickShare",
+          "descriptor": "wireless presentations",
+          "sort_order": 3
+        },
+        {
+          "slug": "flipchart",
+          "label": "Digital Flipchart",
+          "descriptor": "interactive whiteboarding",
+          "sort_order": 4
+        },
+        {
+          "slug": "wifi",
+          "label": "Super-Fast Wi-Fi",
+          "descriptor": "seamless coverage",
+          "sort_order": 5
+        },
+        {
+          "slug": "power",
+          "label": "Power Outlets",
+          "descriptor": "stay connected",
+          "sort_order": 6
+        }
+      ]
+    },
+    {
+      "slug": "amenities",
+      "display_layout": "icon-list",
+      "items": [
+        {
+          "slug": "coffee",
+          "label": "Coffee Corner",
+          "body": "Coffee available.",
+          "sort_order": 1
+        },
+        {
+          "slug": "daylight",
+          "label": "Natural Daylight",
+          "body": "Lots of sun.",
+          "sort_order": 2
+        },
+        {
+          "slug": "views",
+          "label": "Inspiring Views",
+          "body": "Look outside.",
+          "sort_order": 3
+        },
+        {
+          "slug": "terrace",
+          "label": "Outdoor Terrace",
+          "body": "Relax.",
+          "sort_order": 4
+        },
+        {
+          "slug": "summer-house",
+          "label": "The Summer House",
+          "body": "For summer.",
+          "sort_order": 5
+        }
+      ]
+    },
+    {
+      "slug": "room-inclusions",
+      "display_layout": "icon-grid",
+      "items": [
+        {
+          "slug": "breakfast",
+          "label": "Farm-Fresh Breakfast",
+          "descriptor": "served daily",
+          "sort_order": 1
+        },
+        {
+          "slug": "wifi",
+          "label": "High-Speed Wi-Fi",
+          "descriptor": "unlimited access",
+          "sort_order": 2
+        },
+        {
+          "slug": "parking",
+          "label": "Free Parking",
+          "descriptor": "on premises",
+          "sort_order": 3
+        },
+        {
+          "slug": "cleaning",
+          "label": "Daily Housekeeping",
+          "descriptor": "included",
+          "sort_order": 4
+        },
+        {
+          "slug": "toiletries",
+          "label": "Luxury Toiletries",
+          "descriptor": "eco-friendly",
+          "sort_order": 5
+        },
+        {
+          "slug": "coffee-tea",
+          "label": "Coffee & Tea Facilities",
+          "descriptor": "in-room",
+          "sort_order": 6
+        }
+      ]
+    }
+  ]
+}

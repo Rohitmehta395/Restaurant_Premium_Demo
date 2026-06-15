@@ -1,26 +1,235 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-surface-default: #FFFFFF;
+  --color-surface-alternate: #F8F6F2;
+  --color-surface-dark: #1A1A18;
+  --color-text-primary: #111110;
+  --color-text-secondary: #6B6861;
+  --color-text-on-dark: #F5F3EF;
+  --color-text-on-primary: #FFFFFF;
+  --color-brand-primary: #111110;
+  --color-brand-secondary: #C5A97A;
+  --color-border-subtle: #E8E4DC;
+  --color-border-strong: #2A2A28;
+  --color-overlay-dark: rgba(17, 17, 16, 0.45);
+
+  /* Motion */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 600ms;
+  --motion-duration-hero: 1200ms;
+  --motion-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Radii */
+  --radius-none: 0px;
+  --radius-small: 2px;
+  --radius-base: 4px;
+  --radius-large: 8px;
+  --radius-button: 2px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(17, 17, 16, 0.06);
+  --shadow-base: 0 4px 12px rgba(17, 17, 16, 0.08);
+  --shadow-raised: 0 8px 24px rgba(17, 17, 16, 0.12);
+  --shadow-overlay: 0 24px 64px rgba(17, 17, 16, 0.24);
+
+  /* shadcn vars — wired to FARMform design tokens */
+  --background: var(--color-surface-default);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface-default);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-surface-default);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-brand-primary);
+  --primary-foreground: var(--color-text-on-dark);
+  --secondary: var(--color-surface-alternate);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-surface-alternate);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-surface-alternate);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: var(--color-border-subtle);
+  --input: var(--color-border-subtle);
+  --ring: var(--color-brand-primary);
+  --radius: var(--radius-base);
 }
+
+/* Note: dark mode not implemented — FARMform is a light-only design system */
 
 @theme inline {
+  /* Breakpoints */
+  --breakpoint-xs: 375px;
+
+  /* Colors */
+  --color-surface-default: var(--color-surface-default);
+  --color-surface-alt: var(--color-surface-alternate);
+  --color-surface-dark: var(--color-surface-dark);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-on-dark: var(--color-text-on-dark);
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-strong: var(--color-border-strong);
+  
+  /* Fonts */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  /* Spacing Extension */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-26: 6.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Motion */
+  --transition-duration-fast: var(--motion-duration-fast);
+  --transition-duration-base: var(--motion-duration-base);
+  --transition-duration-slow: var(--motion-duration-slow);
+  --transition-duration-hero: var(--motion-duration-hero);
+  
+  --transition-timing-function-default: var(--motion-easing-default);
+  --transition-timing-function-enter: var(--motion-easing-enter);
+  --transition-timing-function-exit: var(--motion-easing-exit);
+
+  /* Radii */
+  --radius-none: var(--radius-none);
+  --radius-sm: var(--radius-small);
+  --radius-base: var(--radius-base);
+  --radius-lg: var(--radius-large);
+  --radius-btn: var(--radius-button);
+
+  /* Shadows */
+  --shadow-subtle: var(--shadow-subtle);
+  --shadow-base: var(--shadow-base);
+  --shadow-raised: var(--shadow-raised);
+  --shadow-overlay: var(--shadow-overlay);
+
+  /* Shadcn standard theme tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface-default text-text-primary font-body antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .farmform-site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .farmform-site-header__inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 32px;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 md:py-24 lg:py-30;
+  }
+
+  .container-content {
+    @apply max-w-[1320px] mx-auto px-4 xs:px-5 sm:px-8 md:px-10 lg:px-16;
+  }
+
+  .reading-column {
+    @apply max-w-[72ch] mx-auto;
+  }
+
+  /* Responsive Typography Utilities */
+  .text-hero-h1 {
+    @apply text-[36px] md:text-[48px] lg:text-[64px] font-display font-bold leading-[1.05] tracking-[-0.02em];
+  }
+  .text-page-h1 {
+    @apply text-[32px] md:text-[40px] lg:text-[48px] font-display font-bold leading-[1.1];
+  }
+  .text-section-h2 {
+    @apply text-[26px] md:text-[30px] lg:text-[36px] font-display font-semibold leading-[1.2];
+  }
+  .text-card-h3 {
+    @apply text-[18px] md:text-[20px] lg:text-[22px] font-display font-semibold leading-[1.3];
+  }
+  .text-body-base {
+    @apply text-[15px] md:text-[16px] leading-[1.65];
+  }
+  .text-body-large {
+    @apply text-[16px] md:text-[17px] lg:text-[18px] leading-[1.7];
+  }
 }

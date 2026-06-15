@@ -1,0 +1,15 @@
+{
+  "hero_slideshow": true,
+  "quick_navigation": true,
+  "gallery_lightbox": true,
+  "pricing_visible": true,
+  "newsletter_signup": true,
+  "testimonials_section": false,
+  "faq_section": true,
+  "pre_header_bar": false,
+  "announcement_banner": false,
+  "team_section": true,
+  "hours_section": false,
+  "map_embed": false,
+  "pricing_visible": true
+}

@@ -1,0 +1,160 @@
+{
+  "rooms": [
+    {
+      "slug": "standard-room",
+      "parent_service_slug": "stay-the-night",
+      "status": "published",
+      "name": "Standard Room",
+      "room_type": "standard",
+      "room_count": 2,
+      "max_guests": 2,
+      "bed_configuration": "king bed",
+      "bathroom_type": "en-suite",
+      "capacity_label": "2",
+      "capacity_max": 2,
+      "area_sqm": 20,
+      "description_short": "Comfortable room.",
+      "description_long": "Comfortable room for two.",
+      "rate_single": 235,
+      "rate_double": 300,
+      "rate_currency": "EUR",
+      "rate_from_text": true,
+      "rate_note": "Prices vary during Tomorrowland.",
+      "sort_order": 1,
+      "gallery_images": [
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-01.jpg",
+          "alt_text": "Standard Room"
+        },
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-02.jpg",
+          "alt_text": "Standard Room"
+        },
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-03.jpg",
+          "alt_text": "Standard Room"
+        },
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-04.jpg",
+          "alt_text": "Standard Room"
+        },
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-05.jpg",
+          "alt_text": "Standard Room"
+        },
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-06.jpg",
+          "alt_text": "Standard Room"
+        },
+        {
+          "image_ref": "/images/spaces/standard-room/gallery-07.jpg",
+          "alt_text": "Standard Room"
+        }
+      ]
+    },
+    {
+      "slug": "deluxe-room",
+      "parent_service_slug": "stay-the-night",
+      "status": "published",
+      "name": "Deluxe Room",
+      "room_type": "deluxe",
+      "room_count": 4,
+      "max_guests": 2,
+      "bed_configuration": "king bed",
+      "bathroom_type": "en-suite",
+      "capacity_label": "2",
+      "capacity_max": 2,
+      "area_sqm": 30,
+      "description_short": "Spacious and elegant.",
+      "description_long": "Spacious room with elegant details.",
+      "rate_single": 265,
+      "rate_double": 330,
+      "rate_currency": "EUR",
+      "rate_from_text": true,
+      "rate_note": "Prices vary during Tomorrowland.",
+      "sort_order": 2,
+      "gallery_images": [
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-01.jpg",
+          "alt_text": "Deluxe Room"
+        },
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-02.jpg",
+          "alt_text": "Deluxe Room"
+        },
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-03.jpg",
+          "alt_text": "Deluxe Room"
+        },
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-04.jpg",
+          "alt_text": "Deluxe Room"
+        },
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-05.jpg",
+          "alt_text": "Deluxe Room"
+        },
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-06.jpg",
+          "alt_text": "Deluxe Room"
+        },
+        {
+          "image_ref": "/images/spaces/deluxe-room/gallery-07.jpg",
+          "alt_text": "Deluxe Room"
+        }
+      ]
+    },
+    {
+      "slug": "executive-suite",
+      "parent_service_slug": "stay-the-night",
+      "status": "published",
+      "name": "Executive Suite",
+      "room_type": "suite",
+      "room_count": 2,
+      "max_guests": 2,
+      "bed_configuration": "king bed",
+      "bathroom_type": "en-suite",
+      "capacity_label": "2",
+      "capacity_max": 2,
+      "area_sqm": 35,
+      "description_short": "Premium suite with terrace or bathtub.",
+      "description_long": "Premium suite featuring a private terrace or bathtub.",
+      "rate_single": 320,
+      "rate_double": 385,
+      "rate_currency": "EUR",
+      "rate_from_text": true,
+      "rate_note": "Prices vary during Tomorrowland.",
+      "sort_order": 3,
+      "gallery_images": [
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-01.jpg",
+          "alt_text": "Executive Suite"
+        },
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-02.jpg",
+          "alt_text": "Executive Suite"
+        },
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-03.jpg",
+          "alt_text": "Executive Suite"
+        },
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-04.jpg",
+          "alt_text": "Executive Suite"
+        },
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-05.jpg",
+          "alt_text": "Executive Suite"
+        },
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-06.jpg",
+          "alt_text": "Executive Suite"
+        },
+        {
+          "image_ref": "/images/spaces/executive-suite/gallery-07.jpg",
+          "alt_text": "Executive Suite"
+        }
+      ]
+    }
+  ]
+}

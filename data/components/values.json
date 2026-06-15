@@ -1,0 +1,36 @@
+{
+  "section_heading": "Our Values",
+  "section_subheading": "What drive us at our core",
+  "values": [
+    {
+      "slug": "freedom",
+      "label": "Freedom",
+      "description": "Empowering you to shape your time with us.",
+      "sort_order": 1
+    },
+    {
+      "slug": "sustainability",
+      "label": "Sustainability",
+      "description": "Building a greener future with eco-conscious choices.",
+      "sort_order": 2
+    },
+    {
+      "slug": "exclusivity",
+      "label": "Exclusivity",
+      "description": "Creating spaces that feel uniquely yours.",
+      "sort_order": 3
+    },
+    {
+      "slug": "comfort",
+      "label": "Comfort",
+      "description": "Designed for your well-being.",
+      "sort_order": 4
+    },
+    {
+      "slug": "inspiration",
+      "label": "Inspiration",
+      "description": "Igniting creativity and new perspectives.",
+      "sort_order": 5
+    }
+  ]
+}

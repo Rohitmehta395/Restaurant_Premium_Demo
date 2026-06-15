@@ -1,0 +1,72 @@
+{
+  "services": [
+    {
+      "slug": "meeting-spaces",
+      "status": "published",
+      "nav_label": "Meeting Spaces",
+      "page_title": "Meeting Spaces",
+      "card_title": "Meeting Spaces",
+      "card_tagline": "Choose from our 3 exclusive meeting rooms – where functionality meets inspiration and focus flows naturally.",
+      "card_cta_text": "Step inside our spaces",
+      "card_image_ref": "/images/services/meeting-spaces.jpg",
+      "card_image_alt": "Inspiring meeting spaces at FARMform",
+      "meta_title": "Meeting Spaces | FARMform",
+      "meta_description": "Exclusive meeting rooms for your team.",
+      "quick_nav_items": [
+        { "label": "Spaces", "id": "spaces" },
+        { "label": "Technologies", "id": "technologies" },
+        { "label": "Amenities", "id": "amenities" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "slug": "business-events",
+      "status": "published",
+      "nav_label": "Business Events",
+      "page_title": "Business Events",
+      "card_title": "Business Events",
+      "card_tagline": "Host your corporate event in a private, nature-infused setting designed to inspire and impress.",
+      "card_cta_text": "Discover what's possible",
+      "card_image_ref": "/images/services/business-events.jpg",
+      "card_image_alt": "Professional business events at FARMform",
+      "meta_title": "Business Events | FARMform",
+      "meta_description": "Host your corporate events.",
+      "sort_order": 2
+    },
+    {
+      "slug": "stay-the-night",
+      "status": "published",
+      "nav_label": "Stay the Night",
+      "page_title": "Stay the Night",
+      "card_title": "Stay the Night",
+      "card_tagline": "Relax after a long day in one of our 8 versatile rooms – crafted for comfort, rest and a sense of ease.",
+      "card_cta_text": "Experience the stay",
+      "card_image_ref": "/images/services/stay-the-night.jpg",
+      "card_image_alt": "Comfortable overnight stay at FARMform",
+      "meta_title": "Stay the Night | FARMform",
+      "meta_description": "Relax in our comfortable rooms.",
+      "quick_nav_items": [
+        { "label": "Rooms", "id": "rooms" },
+        { "label": "Amenities", "id": "amenities" }
+      ]
+    }
+  ],
+  "one_price_concepts": [
+    {
+      "service_slug": "meeting-spaces",
+      "headline": "One Price Concept",
+      "body": "No hidden fees or complex calculations. Our single price per person includes everything you need for a productive meeting.",
+      "inclusions_heading": "What's included?",
+      "inclusions_body": "Exclusive room access, smart presentation technology, unlimited coffee & water, fresh fruits, dedicated host, and high-speed Wi-Fi.",
+      "catering_note": "Optional high-end catering and lunch options available upon request."
+    },
+    {
+      "service_slug": "stay-the-night",
+      "headline": "Simple & Transparent Pricing",
+      "body": "Our room rates include everything you need for a comfortable stay. No hidden resort fees or surprise charges.",
+      "inclusions_heading": "What's included in every stay?",
+      "inclusions_body": "Farm-fresh breakfast, daily housekeeping, high-speed Wi-Fi, premium toiletries, and free parking.",
+      "catering_note": "Dinner reservations at our on-site restaurant can be made separately."
+    }
+  ]
+}

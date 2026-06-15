@@ -1,0 +1,75 @@
+{
+  "page_title": "Practical Info",
+  "meta_title": "Practical Info | FARMform",
+  "meta_description": "Find practical information about visiting FARMform.",
+  "hero_cta_ref": "primary-contact",
+  "info_blocks": [
+    {
+      "slug": "languages-spoken",
+      "heading": "Languages Spoken",
+      "content_type": "list",
+      "content": [
+        "English",
+        "Dutch",
+        "French"
+      ]
+    },
+    {
+      "slug": "location",
+      "heading": "Location and Accessibility",
+      "content_type": "distance-table",
+      "content": [
+        {
+          "label": "Brussels Airport",
+          "distance_km": 25,
+          "distance_text": "25km"
+        },
+        {
+          "label": "Brussels City Center",
+          "distance_km": 20,
+          "distance_text": "20km"
+        },
+        {
+          "label": "Antwerp",
+          "distance_km": 30,
+          "distance_text": "30km"
+        },
+        {
+          "label": "Mechelen",
+          "distance_km": 20,
+          "distance_text": "20km"
+        }
+      ]
+    },
+    {
+      "slug": "parking",
+      "heading": "Parking",
+      "content_type": "paragraph",
+      "content": "Free parking is available. EV charging note included."
+    },
+    {
+      "slug": "technologies",
+      "heading": "Technologies",
+      "content_type": "list",
+      "content": [
+        "Smart TV",
+        "Barco ClickShare",
+        "Wi-Fi"
+      ]
+    },
+    {
+      "slug": "amenities",
+      "heading": "Amenities",
+      "content_type": "list",
+      "content": [
+        "Coffee Corner",
+        "Terrace",
+        "The Summer House"
+      ]
+    }
+  ],
+  "services_quicklinks": {
+    "heading": "Our Services",
+    "intro": "Explore what FARMform has to offer:"
+  }
+}

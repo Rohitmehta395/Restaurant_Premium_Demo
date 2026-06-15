@@ -1,0 +1,23 @@
+{
+  "meta_title": "FARMform - Where work meets comfort",
+  "meta_description": "Experience a new way of business stay and events at FARMform.",
+  "hero": {
+    "eyebrow_text": "Where work meets comfort",
+    "headline": "Welcome to FarmForm",
+    "headline_emphasis": "Form",
+    "subheadline": "Experience a New Way of Business Stay and Events"
+  },
+  "about_section": {
+    "show_section": true,
+    "heading": "A new way to experience business and leisure.",
+    "body_paragraphs": [
+      "FARMform® is an innovative hospitality concept bridging the gap between professional productivity and rural tranquility. We believe that great ideas are born when you step away from the noise.",
+      "Our uniquely designed spaces offer everything from highly-equipped boardrooms to relaxing wellness areas, ensuring that whether you're hosting a corporate retreat or an intensive workshop, you have the ideal environment to succeed."
+    ]
+  },
+  "services_section": {
+    "show_section": true,
+    "heading": "Our Services",
+    "intro": "Explore our tailored experiences designed to elevate your stay."
+  }
+}
