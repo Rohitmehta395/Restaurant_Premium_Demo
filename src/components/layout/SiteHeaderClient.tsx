@@ -66,7 +66,7 @@ export function SiteHeaderClient({
   const hasFullBleedHero = pathname === "/";
   const [isPastHero, setIsPastHero] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const isScrolled = !hasFullBleedHero || isPastHero;
 
   useEffect(() => {
@@ -75,8 +75,10 @@ export function SiteHeaderClient({
     }
 
     const handleScroll = () => {
-      const shouldCollapse = window.scrollY > window.innerHeight;
-      setIsPastHero((current) => (current === shouldCollapse ? current : shouldCollapse));
+      const shouldCollapse = window.scrollY > 150;
+      setIsPastHero((current) =>
+        current === shouldCollapse ? current : shouldCollapse,
+      );
     };
 
     handleScroll();
@@ -86,62 +88,71 @@ export function SiteHeaderClient({
   }, [hasFullBleedHero]);
 
   const normalizedMenuLabel = menuTriggerLabel || "MENU";
-  const menuButtonLabel = isMenuOpen ? "Close navigation menu" : "Open navigation menu";
+  const menuButtonLabel = isMenuOpen
+    ? "Close navigation menu"
+    : "Open navigation menu";
 
   return (
     <>
       <header role="banner" className="farmform-site-header">
         <div className="farmform-site-header__inner">
-          
           {/* Left Element */}
-          {isScrolled ? (
+          <div className="relative flex items-center h-12 w-full">
             <Link
               href={"/" as Route}
               aria-label={`${businessName} home`}
-              className="flex size-10 flex-none items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm"
+              className={cn(
+                "absolute left-0 flex size-12 flex-none items-center justify-center rounded-full bg-black text-white transition-all duration-700 ease-out",
+                isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+              )}
             >
               <Image
                 src="/images/brand/logo-icon.svg"
                 alt=""
                 width={24}
                 height={24}
-                className="size-6 object-contain brightness-0 invert"
+                className="size-10 object-contain brightness-0 invert"
                 unoptimized
               />
             </Link>
-          ) : (
             <Link
               href={"/" as Route}
-              className="flex flex-none items-center gap-2 text-white"
+              className={cn(
+                "absolute left-0 flex items-center gap-2 text-white transition-all duration-700 ease-out",
+                !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+              )}
               aria-label={`${brandTagline} - ${businessName} home`}
-              style={{ flex: "0 0 auto" }}
             >
               <DecorativeStar />
               <span className="text-[11px] font-light uppercase tracking-[0.15em] text-white">
                 {brandTagline}
               </span>
             </Link>
-          )}
+          </div>
 
           {/* Center Element */}
-          {!isScrolled ? (
+          <div className="relative flex items-center justify-center h-12 w-full">
             <Link
               href={"/" as Route}
               aria-label={`${businessName} home`}
-              className="block flex-none"
+              className={cn(
+                "absolute flex items-center gap-2 transition-all duration-700 ease-out",
+                !isScrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+              )}
             >
               <Image
                 src="/images/brand/logo.svg"
-                alt={businessName}
-                width={190}
-                height={56}
-                className="h-auto w-28 object-contain brightness-0 invert sm:w-36 md:w-44"
+                alt=""
+                width={36}
+                height={36}
+                className="size-8 md:size-[36px] object-contain brightness-0 invert"
                 unoptimized
               />
+              <span className="text-white font-display text-[26px] md:text-[34px] tracking-wide">
+                FARM<span className="italic font-light">form</span>
+              </span>
             </Link>
-          ) : (
-            <div className="flex-none" aria-hidden="true" />
-          )}
+          </div>
 
           {/* Right Element */}
           <button
@@ -151,24 +162,17 @@ export function SiteHeaderClient({
             aria-label={menuButtonLabel}
             onClick={() => setIsMenuOpen((current) => !current)}
             className={cn(
-              "z-[60] flex flex-none cursor-pointer items-center gap-[10px] text-white",
-              "transition-opacity duration-150 ease-out hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              "z-[60] flex cursor-pointer items-center gap-[10px] text-white justify-self-end",
+              "transition-all duration-700 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white",
+              isMenuOpen ? "opacity-0 pointer-events-none" : "hover:opacity-70",
+              isScrolled ? "bg-black rounded-xl px-[18px] h-10" : "h-10 px-0 rounded-none bg-transparent"
             )}
           >
-            {!isScrolled && !isMenuOpen ? (
-              <span className="text-[13px] font-light uppercase tracking-[0.1em] text-white">
-                {normalizedMenuLabel}
-              </span>
-            ) : null}
-            {isMenuOpen ? (
-              <span aria-hidden="true" className="text-[30px] font-light leading-[20px] text-white">
-                &times;
-              </span>
-            ) : (
-              <HamburgerIcon />
-            )}
+            <span className="text-[13px] font-medium uppercase tracking-[0.1em] text-white mt-[1px]">
+              {normalizedMenuLabel}
+            </span>
+            <HamburgerIcon />
           </button>
-
         </div>
       </header>
 

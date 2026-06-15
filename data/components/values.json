@@ -6,35 +6,35 @@
       "slug": "freedom",
       "label": "Freedom",
       "description": "Empowering you to shape your time with us.",
-      "image_ref": "/images/story/freedom.jpg",
+      "image_ref": "/images/values/freedom.jpg",
       "sort_order": 1
     },
     {
       "slug": "sustainability",
       "label": "Sustainability",
       "description": "Building a greener future with eco-conscious choices.",
-      "image_ref": "/images/story/sustainability.jpg",
+      "image_ref": "/images/values/sustainability.jpg",
       "sort_order": 2
     },
     {
       "slug": "exclusivity",
       "label": "Exclusivity",
       "description": "Creating tailored, private experiences.",
-      "image_ref": "/images/story/exclusivity.jpg",
+      "image_ref": "/images/values/exclusivity.jpg",
       "sort_order": 3
     },
     {
       "slug": "comfort",
       "label": "Comfort",
       "description": "Balancing modern luxury with a homely atmosphere.",
-      "image_ref": "/images/story/comfort.jpg",
+      "image_ref": "/images/values/comfort.jpg",
       "sort_order": 4
     },
     {
       "slug": "inspiration",
       "label": "Inspiration",
       "description": "Encouraging creativity and relaxation through our farm-inspired design.",
-      "image_ref": "/images/story/inspiration.jpg",
+      "image_ref": "/images/values/inspiration.jpg",
       "sort_order": 5
     }
   ]

@@ -21,34 +21,40 @@ export async function ServicesGrid({ data }: ServicesGridProps) {
   if (publishedServices.length === 0) return null;
 
   return (
-    <section className="bg-white py-12 md:py-[80px]">
+    <section className="bg-surface-alt pb-24 md:pb-[30px]">
       <div className="container-content">
-        {data.heading && (
-          <SectionReveal className="text-left mb-10">
-            <h2 className="text-[36px] text-[#111] font-display font-normal mb-4">
-              {data.heading}
-            </h2>
-            {(data as any).intro_text && (
-              <p className="text-[15px] text-[#666] leading-relaxed max-w-[560px]">
-                {(data as any).intro_text}
-              </p>
-            )}
-          </SectionReveal>
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {publishedServices.map((service, index) => (
-            <SectionReveal key={service.slug} delay={index * 0.15}>
-              <ServiceCard
-                title={service.card_title}
-                tagline={service.card_tagline}
-                ctaText={service.card_cta_text}
-                ctaHref={`/${service.slug}`}
-                imageSrc={service.card_image_ref || "/images/placeholder.jpg"}
-                imageAlt={service.card_image_alt || service.card_title}
-              />
+        <div className="bg-white rounded-[10px] md:rounded-[12px] p-6 md:p-12 lg:p-16">
+          {data.heading && (
+            <SectionReveal className="text-left mb-10 md:mb-14">
+              <h2 className="text-[32px] md:text-[40px] text-[#111] font-display font-semibold mb-6">
+                {data.heading}
+              </h2>
+              {(data as any).intro_text && (
+                <p className="text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-[50%] ">
+                  {(data as any).intro_text}
+                </p>
+              )}
             </SectionReveal>
-          ))}
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {publishedServices.map((service, index) => (
+              <SectionReveal
+                key={service.slug}
+                delay={index * 0.15}
+                className="h-full"
+              >
+                <ServiceCard
+                  title={service.card_title}
+                  tagline={service.card_tagline}
+                  ctaText={service.card_cta_text}
+                  ctaHref={`/${service.slug}`}
+                  imageSrc={service.card_image_ref || "/images/placeholder.jpg"}
+                  imageAlt={service.card_image_alt || service.card_title}
+                />
+              </SectionReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

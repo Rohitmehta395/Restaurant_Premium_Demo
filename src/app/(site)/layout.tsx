@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
 import { getFeaturesConfig } from "@/lib/data/loaders";
+import { GsapReveal } from "@/components/animation/GsapReveal";
 
 export default async function SiteLayout({
   children,
@@ -18,8 +19,19 @@ export default async function SiteLayout({
       <main id="content" className="flex-1" tabIndex={-1}>
         {children}
       </main>
-      {features?.newsletter_signup && <NewsletterSection />}
-      <SiteFooter />
+
+      <div className="bg-[#F0EDE8] pb-6 md:pb-8">
+        <div className="container-content">
+          <div className="bg-[#171717] rounded-[16px] md:rounded-[10px] overflow-hidden">
+            <GsapReveal direction="up" distance={30} triggerOffset="top 90%">
+              {features?.newsletter_signup && <NewsletterSection />}
+            </GsapReveal>
+            <GsapReveal direction="up" distance={30} triggerOffset="top 95%">
+              <SiteFooter />
+            </GsapReveal>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

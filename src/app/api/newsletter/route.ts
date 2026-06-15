@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     if (!body) {
       return NextResponse.json(
         { success: false, message: "Invalid request body" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -48,8 +48,11 @@ export async function POST(req: NextRequest) {
     // 1. Validate Email
     if (!email || typeof email !== "string" || !EMAIL_REGEX.test(email)) {
       return NextResponse.json(
-        { success: false, message: newsletterData.error_message || "Invalid email address" },
-        { status: 400 }
+        {
+          success: false,
+          message: newsletterData.error_message || "Invalid email address",
+        },
+        { status: 400 },
       );
     }
 
@@ -57,7 +60,7 @@ export async function POST(req: NextRequest) {
     if (consent !== true) {
       return NextResponse.json(
         { success: false, message: "Consent is required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -65,8 +68,11 @@ export async function POST(req: NextRequest) {
     const ip = req.ip || req.headers.get("x-forwarded-for") || "unknown";
     if (isRateLimited(ip)) {
       return NextResponse.json(
-        { success: false, message: "Too many requests. Please try again later." },
-        { status: 429 }
+        {
+          success: false,
+          message: "Too many requests. Please try again later.",
+        },
+        { status: 429 },
       );
     }
 
@@ -77,25 +83,29 @@ export async function POST(req: NextRequest) {
         email,
         consentGiven: consent,
         source: "website-footer",
-        tags: ["newsletter-form"]
+        tags: ["newsletter-form"],
       });
-      
+
       return NextResponse.json(
-        { success: true, message: newsletterData.success_message || "Thank you for subscribing." },
-        { status: 200 }
+        {
+          success: true,
+          message:
+            newsletterData.success_message || "Thank you for subscribing.",
+        },
+        { status: 200 },
       );
     } catch (error) {
       console.error("[Newsletter API] Provider Error:", error);
       return NextResponse.json(
         { success: false, message: "An error occurred. Please try again." },
-        { status: 500 }
+        { status: 500 },
       );
     }
   } catch (error) {
     console.error("[Newsletter API] Unexpected Error:", error);
     return NextResponse.json(
       { success: false, message: "An error occurred. Please try again." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

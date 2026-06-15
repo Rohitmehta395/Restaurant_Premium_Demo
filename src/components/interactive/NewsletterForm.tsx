@@ -13,7 +13,9 @@ interface NewsletterFormProps {
 export function NewsletterForm({ data }: NewsletterFormProps) {
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const prefersReducedMotion = useReducedMotion();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,7 +36,7 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-[560px] mx-auto mt-8">
       <div className="flex flex-col">
-        <div className="flex border border-white/30 rounded-full overflow-hidden bg-transparent">
+        <div className="flex bg-[#262626] rounded-full overflow-hidden">
           <input
             type="email"
             value={email}
@@ -47,13 +49,13 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
           <button
             type="submit"
             disabled={status === "loading" || !consent}
-            className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-1 my-1 hover:bg-white/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-1 my-1 hover:bg-white/90 transition-colors disabled:cursor-not-allowed"
             aria-label="Subscribe"
           >
-            <ArrowRight className="size-5 text-[#111]" aria-hidden="true" />
+            <ArrowRight className="size-5 text-black" aria-hidden="true" />
           </button>
         </div>
-        
+
         <label className="flex items-center justify-center gap-3 mt-4 text-[13px] text-white/60 cursor-pointer">
           <input
             type="checkbox"
@@ -62,7 +64,13 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
             required
             className="border border-white/40 w-4 h-4 rounded-none bg-transparent appearance-none cursor-pointer checked:bg-white/20"
           />
-          <span dangerouslySetInnerHTML={{ __html: data.consent_text || "I agree to the <a href='/privacy-policy' class='underline'>Privacy Policy</a>" }} />
+          <span
+            dangerouslySetInnerHTML={{
+              __html:
+                data.consent_text ||
+                "I agree to the <a href='/privacy-policy' class='underline'>Privacy Policy</a>",
+            }}
+          />
         </label>
       </div>
 
@@ -75,12 +83,15 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
             transition={prefersReducedMotion ? { duration: 0 } : undefined}
             className="mt-4 overflow-hidden"
           >
-            <p role="status" className="text-green-400 text-center text-[13px] font-medium">
+            <p
+              role="status"
+              className="text-green-400 text-center text-[13px] font-medium"
+            >
               {data.success_message}
             </p>
           </motion.div>
         )}
-        
+
         {status === "error" && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -89,7 +100,10 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
             transition={prefersReducedMotion ? { duration: 0 } : undefined}
             className="mt-4 overflow-hidden"
           >
-            <p role="alert" className="text-red-400 text-center text-[13px] font-medium">
+            <p
+              role="alert"
+              className="text-red-400 text-center text-[13px] font-medium"
+            >
               {data.error_message}
             </p>
           </motion.div>

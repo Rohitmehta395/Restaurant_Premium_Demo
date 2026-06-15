@@ -1,10 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import { displayFont, bodyFont } from "@/lib/fonts";
-import { getSiteConfig, getBusinessIdentity, getBusinessContact, getFeaturesConfig, getActiveBanners, getCookiesData } from "@/lib/data/loaders";
+import {
+  getSiteConfig,
+  getBusinessIdentity,
+  getBusinessContact,
+  getFeaturesConfig,
+  getActiveBanners,
+  getCookiesData,
+} from "@/lib/data/loaders";
 import { SkipToContent } from "@/components/layout/SkipToContent";
 import { AnnouncementBanner } from "@/components/interactive/AnnouncementBanner";
 import { CookieConsent } from "@/components/interactive/CookieConsent";
 import { MotionProvider } from "@/components/animation/MotionProvider";
+import { SmoothScrollProvider } from "@/components/animation/SmoothScrollProvider";
+import { FloatingScrollbar } from "@/components/interactive/FloatingScrollbar";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -31,10 +40,14 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       siteName: businessName,
       locale: siteConfig?.locale || "en-BE",
-      images: siteConfig?.og_image_default_ref ? [siteConfig.og_image_default_ref] : [],
+      images: siteConfig?.og_image_default_ref
+        ? [siteConfig.og_image_default_ref]
+        : [],
     },
     twitter: {
-      card: (siteConfig?.twitter_card_type as "summary_large_image" | "summary") || "summary_large_image",
+      card:
+        (siteConfig?.twitter_card_type as "summary_large_image" | "summary") ||
+        "summary_large_image",
     },
     robots: {
       index: true,
@@ -57,7 +70,8 @@ export default async function RootLayout({
   const banners = await getActiveBanners();
   const cookiesData = await getCookiesData();
 
-  const activeBanner = features?.announcement_banner && banners.length > 0 ? banners[0] : null;
+  const activeBanner =
+    features?.announcement_banner && banners.length > 0 ? banners[0] : null;
 
   const businessName = identity?.business_name || "FARMform";
   const siteUrl = siteConfig?.url || "https://farmform.be";
@@ -65,20 +79,20 @@ export default async function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": businessName,
-    "description": identity?.brand_description_short || "",
-    "url": siteUrl,
-    "telephone": contact?.phone || "",
-    "email": contact?.email || "",
-    "address": {
+    name: businessName,
+    description: identity?.brand_description_short || "",
+    url: siteUrl,
+    telephone: contact?.phone || "",
+    email: contact?.email || "",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": contact?.address_line_1 || "",
-      "addressLocality": contact?.city || "",
-      "postalCode": contact?.postcode || "",
-      "addressCountry": contact?.country_code || ""
-    }
+      streetAddress: contact?.address_line_1 || "",
+      addressLocality: contact?.city || "",
+      postalCode: contact?.postcode || "",
+      addressCountry: contact?.country_code || "",
+    },
   };
-  
+
   return (
     <html
       lang={siteConfig?.locale || "en"}
@@ -91,12 +105,15 @@ export default async function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col font-body text-text-primary bg-surface-default antialiased">
-        <SkipToContent />
-        {activeBanner && <AnnouncementBanner banner={activeBanner} />}
-        <MotionProvider>
-          {children}
-        </MotionProvider>
-        {features?.cookie_consent && cookiesData && <CookieConsent data={cookiesData} />}
+        <SmoothScrollProvider>
+          <SkipToContent />
+          {activeBanner && <AnnouncementBanner banner={activeBanner} />}
+          <MotionProvider>{children}</MotionProvider>
+          <FloatingScrollbar />
+          {features?.cookie_consent && cookiesData && (
+            <CookieConsent data={cookiesData} />
+          )}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

@@ -9,17 +9,17 @@ export function AboutSection({ data }: AboutSectionProps) {
   if (!data || !data.show_section) return null;
 
   return (
-    <section className="py-section bg-surface-default">
+    <section className="py-24 md:py-[120px] bg-surface-alt">
       <div className="container-content">
-        <SectionReveal className="reading-column mx-auto max-w-2xl text-center md:text-left">
-          <h2 className="text-section-h2 text-text-primary mb-8 font-display font-semibold">
-            {data.heading}
-          </h2>
-          <div className="space-y-5">
+        <SectionReveal className="mx-auto max-w-[900px] flex flex-col items-center text-center">
+          <span className="text-[14px] font-semibold uppercase tracking-[0.15em] text-text-primary mb-12">
+            Where work meets comfort
+          </span>
+
+          <div className="space-y-8 md:space-y-10 text-[20px] md:text-[28px] lg:text-[30px] font-display font-semibold text-text-primary leading-[1.6]">
+            {data.heading && <h2 className="font-display">{data.heading}</h2>}
             {data.body_paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-body-large text-text-secondary font-body">
-                {paragraph}
-              </p>
+              <p key={index}>{paragraph}</p>
             ))}
           </div>
         </SectionReveal>

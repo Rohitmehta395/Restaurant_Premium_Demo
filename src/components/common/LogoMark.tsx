@@ -11,8 +11,8 @@ interface LogoMarkProps {
 
 export function LogoMark({
   variant = "default",
-  width = 150,
-  height = 40,
+  width = 48,
+  height = 48,
   priority = false,
   businessName = "FARMform",
 }: LogoMarkProps) {

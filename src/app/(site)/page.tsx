@@ -7,6 +7,7 @@ import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
 import { getHeroBySlug, getHomePageData, getFeatureGroup, getValuesData } from "@/lib/data/loaders";
 import { buildMetadata } from "@/lib/seo";
 import { Metadata } from "next";
+import { GsapReveal } from "@/components/animation/GsapReveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getHomePageData();
@@ -30,18 +31,30 @@ export default async function Page() {
   return (
     <main>
       <HeroSlideshow hero={heroData} />
-      <AboutSection data={homeData.about_section} />
-      <ServicesGrid data={homeData.services_section} />
+      
+      <GsapReveal direction="up" distance={40}>
+        <AboutSection data={homeData.about_section} />
+      </GsapReveal>
+      
+      <GsapReveal direction="up" distance={40} delay={0.1}>
+        <ServicesGrid data={homeData.services_section} />
+      </GsapReveal>
       
       {featuresData && (
-        <FeaturesGrid featureGroup={featuresData} />
+        <GsapReveal direction="up" distance={40} delay={0.1}>
+          <FeaturesGrid featureGroup={featuresData} />
+        </GsapReveal>
       )}
 
       {valuesData && valuesData.values?.length > 0 ? (
-        <ValuesGrid data={valuesData} />
+        <GsapReveal direction="up" distance={40} delay={0.1}>
+          <ValuesGrid data={valuesData} />
+        </GsapReveal>
       ) : null}
 
-      <PreFooterCTA />
+      <GsapReveal direction="up" distance={40} triggerOffset="top 90%">
+        <PreFooterCTA />
+      </GsapReveal>
     </main>
   );
 }

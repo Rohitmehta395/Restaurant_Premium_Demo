@@ -38,7 +38,7 @@ export function OnePriceConcept({
       <p className="text-body-large text-text-secondary mt-4 leading-relaxed">
         {body}
       </p>
-      
+
       <div className="mt-8 pt-8 border-t border-border-subtle">
         <h3 className="text-card-h3 font-semibold text-text-primary">
           {inclusionsHeading}
@@ -47,9 +47,9 @@ export function OnePriceConcept({
           {inclusionsBody}
         </p>
       </div>
-      
+
       {cateringNote && (
-        <p 
+        <p
           aria-label="Additional note about catering"
           className="text-caption italic text-text-secondary mt-6 pt-6 border-t border-border-subtle"
         >

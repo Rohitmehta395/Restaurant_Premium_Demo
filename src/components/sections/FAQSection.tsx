@@ -4,41 +4,46 @@ import { SectionWrapper } from "@/components/common/SectionWrapper";
 import { SectionReveal } from "@/components/common/SectionReveal";
 import { ProseContent } from "@/components/common/ProseContent";
 import { FAQTabbedSection } from "./FAQTabbedSection";
-import { 
-  Accordion, 
-  AccordionItem, 
-  AccordionTrigger, 
-  AccordionContent 
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
 export async function FAQSection() {
   const [data, features] = await Promise.all([
     getFAQData(),
-    getFeaturesConfig()
+    getFeaturesConfig(),
   ]);
 
   if (!features.faq_section || !data) return null;
 
-  const { section_heading, intro_text, display_style = "accordion", faq_groups } = data;
+  const {
+    section_heading,
+    intro_text,
+    display_style = "accordion",
+    faq_groups,
+  } = data;
 
   // Filter groups with zero items and sort items within groups
   const filteredGroups = faq_groups
-    .map(group => ({
+    .map((group) => ({
       ...group,
-      items: [...group.items].sort((a, b) => a.sort_order - b.sort_order)
+      items: [...group.items].sort((a, b) => a.sort_order - b.sort_order),
     }))
-    .filter(group => group.items.length > 0);
+    .filter((group) => group.items.length > 0);
 
   if (filteredGroups.length === 0) return null;
 
   // Pre-render answers for all groups in parallel
   const preRenderedAnswers: Record<string, string> = {};
-  const renderPromises = filteredGroups.flatMap(group => 
+  const renderPromises = filteredGroups.flatMap((group) =>
     group.items.map(async (item, i) => {
       const html = await parseInlineMarkdown(item.answer);
       preRenderedAnswers[`${group.slug}-${i}`] = html;
-    })
+    }),
   );
   await Promise.all(renderPromises);
 
@@ -58,19 +63,21 @@ export async function FAQSection() {
           </div>
 
           {display_style === "tabbed" ? (
-            <FAQTabbedSection 
-              groups={filteredGroups} 
-              preRenderedAnswers={preRenderedAnswers} 
+            <FAQTabbedSection
+              groups={filteredGroups}
+              preRenderedAnswers={preRenderedAnswers}
             />
           ) : (
             <div className="space-y-12">
               {filteredGroups.map((group, groupIdx) => (
                 <div key={group.slug}>
                   {filteredGroups.length > 1 && (
-                    <h3 className={cn(
-                      "text-card-h3 text-text-primary mb-4",
-                      groupIdx > 0 ? "mt-8" : "mt-0"
-                    )}>
+                    <h3
+                      className={cn(
+                        "text-card-h3 text-text-primary mb-4",
+                        groupIdx > 0 ? "mt-8" : "mt-0",
+                      )}
+                    >
                       {group.heading}
                     </h3>
                   )}
@@ -78,8 +85,8 @@ export async function FAQSection() {
                   {display_style === "open-list" ? (
                     <div className="space-y-0">
                       {group.items.map((item, itemIdx) => (
-                        <div 
-                          key={itemIdx} 
+                        <div
+                          key={itemIdx}
                           className="mb-8 pb-8 border-b border-border-subtle last:border-0"
                         >
                           <h3 className="text-card-h3 text-text-primary">
@@ -88,7 +95,12 @@ export async function FAQSection() {
                           <div className="mt-3">
                             <div
                               className="text-body-large text-text-secondary"
-                              dangerouslySetInnerHTML={{ __html: preRenderedAnswers[`${group.slug}-${itemIdx}`] }}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  preRenderedAnswers[
+                                    `${group.slug}-${itemIdx}`
+                                  ],
+                              }}
                             />
                           </div>
                         </div>
@@ -98,8 +110,8 @@ export async function FAQSection() {
                     /* Default: Accordion */
                     <Accordion type="multiple" className="w-full">
                       {group.items.map((item, itemIdx) => (
-                        <AccordionItem 
-                          key={itemIdx} 
+                        <AccordionItem
+                          key={itemIdx}
                           value={`item-${group.slug}-${itemIdx}`}
                           className="border-border-subtle"
                         >
@@ -107,7 +119,11 @@ export async function FAQSection() {
                             {item.question}
                           </AccordionTrigger>
                           <AccordionContent className="text-text-secondary text-body-base pb-4 pt-0 leading-relaxed">
-                            <ProseContent html={preRenderedAnswers[`${group.slug}-${itemIdx}`]} />
+                            <ProseContent
+                              html={
+                                preRenderedAnswers[`${group.slug}-${itemIdx}`]
+                              }
+                            />
                           </AccordionContent>
                         </AccordionItem>
                       ))}

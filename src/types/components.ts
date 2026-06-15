@@ -29,6 +29,7 @@ export interface FeatureGroup {
 }
 
 export interface ValueItem {
+  image_ref: string | StaticImport;
   slug: string;
   label: string;
   description: string;
@@ -84,6 +85,7 @@ export interface FAQData {
 }
 
 export interface NewsletterData {
+  section_label: any;
   heading: string;
   subheading?: string;
   input_placeholder: string;

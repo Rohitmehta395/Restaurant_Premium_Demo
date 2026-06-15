@@ -13,19 +13,29 @@ export interface InfoBlockProps {
 }
 
 const IconMap: Record<string, React.ElementType> = {
-  "languages": Languages,
-  "location": MapPin,
-  "parking": Car,
-  "technologies": Cpu,
-  "amenities": Coffee,
-  "hours": Clock,
+  languages: Languages,
+  location: MapPin,
+  parking: Car,
+  technologies: Cpu,
+  amenities: Coffee,
+  hours: Clock,
 };
 
-export function InfoBlock({ iconRef, heading, contentType, content, note, href }: InfoBlockProps) {
+export function InfoBlock({
+  iconRef,
+  heading,
+  contentType,
+  content,
+  note,
+  href,
+}: InfoBlockProps) {
   const IconComponent = IconMap[iconRef] || MapPin;
 
   const HeadingEl = href ? (
-    <Link href={href as any} className="hover:underline hover:text-brand-primary transition-colors">
+    <Link
+      href={href as any}
+      className="hover:underline hover:text-brand-primary transition-colors"
+    >
       {heading}
     </Link>
   ) : (
@@ -41,7 +51,7 @@ export function InfoBlock({ iconRef, heading, contentType, content, note, href }
         <h3 className="text-card-h3 font-display font-medium text-text-primary mb-3">
           {HeadingEl}
         </h3>
-        
+
         {contentType === "paragraph" && (
           <p className="text-body-base text-text-secondary leading-relaxed">
             {content as string}
@@ -59,7 +69,10 @@ export function InfoBlock({ iconRef, heading, contentType, content, note, href }
         {contentType === "distance-table" && Array.isArray(content) && (
           <dl className="space-y-2 text-body-base text-text-secondary w-full max-w-sm">
             {(content as ProximityPoint[]).map((point, idx) => (
-              <div key={idx} className="flex justify-between border-b border-border-subtle pb-1">
+              <div
+                key={idx}
+                className="flex justify-between border-b border-border-subtle pb-1"
+              >
                 <dt>{point.label}</dt>
                 <dd className="font-medium">{point.distance_text}</dd>
               </div>
@@ -70,7 +83,10 @@ export function InfoBlock({ iconRef, heading, contentType, content, note, href }
         {contentType === "hours" && content && (
           <dl className="space-y-2 text-body-base text-text-secondary w-full max-w-sm">
             {Object.entries(content).map(([days, hours], idx) => (
-              <div key={idx} className="flex justify-between border-b border-border-subtle pb-1">
+              <div
+                key={idx}
+                className="flex justify-between border-b border-border-subtle pb-1"
+              >
                 <dt className="capitalize">{days}</dt>
                 <dd className="font-medium">{hours as string}</dd>
               </div>

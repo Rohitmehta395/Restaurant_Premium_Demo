@@ -31,7 +31,7 @@ export function QuickNavBar({ items }: QuickNavBarProps) {
       },
       {
         rootMargin: "-20% 0px -80% 0px", // Trigger when section hits the top 20%
-      }
+      },
     );
 
     // Give the DOM a tiny bit of time to render the sections before querying
@@ -57,34 +57,44 @@ export function QuickNavBar({ items }: QuickNavBarProps) {
       <div className="container-content py-4">
         <div className="flex flex-row items-center gap-4">
           <span className="text-label-caps text-text-secondary uppercase tracking-wider font-semibold flex items-center gap-2 shrink-0">
-            <span className="hidden xs:inline">Quick nav</span> <ArrowRight className="size-3 md:size-4" aria-hidden="true" />
+            <span className="hidden xs:inline">Quick nav</span>{" "}
+            <ArrowRight className="size-3 md:size-4" aria-hidden="true" />
           </span>
-          
-          <nav aria-label="Page sections" className={cn(
-            "flex-1 overflow-hidden",
-            hasManyItems ? "overflow-x-auto scrollbar-hide" : ""
-          )}>
-            <ol role="list" className={cn(
-              "flex items-center gap-x-4 gap-y-2 whitespace-nowrap",
-              hasManyItems ? "flex-nowrap" : "flex-wrap"
-            )}>
+
+          <nav
+            aria-label="Page sections"
+            className={cn(
+              "flex-1 overflow-hidden",
+              hasManyItems ? "overflow-x-auto scrollbar-hide" : "",
+            )}
+          >
+            <ol
+              role="list"
+              className={cn(
+                "flex items-center gap-x-4 gap-y-2 whitespace-nowrap",
+                hasManyItems ? "flex-nowrap" : "flex-wrap",
+              )}
+            >
               {items.map((item, index) => {
                 const isActive = activeId === item.id;
-                
+
                 return (
                   <li key={item.id} className="flex items-center gap-4">
                     <Link
                       href={`#${item.id}` as Route}
                       className={`text-[13px] md:text-body-base transition-colors duration-150 ease-out cursor-pointer ${
-                        isActive 
-                          ? "text-text-primary font-medium underline underline-offset-8 decoration-2 decoration-brand-secondary" 
+                        isActive
+                          ? "text-text-primary font-medium underline underline-offset-8 decoration-2 decoration-brand-secondary"
                           : "text-text-secondary hover:text-text-primary"
                       }`}
                     >
                       {item.label}
                     </Link>
                     {index < items.length - 1 && (
-                      <span className="text-text-secondary/40 select-none" aria-hidden="true">
+                      <span
+                        className="text-text-secondary/40 select-none"
+                        aria-hidden="true"
+                      >
                         ·
                       </span>
                     )}

@@ -1,4 +1,4 @@
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Karla } from "next/font/google";
 
 export const displayFont = Cormorant_Garamond({
   subsets: ["latin"],
@@ -8,9 +8,9 @@ export const displayFont = Cormorant_Garamond({
   display: "swap",
 });
 
-export const bodyFont = Inter({
+export const bodyFont = Karla({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-body",
   display: "swap",
 });

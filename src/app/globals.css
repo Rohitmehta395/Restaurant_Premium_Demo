@@ -7,7 +7,7 @@
 
 :root {
   /* Colors */
-  --color-surface-default: #FFFFFF;
+  --color-surface-default: #F0EDE8;
   --color-surface-alternate: #F0EDE8;
   --color-surface-dark: #1A1A18;
   --color-text-primary: #111111;
@@ -165,10 +165,23 @@
   }
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
   body {
     @apply bg-surface-default text-text-primary font-body antialiased;
   }
+
 
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -196,9 +209,9 @@
 
   .farmform-site-header__inner {
     position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     width: 100%;
     padding: 24px 32px;
   }
@@ -210,7 +223,7 @@
   }
 
   .container-content {
-    @apply max-w-[1320px] mx-auto px-4 xs:px-5 sm:px-8 md:px-10 lg:px-16;
+    @apply w-[92%] max-w-[1600px] mx-auto;
   }
 
   .reading-column {
