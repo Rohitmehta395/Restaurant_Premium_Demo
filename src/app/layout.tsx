@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { fontDisplay, fontBody } from "@/lib/fonts";
+import { displayFont, bodyFont } from "@/lib/fonts";
 import { getSiteConfig, getBusinessIdentity, getBusinessContact, getFeaturesConfig, getActiveBanners, getCookiesData } from "@/lib/data/loaders";
 import { SkipToContent } from "@/components/layout/SkipToContent";
 import { AnnouncementBanner } from "@/components/interactive/AnnouncementBanner";
@@ -82,7 +82,7 @@ export default async function RootLayout({
   return (
     <html
       lang={siteConfig?.locale || "en"}
-      className={`${fontDisplay.variable} ${fontBody.variable} h-full antialiased`}
+      className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
       <head>
         <script

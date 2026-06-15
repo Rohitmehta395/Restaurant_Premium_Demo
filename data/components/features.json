@@ -2,49 +2,50 @@
   "feature_groups": [
     {
       "slug": "why-choose",
-      "display_layout": "card-grid",
+      "heading": "Why choose FARMform?",
+      "display_layout": "icon-grid",
       "items": [
         {
-          "slug": "freedom-to-tailor",
-          "label": "Freedom to Tailor",
-          "body": "Tailor to your needs.",
-          "sort_order": 1
+          "slug": "freedom",
+          "icon_ref": "/images/icons/features/freedom.svg",
+          "label": "Freedom to Tailor Your Stay",
+          "body": "From extended business trips to corporate retreats and seminars, FARMform offers the flexibility to match your needs. Enjoy the freedom to work, stay and unwind on your terms – in an exclusive, personalised setting."
         },
         {
           "slug": "eco-friendly",
-          "label": "Eco-Friendly",
-          "body": "Green.",
-          "sort_order": 2
+          "icon_ref": "/images/icons/features/eco.svg",
+          "label": "Eco-Friendly and Sustainable",
+          "body": "Our thoughtfully rebuilt farm reflects a deep commitment to the environment, using sustainable materials and technologies to create a space that respects nature while offering modern comfort."
         },
         {
           "slug": "convenient",
-          "label": "Convenient",
-          "body": "Accessible.",
-          "sort_order": 3
+          "icon_ref": "/images/icons/features/location.svg",
+          "label": "Convenient and Connected",
+          "body": "Located in Londerzeel, FARMform is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
         },
         {
           "slug": "one-price",
-          "label": "One-Price",
-          "body": "No hidden fees.",
-          "sort_order": 4
+          "icon_ref": "/images/icons/features/price.svg",
+          "label": "One-Price Concept",
+          "body": "We keep it simple: our One-Price Concept ensures simple, transparent pricing with no hidden costs. Inclusions are clearly detailed per service, so you always know what to expect."
         },
         {
-          "slug": "nature-infused",
-          "label": "Nature-Infused",
-          "body": "Green spaces.",
-          "sort_order": 5
+          "slug": "nature",
+          "icon_ref": "/images/icons/features/nature.svg",
+          "label": "Nature-Infused Experience",
+          "body": "Step away from the noise! FARMform offers an intimate, peaceful setting with open field views and the calming presence of animals – a pony, a dog, cats, chickens and rabbits — roaming freely around the property. Whether you are taking a break, strolling the grounds or unwinding after a long day, their presence adds a unique and relaxing touch to your stay."
         },
         {
-          "slug": "equipped-for-professionals",
+          "slug": "professionals",
+          "icon_ref": "/images/icons/features/professional.svg",
           "label": "Equipped for Professionals",
-          "body": "Professional.",
-          "sort_order": 6
+          "body": "FARMform is designed with professionals in mind. From high-end meeting spaces to private rooms and wellness facilities (fitness and sauna), every detail supports productivity, focus, collaboration and comfort – whether you are working, hosting an event, collaborating with a team or simply recharging after a busy day."
         },
         {
-          "slug": "multilingual-team",
+          "slug": "multilingual",
+          "icon_ref": "/images/icons/features/language.svg",
           "label": "Multilingual Team",
-          "body": "Many languages.",
-          "sort_order": 7
+          "body": "To ensure smooth communication and a personalised experience, our team speaks English, Dutch, French, German and Romanian. No matter your language, we are here to help."
         }
       ]
     },

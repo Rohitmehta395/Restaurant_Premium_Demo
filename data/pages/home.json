@@ -18,6 +18,7 @@
   "services_section": {
     "show_section": true,
     "heading": "Our Services",
-    "intro": "Explore our tailored experiences designed to elevate your stay."
+    "intro_text": "Let FARMform be your space where business meets tranquility. Host strategic meetings, launch products, collaborate with your team or unwind in comfort. With inspiring meeting spaces, private accommodations and serene surroundings, FARMform offers the perfect balance of productivity and relaxation – day and night.",
+    "layout_variant": "grid-3"
   }
 }

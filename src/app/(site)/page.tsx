@@ -3,8 +3,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
 import { ValuesGrid } from "@/components/sections/ValuesGrid";
-import { SectionReveal } from "@/components/animation/SectionReveal";
-import { FAQSection } from "@/components/sections/FAQSection";
+import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
 import { getHeroBySlug, getHomePageData, getFeatureGroup, getValuesData } from "@/lib/data/loaders";
 import { buildMetadata } from "@/lib/seo";
 import { Metadata } from "next";
@@ -34,23 +33,15 @@ export default async function Page() {
       <AboutSection data={homeData.about_section} />
       <ServicesGrid data={homeData.services_section} />
       
-      {featuresData && homeData.features_section?.show_features ? (
-        <section className="py-section bg-surface-default">
-          <div className="container-content">
-            <SectionReveal className="mb-16">
-              <h2 className="text-section-h2 text-text-primary font-display font-semibold">
-                {String(homeData.features_section.section_heading || "Features")}
-              </h2>
-            </SectionReveal>
-            <FeaturesGrid featureGroup={featuresData} variant="expanded" />
-          </div>
-        </section>
+      {featuresData && (
+        <FeaturesGrid featureGroup={featuresData} />
+      )}
+
+      {valuesData && valuesData.values?.length > 0 ? (
+        <ValuesGrid data={valuesData} />
       ) : null}
 
-      {valuesData && valuesData.values?.length > 0 ? <ValuesGrid data={valuesData} /> : null}
-      
-      <FAQSection />
+      <PreFooterCTA />
     </main>
   );
 }
-

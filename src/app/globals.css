@@ -8,15 +8,17 @@
 :root {
   /* Colors */
   --color-surface-default: #FFFFFF;
-  --color-surface-alternate: #F8F6F2;
+  --color-surface-alternate: #F0EDE8;
   --color-surface-dark: #1A1A18;
-  --color-text-primary: #111110;
-  --color-text-secondary: #6B6861;
-  --color-text-on-dark: #F5F3EF;
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-text-on-dark: #FFFFFF;
   --color-text-on-primary: #FFFFFF;
-  --color-brand-primary: #111110;
+  --color-brand-primary: #111111;
   --color-brand-secondary: #C5A97A;
-  --color-border-subtle: #E8E4DC;
+  --color-brand-accent: #C8B99A;
+  --color-border-subtle: #E0DDD8;
   --color-border-strong: #2A2A28;
   --color-overlay-dark: rgba(17, 17, 16, 0.45);
 
@@ -82,10 +84,12 @@
   --color-brand-secondary: var(--color-brand-secondary);
   --color-border-subtle: var(--color-border-subtle);
   --color-border-strong: var(--color-border-strong);
+  --color-text-muted: var(--color-text-muted);
+  --color-brand-accent: var(--color-brand-accent);
   
   /* Fonts */
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
 
   /* Spacing Extension */
   --spacing-18: 4.5rem;

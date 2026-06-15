@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionReveal } from "@/components/animation/SectionReveal";
 import type { ValuesData } from "@/types/components";
 
@@ -9,28 +10,41 @@ export function ValuesGrid({ data }: ValuesGridProps) {
   if (!data || !data.values || data.values.length === 0) return null;
 
   return (
-    <section className="py-section bg-surface-alternate">
+    <section className="bg-[#F0EDE8] py-12 md:py-[80px]">
       <div className="container-content">
-        <SectionReveal className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-section-h2 text-text-primary font-display font-semibold">
-            {data.section_heading}
+        <SectionReveal className="text-left mb-10">
+          <p className="text-[11px] tracking-[0.18em] uppercase text-[#888] mb-2">
+            OUR VALUES
+          </p>
+          <h2 className="font-display text-[36px] text-[#111] font-normal">
+            What drive us at our core
           </h2>
-          {data.section_subheading && (
-            <p className="text-body-large text-text-secondary mt-4">
-              {data.section_subheading}
-            </p>
-          )}
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
           {data.values.map((value, index) => (
-            <SectionReveal key={value.slug} delay={index * 0.1} className="flex flex-col h-full bg-surface-default p-8 rounded-base border border-border-subtle shadow-subtle">
-              <h3 className="text-card-h3 font-display font-medium text-text-primary mb-3">
-                {value.label}
-              </h3>
-              <p className="text-body-base text-text-secondary leading-relaxed flex-1">
-                {value.description}
-              </p>
+            <SectionReveal key={value.slug} delay={index * 0.1}>
+              <div className="border border-[#E0DDD8] rounded-[4px] overflow-hidden bg-white h-full flex flex-col">
+                <div className="relative aspect-[4/3] bg-[#F0EDE8] overflow-hidden shrink-0">
+                  {value.image_ref && (
+                    <Image 
+                      src={value.image_ref}
+                      alt={value.label}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
+                </div>
+                
+                <div className="p-[16px] flex flex-col flex-1">
+                  <h3 className="text-[17px] font-semibold text-[#111] mb-2 font-display">
+                    {value.label}
+                  </h3>
+                  <p className="text-[13px] text-[#666] leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              </div>
             </SectionReveal>
           ))}
         </div>

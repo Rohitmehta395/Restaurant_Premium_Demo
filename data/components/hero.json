@@ -3,57 +3,24 @@
     {
       "slug": "home-hero",
       "type": "slideshow",
-      "eyebrow_text": "Where work meets comfort",
-      "headline": "Welcome to FarmForm",
+      "eyebrow_text": "WELCOME TO FARMFORM",
       "headline_parts": [
-        {
-          "text": "Welcome to Farm",
-          "emphasis": false
-        },
-        {
-          "text": "Form",
-          "emphasis": true
-        }
+        { "text": "Experience a New Way", "emphasis": false },
+        { "text": "of Business Stay and Events", "emphasis": false }
       ],
-      "subheadline": "Experience FARMform®",
+      "subheadline": null,
       "show_cta": false,
+      "text_position": "bottom-left",
       "slideshow_images": [
-        {
-          "image_ref": "/images/hero/hero-01.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-02.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-03.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-04.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-05.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-06.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-07.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-08.png",
-          "alt_text": "FARMform exterior/interior"
-        },
-        {
-          "image_ref": "/images/hero/hero-09.png",
-          "alt_text": "FARMform exterior/interior"
-        }
+        { "image_ref": "/images/hero/hero-01.png", "alt_text": "FARMform exterior/interior 1" },
+        { "image_ref": "/images/hero/hero-02.png", "alt_text": "FARMform exterior/interior 2" },
+        { "image_ref": "/images/hero/hero-03.png", "alt_text": "FARMform exterior/interior 3" },
+        { "image_ref": "/images/hero/hero-04.png", "alt_text": "FARMform exterior/interior 4" },
+        { "image_ref": "/images/hero/hero-05.png", "alt_text": "FARMform exterior/interior 5" },
+        { "image_ref": "/images/hero/hero-06.png", "alt_text": "FARMform exterior/interior 6" },
+        { "image_ref": "/images/hero/hero-07.png", "alt_text": "FARMform exterior/interior 7" },
+        { "image_ref": "/images/hero/hero-08.png", "alt_text": "FARMform exterior/interior 8" },
+        { "image_ref": "/images/hero/hero-09.png", "alt_text": "FARMform exterior/interior 9" }
       ]
     }
   ]

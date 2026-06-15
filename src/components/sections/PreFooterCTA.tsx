@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getCTABySlug } from "@/lib/data/loaders";
 import { SectionReveal } from "@/components/animation/SectionReveal";
+import { ArrowUpRight } from "lucide-react";
 import type { Route } from "next";
 
 export async function PreFooterCTA() {
@@ -9,28 +11,37 @@ export async function PreFooterCTA() {
   if (!data) return null;
 
   return (
-    <section className="bg-surface-alternate">
-      <div className="container-content py-section">
-        {data.show_divider_above && (
-          <hr className="border-border-subtle mb-16" />
-        )}
-        
-        <SectionReveal className="reading-column mx-auto flex flex-col items-center">
-          <h2 className="text-section-h2 text-text-primary text-center font-display font-semibold">
+    <section className="bg-[#F0EDE8] py-12 md:py-[80px]">
+      <div className="container-content flex flex-col items-center justify-center">
+        <SectionReveal className="flex flex-col items-center w-full max-w-[600px] mx-auto">
+          {/* Logo Mark */}
+          <div className="w-12 h-12 relative flex items-center justify-center mb-2">
+            <Image 
+              src="/images/brand/logo-icon.svg" 
+              alt="FARMform mark" 
+              width={48} 
+              height={48} 
+              className="object-contain"
+            />
+          </div>
+
+          <h2 className="font-display text-[42px] text-[#111] font-normal text-center mt-4 mb-4">
             {data.heading}
           </h2>
+          
           {data.body && (
-            <p className="text-body-large text-text-secondary text-center mt-4 mb-8">
+            <p className="text-[15px] text-[#666] text-center max-w-[500px] mx-auto mb-8">
               {data.body}
             </p>
           )}
           
           <Link
             href={(data.button_url || "/") as Route}
-            className="bg-brand-primary text-text-on-dark px-8 py-3 rounded-btn text-sm font-medium tracking-wide uppercase hover:bg-opacity-80 transition-colors duration-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
+            className="bg-[#111] text-white rounded-full px-8 py-3 text-[12px] tracking-[0.1em] uppercase font-medium flex items-center gap-2 hover:bg-[#333] transition-colors"
             target={data.open_in_new_tab ? "_blank" : undefined}
           >
             {data.button_text}
+            <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
         </SectionReveal>
       </div>

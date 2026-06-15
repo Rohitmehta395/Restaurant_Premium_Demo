@@ -4,7 +4,7 @@ import { ServiceCard } from "@/components/cards/ServiceCard";
 import { SectionReveal } from "@/components/animation/SectionReveal";
 
 interface ServicesGridProps {
-  data?: HomePageData["services_section"];
+  data?: HomePageData["services_section"] & { intro_text?: string };
 }
 
 export async function ServicesGrid({ data }: ServicesGridProps) {
@@ -21,22 +21,22 @@ export async function ServicesGrid({ data }: ServicesGridProps) {
   if (publishedServices.length === 0) return null;
 
   return (
-    <section className="py-section bg-surface-alternate">
+    <section className="bg-white py-12 md:py-[80px]">
       <div className="container-content">
         {data.heading && (
-          <SectionReveal className="text-center mb-12">
-            <h2 className="text-section-h2 text-text-primary font-display font-semibold">
+          <SectionReveal className="text-left mb-10">
+            <h2 className="text-[36px] text-[#111] font-display font-normal mb-4">
               {data.heading}
             </h2>
-            {data.intro && (
-              <p className="text-body-large text-text-secondary mt-4 max-w-2xl mx-auto">
-                {data.intro}
+            {(data as any).intro_text && (
+              <p className="text-[15px] text-[#666] leading-relaxed max-w-[560px]">
+                {(data as any).intro_text}
               </p>
             )}
           </SectionReveal>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {publishedServices.map((service, index) => (
             <SectionReveal key={service.slug} delay={index * 0.15}>
               <ServiceCard

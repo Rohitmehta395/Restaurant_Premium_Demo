@@ -12,19 +12,18 @@ export async function NewsletterSection() {
   }
 
   return (
-    <section className="py-section bg-surface-dark text-text-on-dark">
-      <div className="container-content">
-        <div className="reading-column mx-auto">
-          <h2 className="text-section-h2 text-center font-display font-semibold">
-            {data.heading}
-          </h2>
-          {data.subheading && (
-            <p className="text-body-large text-text-on-dark/70 text-center mt-4">
-              {data.subheading}
-            </p>
-          )}
-          <NewsletterForm data={data} />
-        </div>
+    <section className="bg-[#1A1A18] pt-12 md:pt-[80px] pb-0">
+      <div className="container-content flex flex-col items-center">
+        {data.section_label && (
+          <p className="text-[11px] tracking-[0.18em] uppercase text-white/60 mb-6 text-center">
+            {data.section_label}
+          </p>
+        )}
+        <h2 className="font-display text-[36px] md:text-[42px] text-white font-normal text-center leading-[1.3] max-w-[700px] mx-auto mb-10">
+          {data.heading}
+        </h2>
+        
+        <NewsletterForm data={data} />
       </div>
     </section>
   );

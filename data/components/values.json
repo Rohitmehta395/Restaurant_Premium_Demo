@@ -1,35 +1,40 @@
 {
-  "section_heading": "Our Values",
+  "section_heading": "OUR VALUES",
   "section_subheading": "What drive us at our core",
   "values": [
     {
       "slug": "freedom",
       "label": "Freedom",
       "description": "Empowering you to shape your time with us.",
+      "image_ref": "/images/story/freedom.jpg",
       "sort_order": 1
     },
     {
       "slug": "sustainability",
       "label": "Sustainability",
       "description": "Building a greener future with eco-conscious choices.",
+      "image_ref": "/images/story/sustainability.jpg",
       "sort_order": 2
     },
     {
       "slug": "exclusivity",
       "label": "Exclusivity",
-      "description": "Creating spaces that feel uniquely yours.",
+      "description": "Creating tailored, private experiences.",
+      "image_ref": "/images/story/exclusivity.jpg",
       "sort_order": 3
     },
     {
       "slug": "comfort",
       "label": "Comfort",
-      "description": "Designed for your well-being.",
+      "description": "Balancing modern luxury with a homely atmosphere.",
+      "image_ref": "/images/story/comfort.jpg",
       "sort_order": 4
     },
     {
       "slug": "inspiration",
       "label": "Inspiration",
-      "description": "Igniting creativity and new perspectives.",
+      "description": "Encouraging creativity and relaxation through our farm-inspired design.",
+      "image_ref": "/images/story/inspiration.jpg",
       "sort_order": 5
     }
   ]
