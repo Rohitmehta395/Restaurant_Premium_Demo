@@ -3,7 +3,6 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
 import { ValuesGrid } from "@/components/sections/ValuesGrid";
-import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
 import { getHeroBySlug, getHomePageData, getFeatureGroup, getValuesData } from "@/lib/data/loaders";
 import { buildMetadata } from "@/lib/seo";
 import { Metadata } from "next";
@@ -51,10 +50,6 @@ export default async function Page() {
           <ValuesGrid data={valuesData} />
         </GsapReveal>
       ) : null}
-
-      <GsapReveal direction="up" distance={40} triggerOffset="top 90%">
-        <PreFooterCTA />
-      </GsapReveal>
     </main>
   );
 }

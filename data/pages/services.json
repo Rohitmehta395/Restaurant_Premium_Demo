@@ -12,10 +12,12 @@
       "card_image_alt": "Inspiring meeting spaces at FARMform",
       "meta_title": "Meeting Spaces | FARMform",
       "meta_description": "Exclusive meeting rooms for your team.",
+      "page_subtitle": "At FARMform, our meeting rooms are designed to inspire productivity and collaboration, equipped with state-of-the-art technology and flexible layouts to suit your needs.",
       "quick_nav_items": [
-        { "label": "Spaces", "id": "spaces" },
-        { "label": "Technologies", "id": "technologies" },
-        { "label": "Amenities", "id": "amenities" }
+        { "label": "THE SPACES", "id": "the-spaces" },
+        { "label": "ONE PRICE CONCEPT", "id": "one-price-concept" },
+        { "label": "TECHNOLOGIES", "id": "technologies" },
+        { "label": "AMENITIES", "id": "amenities" }
       ],
       "sort_order": 1
     },
@@ -55,10 +57,12 @@
     {
       "service_slug": "meeting-spaces",
       "headline": "One Price Concept",
-      "body": "No hidden fees or complex calculations. Our single price per person includes everything you need for a productive meeting.",
-      "inclusions_heading": "What's included?",
-      "inclusions_body": "Exclusive room access, smart presentation technology, unlimited coffee & water, fresh fruits, dedicated host, and high-speed Wi-Fi.",
-      "catering_note": "Optional high-end catering and lunch options available upon request."
+      "body": "We keep it simple: rentals include complimentary access to coffee, tea, sparkling and still water. Catering options are available for your convenience and can be tailored to suit your needs, with any catering services billed separately.",
+      "inclusions_heading": "Tailored to Your Business Needs",
+      "inclusions_body": "At FARMform, we offer complete flexibility to create the ideal environment for you. Our spaces can be arranged in any layout to suit your needs, with options for breakout rooms and additional areas for smaller group sessions or private conversations.",
+      "catering_note": null,
+      "supporting_image_ref": "/images/spaces/business-needs.jpg",
+      "supporting_image_alt": "Tailored to Your Business Needs"
     },
     {
       "service_slug": "stay-the-night",

@@ -2,6 +2,7 @@ import { PreHeaderBar } from "@/components/layout/PreHeaderBar";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
+import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
 import { getFeaturesConfig } from "@/lib/data/loaders";
 import { GsapReveal } from "@/components/animation/GsapReveal";
 
@@ -19,6 +20,10 @@ export default async function SiteLayout({
       <main id="content" className="flex-1" tabIndex={-1}>
         {children}
       </main>
+
+      <GsapReveal direction="up" distance={40} triggerOffset="top 90%">
+        <PreFooterCTA />
+      </GsapReveal>
 
       <div className="bg-[#F0EDE8] pb-6 md:pb-8">
         <div className="container-content">

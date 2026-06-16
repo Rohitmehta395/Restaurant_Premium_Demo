@@ -57,6 +57,8 @@ export interface OnePriceConcept {
   inclusions_heading?: string;
   inclusions_body?: string;
   catering_note?: string;
+  supporting_image_ref?: string;
+  supporting_image_alt?: string;
 }
 
 export interface ServiceData {

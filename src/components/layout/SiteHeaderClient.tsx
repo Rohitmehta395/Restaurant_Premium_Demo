@@ -21,7 +21,7 @@ interface SiteHeaderClientProps {
   showSocialInMenu: boolean;
 }
 
-function DecorativeStar() {
+function DecorativeStar({ className }: { className?: string }) {
   return (
     <svg
       aria-hidden="true"
@@ -29,7 +29,7 @@ function DecorativeStar() {
       height="24"
       viewBox="0 0 14 14"
       fill="none"
-      className="size-[24px] shrink-0 text-white"
+      className={cn("size-[24px] shrink-0", className)}
     >
       <path
         d="M7 1.25L8.32 5.68L12.75 7L8.32 8.32L7 12.75L5.68 8.32L1.25 7L5.68 5.68L7 1.25Z"
@@ -41,12 +41,12 @@ function DecorativeStar() {
   );
 }
 
-function HamburgerIcon() {
+function HamburgerIcon({ className }: { className?: string }) {
   return (
-    <span aria-hidden="true" className="flex flex-col gap-[4px]">
-      <span className="block h-[1.5px] w-5 bg-white" />
-      <span className="block h-[1.5px] w-5 bg-white" />
-      <span className="block h-[1.5px] w-5 bg-white" />
+    <span aria-hidden="true" className={cn("flex flex-col gap-[4px]", className)}>
+      <span className="block h-[1.5px] w-5 bg-current" />
+      <span className="block h-[1.5px] w-5 bg-current" />
+      <span className="block h-[1.5px] w-5 bg-current" />
     </span>
   );
 }
@@ -63,17 +63,15 @@ export function SiteHeaderClient({
   showSocialInMenu,
 }: SiteHeaderClientProps) {
   const pathname = usePathname();
-  const hasFullBleedHero = pathname === "/";
+  const isLightHeader = pathname === "/" || pathname === "/business-events";
+  
   const [isPastHero, setIsPastHero] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const isScrolled = !hasFullBleedHero || isPastHero;
+  // Scroll behavior is active on all pages now
+  const isScrolled = isPastHero;
 
   useEffect(() => {
-    if (!hasFullBleedHero) {
-      return;
-    }
-
     const handleScroll = () => {
       const shouldCollapse = window.scrollY > 150;
       setIsPastHero((current) =>
@@ -85,7 +83,7 @@ export function SiteHeaderClient({
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasFullBleedHero]);
+  }, []);
 
   const normalizedMenuLabel = menuTriggerLabel || "MENU";
   const menuButtonLabel = isMenuOpen
@@ -98,6 +96,7 @@ export function SiteHeaderClient({
         <div className="farmform-site-header__inner">
           {/* Left Element */}
           <div className="relative flex items-center h-12 w-full">
+            {/* Scrolled State: Small Logo Button */}
             <Link
               href={"/" as Route}
               aria-label={`${businessName} home`}
@@ -115,16 +114,22 @@ export function SiteHeaderClient({
                 unoptimized
               />
             </Link>
+            
+            {/* Unscrolled State: Tagline */}
             <Link
               href={"/" as Route}
               className={cn(
-                "absolute left-0 flex items-center gap-2 text-white transition-all duration-700 ease-out",
+                "absolute left-0 flex items-center gap-2 transition-all duration-700 ease-out",
                 !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
+                isLightHeader ? "text-white" : "text-[#111]"
               )}
               aria-label={`${brandTagline} - ${businessName} home`}
             >
-              <DecorativeStar />
-              <span className="text-[14px] font-semibold uppercase tracking-[0.15em] text-white">
+              <DecorativeStar className={isLightHeader ? "text-white" : "text-[#111]"} />
+              <span className={cn(
+                "text-[14px] font-semibold uppercase tracking-[0.15em]",
+                isLightHeader ? "text-white" : "text-[#111]"
+              )}>
                 {brandTagline}
               </span>
             </Link>
@@ -140,17 +145,24 @@ export function SiteHeaderClient({
                 !isScrolled
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-4 pointer-events-none",
+                isLightHeader ? "text-white" : "text-[#111]"
               )}
             >
               <Image
-                src="/images/brand/logo.svg"
+                src={isLightHeader ? "/images/brand/logo.svg" : "/images/brand/logo-icon.svg"}
                 alt=""
                 width={40}
                 height={40}
-                className="size-10 md:size-[40px] object-contain brightness-0 invert"
+                className={cn(
+                  "size-10 md:size-[40px] object-contain",
+                  isLightHeader ? "brightness-0 invert" : "brightness-0"
+                )}
                 unoptimized
               />
-              <span className="text-white  text-[26px] md:text-[34px] tracking-wide font-normal">
+              <span className={cn(
+                "text-[26px] md:text-[34px] tracking-wide font-normal",
+                isLightHeader ? "text-white" : "text-[#111]"
+              )}>
                 FARM
                 <span className="italic font-semibold font-display">form</span>
               </span>
@@ -165,15 +177,15 @@ export function SiteHeaderClient({
             aria-label={menuButtonLabel}
             onClick={() => setIsMenuOpen((current) => !current)}
             className={cn(
-              "z-[60] flex cursor-pointer items-center gap-[10px] text-white justify-self-end",
-              "transition-all duration-700 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white",
+              "z-[60] flex cursor-pointer items-center gap-[10px] justify-self-end",
+              "transition-all duration-700 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
               isMenuOpen ? "opacity-0 pointer-events-none" : "hover:opacity-70",
               isScrolled
-                ? "bg-black rounded-xl px-[18px] h-10"
-                : "h-10 px-0 rounded-none bg-transparent",
+                ? "bg-black text-white rounded-xl px-[18px] h-10 focus-visible:outline-black"
+                : cn("h-10 px-0 rounded-none bg-transparent", isLightHeader ? "text-white focus-visible:outline-white" : "text-[#111] focus-visible:outline-black")
             )}
           >
-            <span className="text-[13px] font-medium uppercase tracking-[0.1em] text-white mt-[1px]">
+            <span className="text-[13px] font-medium uppercase tracking-[0.1em] mt-[1px]">
               {normalizedMenuLabel}
             </span>
             <HamburgerIcon />

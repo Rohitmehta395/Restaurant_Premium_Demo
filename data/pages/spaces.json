@@ -3,155 +3,62 @@
     {
       "slug": "bowies-boardroom",
       "parent_service_slug": "meeting-spaces",
-      "status": "published",
       "name": "Bowie's Boardroom",
-      "capacity_label": "4–12",
+      "capacity_min": 4,
       "capacity_max": 12,
+      "capacity_label": "4 – 12 GUESTS",
       "area_sqm": 40,
-      "description_short": "boardroom style",
-      "description_long": "Bowie's Boardroom is designed for focused work.",
+      "area_display": "40m²",
+      "layout_styles": ["Boardroom style"],
+      "special_features": [],
+      "description_long": "A cozy yet fully equipped boardroom ideal for strategic discussions, leadership meetings or smaller team collaborations. Warm, professional and private – perfect for focused work.",
+      "cover_image_ref": "/images/spaces/bowies-boardroom/gallery-01.jpg",
+      "gallery_trigger_label": "OPEN GALLERY",
+      "status": "published",
       "sort_order": 1,
       "gallery_images": [
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-01.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-02.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-03.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-04.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-05.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-06.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-07.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-08.jpg",
-          "alt_text": "Bowie's Boardroom"
-        },
-        {
-          "image_ref": "/images/spaces/bowies-boardroom/gallery-09.jpg",
-          "alt_text": "Bowie's Boardroom"
-        }
+        { "image_ref": "/images/spaces/bowies-boardroom/gallery-01.jpg", "alt_text": "Bowie's Boardroom" },
+        { "image_ref": "/images/spaces/bowies-boardroom/gallery-02.jpg", "alt_text": "Bowie's Boardroom" }
       ]
     },
     {
       "slug": "amazons-meadow",
       "parent_service_slug": "meeting-spaces",
-      "status": "published",
       "name": "Amazons' Meadow",
-      "capacity_label": "13–40",
+      "capacity_min": 13,
       "capacity_max": 40,
+      "capacity_label": "13 – 40 GUESTS",
       "area_sqm": 70,
-      "description_short": "adaptable layouts + private terrace",
-      "description_long": "A spacious area perfect for workshops.",
+      "area_display": "70m²",
+      "layout_styles": ["Fully adaptable for theater-style, U-shape, boardroom or collaborative sessions"],
+      "special_features": ["Private terrace"],
+      "description_long": "A spacious, flexible venue designed for presentations, workshops, team-building activities or larger group sessions. Bright, open and directly connected to the outdoor terrace – it adapts easily to your preferred layout.",
+      "cover_image_ref": "/images/spaces/amazons-meadow/gallery-01.jpg",
+      "gallery_trigger_label": "OPEN GALLERY",
+      "status": "published",
       "sort_order": 2,
       "gallery_images": [
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-01.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-02.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-03.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-04.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-05.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-06.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-07.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-08.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-09.jpg",
-          "alt_text": "Amazons' Meadow"
-        },
-        {
-          "image_ref": "/images/spaces/amazons-meadow/gallery-010.jpg",
-          "alt_text": "Amazons' Meadow"
-        }
+        { "image_ref": "/images/spaces/amazons-meadow/gallery-01.jpg", "alt_text": "Amazons' Meadow" }
       ]
     },
     {
       "slug": "tokyos-lounge",
       "parent_service_slug": "meeting-spaces",
-      "status": "published",
       "name": "Tokyo's Lounge",
-      "capacity_label": "up to 20",
+      "capacity_min": null,
       "capacity_max": 20,
+      "capacity_label": "UP TO 20 GUESTS",
       "area_sqm": 45,
-      "description_short": "flexible + terrace + fireplace",
-      "description_long": "An informal setting with a fireplace.",
+      "area_display": "45m²",
+      "layout_styles": ["Flexible for formal or informal events"],
+      "special_features": ["Private terrace", "Fireplace"],
+      "description_long": "A stylish, relaxed meeting space that blends comfort with function. Ideal for informal strategy sessions, creative brainstorms, etc. With flexible setup and direct terrace access, it encourages open thinking and meaningful dialogue in a more laid-back atmosphere.",
+      "cover_image_ref": "/images/spaces/tokyos-lounge/gallery-01.jpg",
+      "gallery_trigger_label": "OPEN GALLERY",
+      "status": "published",
       "sort_order": 3,
       "gallery_images": [
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-01.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-02.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-03.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-04.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-05.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-06.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-07.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-08.jpg",
-          "alt_text": "Tokyo's Lounge"
-        },
-        {
-          "image_ref": "/images/spaces/tokyos-lounge/gallery-09.jpg",
-          "alt_text": "Tokyo's Lounge"
-        }
+        { "image_ref": "/images/spaces/tokyos-lounge/gallery-01.jpg", "alt_text": "Tokyo's Lounge" }
       ]
     }
   ]

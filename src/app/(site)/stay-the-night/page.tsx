@@ -94,6 +94,8 @@ export default async function StayTheNightPage() {
             inclusionsHeading={onePriceConcept.inclusions_heading || ""}
             inclusionsBody={onePriceConcept.inclusions_body || ""}
             cateringNote={onePriceConcept.catering_note}
+            supportingImageRef={onePriceConcept.supporting_image_ref}
+            supportingImageAlt={onePriceConcept.supporting_image_alt}
             background="default"
           />
         </div>

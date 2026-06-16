@@ -8,7 +8,7 @@ import {
   getFeatureGroup, 
   getFeaturesConfig 
 } from "@/lib/data/loaders";
-import { PageHeader } from "@/components/sections/PageHeader";
+
 import { QuickNavBar } from "@/components/interactive/QuickNavBar";
 import { SpaceCard } from "@/components/cards/SpaceCard";
 import { OnePriceConcept } from "@/components/sections/OnePriceConcept";
@@ -19,7 +19,7 @@ import { buildMetadata } from "@/lib/seo";
 export async function generateMetadata(): Promise<Metadata> {
   const service = await getServiceBySlug("meeting-spaces");
   if (!service) return {};
-
+ 
   return buildMetadata({
     title: service.meta_title || service.page_title,
     description: service.meta_description || "",
@@ -48,93 +48,98 @@ export default async function MeetingSpacesPage() {
 
   if (!service) notFound();
 
-  const heroImage = service.hero_image_ref ? {
-    src: service.hero_image_ref,
-    alt: service.hero_image_alt || service.page_title,
-  } : undefined;
-
   return (
     <>
-      <PageHeader
-        title={service.page_title}
-        subtitle={service.page_subtitle}
-        heroImage={heroImage}
-        variant="standard"
-      />
-      
-      {features?.quick_navigation && service.quick_nav_items && service.quick_nav_items.length > 0 && (
-        <QuickNavBar items={service.quick_nav_items} />
-      )}
+      {/* Custom Header Section */}
+      <section className="bg-[#F0EDE8] min-h-[50vh] flex flex-col justify-center pt-[180px] pb-[40px]">
+        <div className="container-content w-full">
+          <SectionReveal>
+            <h1 className="font-display text-[38px] text-[#111] font-semibold">
+              {service.page_title}
+            </h1>
+            {service.page_subtitle && (
+              <p className="text-[15px] text-[#111]/80 leading-relaxed max-w-[460px] mt-[10px]">
+                {service.page_subtitle}
+              </p>
+            )}
+            
+            {/* Quick Nav */}
+            {features?.quick_navigation && service.quick_nav_items && service.quick_nav_items.length > 0 && (
+              <div className="mt-12">
+                <QuickNavBar items={service.quick_nav_items} />
+              </div>
+            )}
+          </SectionReveal>
+        </div>
+      </section>
 
       {/* The Spaces Section */}
       {spaces.length > 0 && (
-        <section id="spaces" className="py-section container-content scroll-mt-24">
-          <SectionReveal>
-            <h2 className="text-section-h2 font-display text-text-primary mb-16">
-              The Spaces
-            </h2>
-          </SectionReveal>
-          
-          <div className="flex flex-col gap-12 lg:gap-24">
-            {spaces.map((space: SpaceData, index: number) => (
-              <SectionReveal key={space.slug} delay={index * 0.2}>
-                <SpaceCard space={space} />
-              </SectionReveal>
-            ))}
+        <section id="the-spaces" className="bg-[#FFFFFF] py-[60px] scroll-mt-24">
+          <div className="container-content">
+            <div className="flex flex-col">
+              {spaces.map((space: SpaceData, index: number) => (
+                <div key={space.slug}>
+                  <SectionReveal delay={index * 0.2}>
+                    <SpaceCard space={space} />
+                  </SectionReveal>
+                  {index < spaces.length - 1 && (
+                    <hr className="border-[#E0DDD8]" />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}
 
       {/* One Price Concept Section */}
       {onePriceConcept && (
-        <div id="one-price-concept" className="scroll-mt-24">
-          <OnePriceConcept
-            headline={onePriceConcept.headline}
-            body={onePriceConcept.body}
-            inclusionsHeading={onePriceConcept.inclusions_heading || ""}
-            inclusionsBody={onePriceConcept.inclusions_body || ""}
-            cateringNote={onePriceConcept.catering_note}
-            background="alternate"
-          />
-        </div>
+        <OnePriceConcept
+          headline={onePriceConcept.headline}
+          body={onePriceConcept.body}
+          inclusionsHeading={onePriceConcept.inclusions_heading || ""}
+          inclusionsBody={onePriceConcept.inclusions_body || ""}
+          cateringNote={onePriceConcept.catering_note}
+          supportingImageRef={onePriceConcept.supporting_image_ref}
+          supportingImageAlt={onePriceConcept.supporting_image_alt}
+          background="alternate"
+        />
       )}
 
       {/* Technologies Section */}
       {technologies && technologies.items.length > 0 && (
-        <section id="technologies" className="py-section container-content scroll-mt-24">
-          <SectionReveal>
-            <h2 className="text-section-h2 font-display text-text-primary mb-6">
-              {technologies.heading || "Technologies"}
-            </h2>
-            {technologies.intro && (
-              <p className="text-body-large text-text-secondary max-w-3xl mb-16">
-                {technologies.intro}
-              </p>
-            )}
-          </SectionReveal>
-          
-          <div className={!technologies.intro ? "mt-16" : ""}>
-            <FeaturesGrid featureGroup={technologies} variant="compact" />
+        <section id="technologies" className="bg-[#F0EDE8] py-[2px] scroll-mt-24">
+          <div className="container-content">
+            <div className="w-full max-w-[950px] mx-auto">
+              <SectionReveal>
+                <h2 className="font-display text-[38px] text-[#111] font-semibold mb-5 text-left">
+                  {technologies.heading || "Technologies"}
+                </h2>
+              </SectionReveal>
+              
+              <FeaturesGrid featureGroup={technologies} variant="compact" />
+            </div>
           </div>
         </section>
       )}
 
       {/* Amenities Section */}
       {amenities && amenities.items.length > 0 && (
-        <section id="amenities" className="py-section bg-surface-alternate scroll-mt-24">
+        <section id="amenities" className="bg-[#F0EDE8] py-[50px] scroll-mt-24">
           <div className="container-content">
-            <SectionReveal>
-              <h2 className="text-section-h2 font-display text-text-primary mb-6">
-                {amenities.heading || "Amenities"}
-              </h2>
-              {amenities.intro && (
-                <p className="text-body-large text-text-secondary max-w-3xl mb-16">
-                  {amenities.intro}
-                </p>
-              )}
-            </SectionReveal>
-            
-            <div className={!amenities.intro ? "mt-16" : ""}>
+            <div className="w-full max-w-[950px] mx-auto">
+              <SectionReveal>
+                <h2 className="font-display text-[38px] text-[#111] font-semibold mb-1 text-left">
+                  {amenities.heading || "Amenities"}
+                </h2>
+                {amenities.intro && (
+                  <p className="text-[15px] text-[#111]/80 leading-relaxed max-w-[520px] mb-8 text-left">
+                    {amenities.intro}
+                  </p>
+                )}
+              </SectionReveal>
+              
               <FeaturesGrid featureGroup={amenities} variant="expanded" />
             </div>
           </div>

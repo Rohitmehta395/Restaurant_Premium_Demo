@@ -1,16 +1,15 @@
 import Image from "next/image";
 import { SectionReveal } from "@/components/animation/SectionReveal";
-import { cn } from "@/lib/utils";
 
 interface OnePriceConceptProps {
   headline: string;
   body: string;
   inclusionsHeading: string;
   inclusionsBody: string;
-  cateringNote?: string;
+  cateringNote?: string | null;
   supportingImageRef?: string;
   supportingImageAlt?: string;
-  background?: "default" | "alternate";
+  background?: "default" | "alternate"; // Kept for prop compatibility, though background is hardcoded to #F0EDE8
 }
 
 export function OnePriceConcept({
@@ -21,76 +20,66 @@ export function OnePriceConcept({
   cateringNote,
   supportingImageRef,
   supportingImageAlt,
-  background = "default",
 }: OnePriceConceptProps) {
-  const hasImage = !!supportingImageRef;
-
-  const bgClasses = {
-    default: "bg-surface-default",
-    alternate: "bg-surface-alternate border-y border-border-subtle",
-  };
-
-  const Content = ({ isCentered }: { isCentered?: boolean }) => (
-    <div className={cn(isCentered ? "text-center" : "text-left")}>
-      <h2 className="text-section-h2 font-display font-semibold text-text-primary">
-        {headline}
-      </h2>
-      <p className="text-body-large text-text-secondary mt-4 leading-relaxed">
-        {body}
-      </p>
-
-      <div className="mt-8 pt-8 border-t border-border-subtle">
-        <h3 className="text-card-h3 font-semibold text-text-primary">
-          {inclusionsHeading}
-        </h3>
-        <p className="text-body-base text-text-secondary mt-3 leading-relaxed">
-          {inclusionsBody}
-        </p>
-      </div>
-
-      {cateringNote && (
-        <p
-          aria-label="Additional note about catering"
-          className="text-caption italic text-text-secondary mt-6 pt-6 border-t border-border-subtle"
-        >
-          {cateringNote}
-        </p>
-      )}
-    </div>
-  );
+  const imageRef =
+    supportingImageRef || "/images/spaces/one-price-tailored.jpg";
 
   return (
-    <section className={cn("py-20 md:py-32 w-full", bgClasses[background])}>
-      <div className="container-content">
-        {hasImage ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-1 lg:order-1">
-              <SectionReveal direction="up" delay={0}>
-                <Content />
-              </SectionReveal>
-            </div>
+    <section
+      id="one-price-concept"
+      className="relative bg-[#F0EDE8] py-[85px] scroll-mt-24"
+    >
+      {/* Gradient Fade Overlay - adjust h-[150px] to control fade distance */}
+      <div className="absolute top-0 left-0 w-full h-[70px] bg-gradient-to-b from-[#FFFFFF] to-transparent pointer-events-none" />
 
-            <div className="order-2 lg:order-2">
-              <SectionReveal direction="right" delay={0.2}>
-                <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-base overflow-hidden shadow-base">
+      <div className="container-content relative z-10">
+        <div className="flex flex-col gap-[48px] w-full max-w-[950px] mx-auto">
+          {/* Panel 1 — One Price Concept */}
+          <SectionReveal direction="up" delay={0}>
+            <div className="bg-[#FFFFFF] rounded-[8px] px-[24px] py-[64px] md:px-[60px] md:py-[56px] text-center shadow-sm">
+              <h2 className="font-display text-[36px] text-[#111] font-semibold text-center">
+                {headline}
+              </h2>
+              <p className="text-[16px] text-[#555] leading-[1.6] text-center mt-6 max-w-[500px] mx-auto">
+                {body}
+              </p>
+            </div>
+          </SectionReveal>
+
+          {/* Panel 2 — Tailored to Your Business Needs */}
+          <SectionReveal direction="up" delay={0.1}>
+            <div className="bg-[#FFFFFF] rounded-[8px] p-[24px] md:p-[40px] shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-[40px] md:gap-[60px] items-center justify-center">
+                {/* Left: Image */}
+                <div className="relative aspect-[3/4] rounded-[8px] overflow-hidden bg-gray-100">
                   <Image
-                    src={supportingImageRef!}
-                    alt={supportingImageAlt || ""}
+                    src={imageRef}
+                    alt={supportingImageAlt || inclusionsHeading}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(min-width: 768px) 240px, 100vw"
                   />
                 </div>
-              </SectionReveal>
+
+                {/* Right: Text */}
+                <div>
+                  <h3 className="font-display text-[36px] text-[#111] font-semibold">
+                    {inclusionsHeading}
+                  </h3>
+                  <p className="text-[16px] text-[#555] leading-relaxed mt-3">
+                    {inclusionsBody}
+                  </p>
+
+                  {cateringNote && (
+                    <p className="text-[12px] italic text-[#888] mt-4 pt-4 border-t border-[#E8E4DC]">
+                      {cateringNote}
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="reading-column mx-auto">
-            <SectionReveal direction="up" delay={0}>
-              <Content isCentered />
-            </SectionReveal>
-          </div>
-        )}
+          </SectionReveal>
+        </div>
       </div>
     </section>
   );

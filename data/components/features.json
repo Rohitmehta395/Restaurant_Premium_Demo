@@ -51,80 +51,58 @@
     },
     {
       "slug": "technologies",
+      "heading": "Technologies",
       "display_layout": "icon-grid",
-      "note": "We ensure everything runs smoothly. Adapters and technical support are always on standby.",
+      "note": "We intentionally do not support video conferencing. FARMform is designed to foster genuine, in-person interaction in a focused and inspiring environment.",
       "items": [
-        {
-          "slug": "smart-tv",
-          "label": "Screen Smart TV",
-          "descriptor": "crisp visuals",
-          "sort_order": 1
-        },
-        {
-          "slug": "sound",
-          "label": "High-Quality Sound",
-          "descriptor": "immersive audio",
-          "sort_order": 2
-        },
-        {
-          "slug": "clickshare",
-          "label": "Barco ClickShare",
-          "descriptor": "wireless presentations",
-          "sort_order": 3
-        },
-        {
-          "slug": "flipchart",
-          "label": "Digital Flipchart",
-          "descriptor": "interactive whiteboarding",
-          "sort_order": 4
-        },
-        {
-          "slug": "wifi",
-          "label": "Super-Fast Wi-Fi",
-          "descriptor": "seamless coverage",
-          "sort_order": 5
-        },
-        {
-          "slug": "power",
-          "label": "Power Outlets",
-          "descriptor": "stay connected",
-          "sort_order": 6
-        }
+        { "slug": "smart-tv", "icon_ref": "Monitor", "label": "Screen Smart TV", "descriptor": "crisp visuals" },
+        { "slug": "sound", "icon_ref": "Headphones", "label": "High-Quality Sound", "descriptor": "immersive audio" },
+        { "slug": "clickshare", "icon_ref": "Cast", "label": "Barco ClickShare", "descriptor": "wireless presentations" },
+        { "slug": "flipchart", "icon_ref": "LayoutTemplate", "label": "Digital Flipchart", "descriptor": "interactive whiteboarding" },
+        { "slug": "wifi", "icon_ref": "Wifi", "label": "Super-Fast Wi-Fi", "descriptor": "seamless coverage" },
+        { "slug": "outlets", "icon_ref": "PlugZap", "label": "Power Outlets", "descriptor": "stay connected" }
       ]
     },
     {
       "slug": "amenities",
-      "display_layout": "icon-list",
+      "heading": "Amenities",
+      "intro": "Each detail is designed to enhance your experience, ensuring comfort, productivity and inspiration throughout your time at FARMform.",
+      "display_layout": "photo-card-grid",
       "items": [
         {
-          "slug": "coffee",
+          "slug": "coffee-corner",
+          "icon_ref": "Coffee",
+          "image_ref": "/images/spaces/amenities/coffee-corner.jpg",
           "label": "Coffee Corner",
-          "body": "Coffee available.",
-          "sort_order": 1
+          "body": "Enjoy a continuously stocked coffee corner with complimentary beverages to keep you refreshed throughout the day."
         },
         {
-          "slug": "daylight",
+          "slug": "natural-daylight",
+          "icon_ref": "Sun",
+          "image_ref": "/images/spaces/amenities/natural-daylight.jpg",
           "label": "Natural Daylight",
-          "body": "Lots of sun.",
-          "sort_order": 2
+          "body": "Large windows flood the rooms with daylight, creating a bright, energising and productive work environment."
         },
         {
-          "slug": "views",
+          "slug": "inspiring-views",
+          "icon_ref": "Eye",
+          "image_ref": "/images/spaces/amenities/inspiring-views.jpg",
           "label": "Inspiring Views",
-          "body": "Look outside.",
-          "sort_order": 3
+          "body": "Admire the serene views of the surrounding fields – a peaceful backdrop that fosters focus, creativity and calm."
         },
         {
-          "slug": "terrace",
+          "slug": "outdoor-terrace",
+          "icon_ref": "Trees",
+          "image_ref": "/images/spaces/amenities/outdoor-terrace.jpg",
           "label": "Outdoor Terrace",
-          "body": "Relax.",
-          "sort_order": 4
+          "body": "Step outside for a breath of fresh air. Ideal for informal chats, coffee breaks or simply enjoying nature between sessions."
         },
         {
           "slug": "summer-house",
+          "icon_ref": "Home",
+          "image_ref": "/images/spaces/amenities/summer-house.jpg",
           "label": "The Summer House",
-          "body": "For summer.",
-          "sort_order": 5
+          "body": "A cozy, detached space ideal for breakout sessions, private calls or quiet focus – filled with natural light and views of the grounds."
         }
       ]
     },
