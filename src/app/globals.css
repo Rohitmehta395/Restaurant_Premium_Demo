@@ -249,4 +249,17 @@
   .text-body-large {
     @apply text-[16px] md:text-[17px] lg:text-[18px] leading-[1.7];
   }
+
+  @keyframes ken-burns {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+
+  .animate-ken-burns {
+    animation: ken-burns var(--ken-burns-duration, 5000ms) linear forwards;
+  }
 }

@@ -15,11 +15,11 @@ export async function NewsletterSection() {
     <section className="bg-transparent pt-12 md:pt-[80px] pb-0">
       <div className="px-6 md:px-12 lg:px-16 flex flex-col items-center">
         {data.section_label && (
-          <p className="text-[11px] tracking-[0.18em] uppercase text-white/60 mb-6 text-center">
-            {data.section_label}
+          <p className="text-[16px] tracking-[0.18em] uppercase text-white mb-6 text-center font-semibold">
+            {data.section_label} 
           </p>
         )}
-        <h2 className="font-display text-[36px] md:text-[42px] text-white font-normal text-center leading-[1.3] max-w-[700px] mx-auto mb-10">
+        <h2 className="font-display text-[24px] md:text-[32px] text-white font-semibold text-center leading-[1] max-w-[700px] mx-auto mb-5">
           {data.heading}
         </h2>
 

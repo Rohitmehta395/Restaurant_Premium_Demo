@@ -34,7 +34,7 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-[560px] mx-auto mt-8">
+    <form onSubmit={handleSubmit} className="w-full max-w-[700px] mx-auto mt-8">
       <div className="flex flex-col">
         <div className="flex bg-[#262626] rounded-full overflow-hidden">
           <input
@@ -49,8 +49,8 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
           <button
             type="submit"
             disabled={status === "loading" || !consent}
-            className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-1 my-1 hover:bg-white/90 transition-colors disabled:cursor-not-allowed"
-            aria-label="Subscribe"
+            className="w-24 h-auto bg-white rounded-full flex items-center justify-center flex-shrink-0 mr-1 my-1 hover:bg-white/90 transition-colors disabled:cursor-not-allowed"
+            aria-label="Subscribe" 
           >
             <ArrowRight className="size-5 text-black" aria-hidden="true" />
           </button>
@@ -62,7 +62,7 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
             checked={consent}
             onChange={(e) => setConsent(e.target.checked)}
             required
-            className="border border-white/40 w-4 h-4 rounded-none bg-transparent appearance-none cursor-pointer checked:bg-white/20"
+            className="border border-white/40 w-4 h-4 rounded-none bg-transparent appearance-none cursor-pointer checked:bg-white"
           />
           <span
             dangerouslySetInnerHTML={{

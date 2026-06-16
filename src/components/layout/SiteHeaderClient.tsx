@@ -25,11 +25,11 @@ function DecorativeStar() {
   return (
     <svg
       aria-hidden="true"
-      width="14"
-      height="14"
+      width="24"
+      height="24"
       viewBox="0 0 14 14"
       fill="none"
-      className="size-[14px] shrink-0 text-white"
+      className="size-[24px] shrink-0 text-white"
     >
       <path
         d="M7 1.25L8.32 5.68L12.75 7L8.32 8.32L7 12.75L5.68 8.32L1.25 7L5.68 5.68L7 1.25Z"
@@ -103,7 +103,7 @@ export function SiteHeaderClient({
               aria-label={`${businessName} home`}
               className={cn(
                 "absolute left-0 flex size-12 flex-none items-center justify-center rounded-full bg-black text-white transition-all duration-700 ease-out",
-                isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+                isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
               )}
             >
               <Image
@@ -119,12 +119,12 @@ export function SiteHeaderClient({
               href={"/" as Route}
               className={cn(
                 "absolute left-0 flex items-center gap-2 text-white transition-all duration-700 ease-out",
-                !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+                !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
               )}
               aria-label={`${brandTagline} - ${businessName} home`}
             >
               <DecorativeStar />
-              <span className="text-[11px] font-light uppercase tracking-[0.15em] text-white">
+              <span className="text-[14px] font-semibold uppercase tracking-[0.15em] text-white">
                 {brandTagline}
               </span>
             </Link>
@@ -137,19 +137,22 @@ export function SiteHeaderClient({
               aria-label={`${businessName} home`}
               className={cn(
                 "absolute flex items-center gap-2 transition-all duration-700 ease-out",
-                !isScrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+                !isScrolled
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 -translate-y-4 pointer-events-none",
               )}
             >
               <Image
                 src="/images/brand/logo.svg"
                 alt=""
-                width={36}
-                height={36}
-                className="size-8 md:size-[36px] object-contain brightness-0 invert"
+                width={40}
+                height={40}
+                className="size-10 md:size-[40px] object-contain brightness-0 invert"
                 unoptimized
               />
-              <span className="text-white font-display text-[26px] md:text-[34px] tracking-wide">
-                FARM<span className="italic font-light">form</span>
+              <span className="text-white  text-[26px] md:text-[34px] tracking-wide font-normal">
+                FARM
+                <span className="italic font-semibold font-display">form</span>
               </span>
             </Link>
           </div>
@@ -165,7 +168,9 @@ export function SiteHeaderClient({
               "z-[60] flex cursor-pointer items-center gap-[10px] text-white justify-self-end",
               "transition-all duration-700 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white",
               isMenuOpen ? "opacity-0 pointer-events-none" : "hover:opacity-70",
-              isScrolled ? "bg-black rounded-xl px-[18px] h-10" : "h-10 px-0 rounded-none bg-transparent"
+              isScrolled
+                ? "bg-black rounded-xl px-[18px] h-10"
+                : "h-10 px-0 rounded-none bg-transparent",
             )}
           >
             <span className="text-[13px] font-medium uppercase tracking-[0.1em] text-white mt-[1px]">
