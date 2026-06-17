@@ -128,7 +128,7 @@ function CardsLayout({
 export async function TestimonialsSection() {
   const features = await getFeaturesConfig();
 
-  // Feature-flagged off by default for FARMform template
+  // Feature-flagged off by default for GROVEside template
   if (!features?.testimonials_section) return null;
 
   const data = await getTestimonialsData();

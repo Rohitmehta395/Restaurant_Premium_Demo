@@ -1,7 +1,7 @@
 # Reusable Business/Restaurant Template — Content Architecture Specification
 
 **Document Type:** Content Architecture & Data Layer Design  
-**Derived From:** FARMform® UX Specification  
+**Derived From:** GROVEside® UX Specification  
 **Purpose:** Define a fully data-driven, CMS-ready template whose entire content, configuration, and personality can be replaced by swapping data files — transforming the same structural template from a Belgian business retreat into a restaurant, café, hotel, or any hospitality/service business.
 
 ---
@@ -215,7 +215,7 @@ business_name              The trading name displayed throughout the site
 brand_tagline              The short positioning line ("Where work meets comfort")
 brand_description_short    One sentence — used in meta descriptions, og:description
 brand_description_long     2–3 sentences — used in About sections
-legal_entity_name          Registered company name (e.g., "FARMform La Mama BV")
+legal_entity_name          Registered company name (e.g., "GROVEside La Mama BV")
 vat_number                 VAT / tax registration number
 registration_country       Country of registration (ISO 3166-1 alpha-2)
 registration_year          Year the business was founded (used in footer copyright)
@@ -848,7 +848,7 @@ categories                 Array of cookie categories
 **Purpose:** Global site behavior and meta settings.
 
 ```
-site_url                   Canonical base URL (e.g., "https://farmform.be")
+site_url                   Canonical base URL (e.g., "https://groveside.be")
 locale                     BCP 47 language tag (e.g., "en-BE")
 currency                   ISO 4217 (e.g., "EUR")
 date_format                Display date format string
@@ -1424,6 +1424,6 @@ At the end of this process, the website is a completely different brand. No stru
 ---
 
 **Version:** 1.0  
-**Derived from:** FARMform® UX Specification (June 2026)  
-**Scope:** All sections, components, and data concerns visible across the full FARMform website.  
+**Derived from:** GROVEside® UX Specification (June 2026)  
+**Scope:** All sections, components, and data concerns visible across the full GROVEside website.  
 **Out of scope:** Implementation technology selection, build tooling, CMS vendor selection, hosting infrastructure.

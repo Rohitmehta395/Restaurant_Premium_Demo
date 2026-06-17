@@ -13,7 +13,7 @@ function Label({
     <LabelPrimitive.Root
       data-slot="label"
       className={cn(
-        // FARMform: always block, with spacing below
+        // GROVEside: always block, with spacing below
         "block mb-1.5 text-sm font-medium text-text-primary select-none",
         "group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50",
         "peer-disabled:cursor-not-allowed peer-disabled:opacity-50",

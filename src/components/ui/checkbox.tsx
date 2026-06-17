@@ -14,7 +14,7 @@ function Checkbox({
     <CheckboxPrimitive.Root
       data-slot="checkbox"
       className={cn(
-        // Square checkbox — FARMform premium restrained design language
+        // Square checkbox — GROVEside premium restrained design language
         "peer size-4 shrink-0 rounded-none border border-border-strong",
         "transition-shadow outline-none",
         "focus-visible:ring-1 focus-visible:ring-brand-primary focus-visible:border-brand-primary",

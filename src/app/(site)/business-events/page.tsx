@@ -122,7 +122,7 @@ export default async function BusinessEventsPage() {
               <div className="relative w-18 h-18">
                 <Image
                   src="/images/brand/logo-icon.svg"
-                  alt="FARMform icon"
+                  alt="GROVEside icon"
                   fill
                   className="object-contain"
                 />
@@ -237,7 +237,7 @@ export default async function BusinessEventsPage() {
                 <div className="relative aspect-[3/4] rounded-[6px] overflow-hidden w-[180px] mx-auto md:mx-0">
                   <Image
                     src={eventsData.tailored_image_ref}
-                    alt={eventsData.tailored_image_alt || "FARMform team member"}
+                    alt={eventsData.tailored_image_alt || "GROVEside team member"}
                     fill
                     className="object-cover object-top"
                     sizes="180px"

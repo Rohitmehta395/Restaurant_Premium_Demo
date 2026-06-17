@@ -19,8 +19,8 @@ export async function buildMetadata({
   const siteConfig = await getSiteConfig();
   const identity = await getBusinessIdentity();
 
-  const businessName = identity?.business_name || "FARMform";
-  const siteUrl = siteConfig?.url || "https://farmform.be";
+  const businessName = identity?.business_name || "GROVEside";
+  const siteUrl = siteConfig?.url || "https://groveside.be";
   const canonicalUrl = `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`;
   
   const finalImage = ogImage || siteConfig?.og_image_default_ref || "";

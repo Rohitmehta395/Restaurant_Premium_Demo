@@ -4,7 +4,7 @@ import { getSiteConfig, getAllServices } from "@/lib/data/loaders"
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteConfig = await getSiteConfig();
   const servicesData = await getAllServices();
-  const siteUrl = siteConfig?.url || "https://farmform.be";
+  const siteUrl = siteConfig?.url || "https://groveside.be";
   const now = new Date();
 
   const services = servicesData?.services.filter(s => s.status === "published").map(s => ({

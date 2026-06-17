@@ -22,7 +22,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
         loading: <Loader2Icon className="size-4 animate-spin" />,
       }}
       style={{
-        // FARMform warm neutral palette
+        // GROVEside warm neutral palette
         "--normal-bg": "var(--color-surface-default)",
         "--normal-text": "var(--color-text-primary)",
         "--normal-border": "var(--color-border-subtle)",

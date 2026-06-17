@@ -40,11 +40,11 @@ export async function SiteFooter() {
           {/* Left Column */}
           <div className="max-w-[260px] text-center md:text-left flex flex-col items-center md:items-start">
             <p className="text-[20px] lg:text-[16px] font-semibold text-white mb-2">
-              {identity.legal_entity_name || "FARMform La Mama BV"}
+              {identity.legal_entity_name || "GROVEside La Mama BV"}
             </p>
 
             <p className="text-[18px] lg:text-[14px] leading-[1.8] text-white/85">
-              {contact.address_line_1 || "Stuikberg 135, 1840 Londerzeel"}
+              {contact.address_line_1 || "123 Demo Street, 9999 Demoville"}
             </p>
 
             <p className="text-[18px] lg:text-[14px] leading-[1.8] text-white/85 mb-6">
@@ -55,14 +55,14 @@ export async function SiteFooter() {
               href={`mailto:${contact.email}`}
               className="block text-[18px] lg:text-[14px] leading-[1.8] text-white/85 hover:text-white transition-colors"
             >
-              {contact.email || "info@farmform.be"}
+              {contact.email || "info@example.com"}
             </a>
 
             <a
-              href={contact.phone_uri || "tel:+32475910715"}
+              href={contact.phone_uri || "tel:+15551234567"}
               className="block text-[18px] lg:text-[14px] leading-[1.8] text-white/85 hover:text-white transition-colors"
             >
-              T: {contact.phone || "+32 (0) 475 910 715"}
+              T: {contact.phone || "+1 (0) 555 123 4567"}
             </a>
 
             {socialPlatforms.length > 0 && (
@@ -121,7 +121,7 @@ export async function SiteFooter() {
       <div className="mt-[85px] px-[50px] lg:px-[65px]">
         <div className="flex flex-col md:flex-row justify-between items-center gap-5">
           <div className="text-[13px] font-bold tracking-[0.14em] uppercase text-white text-center">
-            ALL RIGHTS RESERVED FARMFORM®
+            ALL RIGHTS RESERVED GROVESIDE®
             <span className="mx-2 text-white/50">•</span>
             <Link
               href="/privacy-policy"

@@ -1,7 +1,7 @@
-# FARMform® — Complete UX & Design Specification
+# GROVEside® — Complete UX & Design Specification
 
 **Document Type:** Reverse-Engineered Design & UX Audit  
-**Source:** https://farmform.be/  
+**Source:** https://groveside.be/  
 **Prepared:** June 2026  
 **Pages Analyzed:** Home, Meeting Spaces, Business Events, Stay the Night, Our Story, Practical Info, Contact  
 
@@ -31,7 +31,7 @@
 
 ### 1.1 Site Purpose
 
-FARMform® is a premium boutique business retreat venue located in Londerzeel, Belgium. The website functions as a direct-conversion marketing tool whose entire purpose is to generate booking inquiries via a contact form. There is no online booking engine, no pricing calculator, and no third-party reservation platform — every path ends at personal contact.
+GROVEside® is a premium boutique business retreat venue located in Demoville, Demoland. The website functions as a direct-conversion marketing tool whose entire purpose is to generate booking inquiries via a contact form. There is no online booking engine, no pricing calculator, and no third-party reservation platform — every path ends at personal contact.
 
 The site must simultaneously:
 - Communicate a new category ("business stay" that is neither hotel nor co-working space)
@@ -40,9 +40,9 @@ The site must simultaneously:
 
 ### 1.2 Business Positioning
 
-FARMform occupies a deliberately constructed white-space position between two existing categories:
+GROVEside occupies a deliberately constructed white-space position between two existing categories:
 
-| Dimension | Traditional Business Hotel | FARMform |
+| Dimension | Traditional Business Hotel | GROVEside |
 |---|---|---|
 | Scale | Large, impersonal | Intimate, exclusive (max ~40 guests) |
 | Setting | Urban / airport | Rural, 20–30 km from business hubs |
@@ -55,7 +55,7 @@ The "One-Price Concept" is used as a direct competitive differentiator framed as
 
 ### 1.3 Target Audience
 
-**Primary:** Corporate event planners and executive assistants in Belgium and the broader Brussels/Antwerp/Mechelen business triangle booking off-site meetings, strategic retreats, and team-building days (groups of 4–40).
+**Primary:** Corporate event planners and executive assistants in Demoland and the broader Brussels/Antwerp/Mechelen business triangle booking off-site meetings, strategic retreats, and team-building days (groups of 4–40).
 
 **Secondary:** Individual business travelers who need a peaceful, productive place to sleep between appointments — professionals who reject impersonal chain hotels and value restorative environments.
 
@@ -66,7 +66,7 @@ The "One-Price Concept" is used as a direct competitive differentiator framed as
 ### 1.4 Conversion Goals
 
 **Primary:** Drive inquiry submissions through the contact form at `/contact/`  
-**Secondary:** Email clicks (`info@farmform.be`) and phone calls (`+32 475 910 715`)  
+**Secondary:** Email clicks (`info@example.com`) and phone calls (`+1 555 123 4567`)  
 **Tertiary:** Newsletter email captures on the "Join Our Community" form, present on every page  
 **Macro funnel:** Awareness → Interest (photos/story) → Desire (services + values) → Inquiry → Personal close (no online booking, deliberate human touchpoint)
 
@@ -79,17 +79,17 @@ The absence of instant booking is a strategic choice — it forces a human conve
 ### 2.1 Brand Personality Axes
 
 **Primary axis:** Professional ↔ Personal  
-FARMform positions itself as run by real people (co-founder Andra Delanoye signs the Our Story page by name) rather than a corporate entity. The legal entity name "La Mama BV" (Italian for "The Mother") reinforces the family warmth reading.
+GROVEside positions itself as run by real people (co-founder Andra Delanoye signs the Our Story page by name) rather than a corporate entity. The legal entity name "La Mama BV" (Italian for "The Mother") reinforces the family warmth reading.
 
 **Secondary axis:** Rustic ↔ Contemporary  
-The farm origin is preserved as storytelling texture but the experience is described as modern, equipped, and professional. The tension between these two is the brand's defining creative idea.
+The grove origin is preserved as storytelling texture but the experience is described as modern, equipped, and professional. The tension between these two is the brand's defining creative idea.
 
 **Voice characteristics:**
 - Second-person, warm and inviting ("we will work with you")
 - Em-dash used frequently for rhythm and conversational asides
 - Occasional punctuation-free fragment sentences for poetic effect
 - No corporate jargon; prefers "meaningful dialogue" over "synergy"
-- Genuine, not performative — the origin story is told with vulnerability ("farm life was something completely new for me")
+- Genuine, not performative — the origin story is told with vulnerability ("grove life was something completely new for me")
 
 **Tagline:** "Where work meets comfort" — present in the site's `<title>` tag, the browser tab, the pre-loader text, and the footer. This is the brand's single organizing idea, not just a marketing line.
 
@@ -103,7 +103,7 @@ Written communication reads as intelligent but unpretentious. Sentences are long
 
 ### 3.1 Design Philosophy
 
-FARMform's visual identity is built on four observable principles:
+GROVEside's visual identity is built on four observable principles:
 
 **1. Restraint over decoration.** The UI makes no use of illustrated icons in the decorative sense — all iconography appears to be functional (SVG inline icons for room specs like area and capacity). Borders, shadows, and gradients are absent or extremely subtle.
 
@@ -111,7 +111,7 @@ FARMform's visual identity is built on four observable principles:
 
 **3. Typographic hierarchy as structure.** Because the palette is restrained, visual differentiation between sections is achieved primarily through type size contrast and spacing rhythm, not through color blocks or background patterns.
 
-**4. Content density varies intentionally by section.** The hero is sparse and cinematic. The "Why Choose FARMform?" section is deliberately content-rich to systematically address every possible objection. This reflects a considered information architecture, not inconsistency.
+**4. Content density varies intentionally by section.** The hero is sparse and cinematic. The "Why Choose GROVEside?" section is deliberately content-rich to systematically address every possible objection. This reflects a considered information architecture, not inconsistency.
 
 ### 3.2 Image Usage
 
@@ -119,10 +119,10 @@ Photography is the most visible design investment on the site. Observable patter
 
 - All photography is professional, warm-toned, and high-resolution. The images appear to use a consistent color grade with warm highlights and soft, slightly desaturated midtones to evoke calmness.
 - Images are used in three modes: full-bleed hero banners, contained image cards within service blocks, and gallery sliders within room/space detail panels.
-- The hero image (`FarmForm-Interieur-4773`) appears to be an interior shot emphasizing natural light, texture, and space — immediately establishing the physical quality of the property.
-- The Business Events hero features a portrait-style photo (`FarmForm-Portretten-3729`) — an unusual choice that puts a human face on what could be an abstract service offering, reinforcing the personal brand dimension.
+- The hero image (`GroveSide-Interieur-4773`) appears to be an interior shot emphasizing natural light, texture, and space — immediately establishing the physical quality of the property.
+- The Business Events hero features a portrait-style photo (`GroveSide-Portretten-3729`) — an unusual choice that puts a human face on what could be an abstract service offering, reinforcing the personal brand dimension.
 - Gallery sliders allow 7–14 images per room/space, indicating that visual evidence of quality is considered essential for overcoming the uncertainty of an unfamiliar brand.
-- Farm animals (pony, dog, cats, chickens, rabbits) are mentioned in copy as a deliberate differentiator and are presumably photographed in the gallery — a unique humanizing element absent from any competitor in this segment.
+- Grove animals (pony, dog, cats, chickens, rabbits) are mentioned in copy as a deliberate differentiator and are presumably photographed in the gallery — a unique humanizing element absent from any competitor in this segment.
 
 ---
 
@@ -130,13 +130,13 @@ Photography is the most visible design investment on the site. Observable patter
 
 ### 4.1 Inferred Typeface Roles
 
-Based on the visual evidence and the custom WordPress theme (`farmform-theme`), the site uses a system consisting of distinct display and body roles:
+Based on the visual evidence and the custom WordPress theme (`groveside-theme`), the site uses a system consisting of distinct display and body roles:
 
 **Display / Brand Wordmark Treatment:**  
-The logo uses a mixed-case rendering where "FARM" appears in uppercase and "form" in lowercase italic — this is a deliberate typographic identity device. The SVG logo file is named `logo-text-black-v2.svg`, indicating it is type-based rather than icon-based.
+The logo uses a mixed-case rendering where "GROVE" appears in uppercase and "form" in lowercase italic — this is a deliberate typographic identity device. The SVG logo file is named `logo-text-black-v2.svg`, indicating it is type-based rather than icon-based.
 
 **Display Headlines (H1, H2 on hero):**  
-Large, commanding headlines. The `<h1>` on the homepage reads "Welcome to Farm*Form*" with "Form" in italic — a consistent application of the brand's mixed-case mark.
+Large, commanding headlines. The `<h1>` on the homepage reads "Welcome to Grove*Side*" with "Form" in italic — a consistent application of the brand's mixed-case mark.
 
 **Body Copy:**  
 Readable, well-spaced prose at a comfortable reading size. No tight tracking or decorative treatment.
@@ -231,7 +231,7 @@ Content is centered within a constrained max-width container with generous horiz
 
 **Three-Column Card Grid:** The "Our Services" section on the homepage presents Meeting Spaces, Business Events, and Stay the Night as three equal-width cards. On mobile, these likely stack vertically.
 
-**Feature Grid (2-across or 3-across):** The "Why Choose FARMform?" section with 7 items, and the "Our Values" section with 5 items, use a grid layout where icon + heading + body text repeat. Estimated 2-across on tablet, 3-across on desktop.
+**Feature Grid (2-across or 3-across):** The "Why Choose GROVEside?" section with 7 items, and the "Our Values" section with 5 items, use a grid layout where icon + heading + body text repeat. Estimated 2-across on tablet, 3-across on desktop.
 
 **Technology/Amenity Icon Grid:** The tech specs (Smart TV, Wi-Fi, etc.) use a compact icon-grid pattern — icon above, bold label, italic descriptor below. Estimated 3-across on desktop, 2-across on tablet, possibly 2-across or 1-across on mobile.
 
@@ -241,7 +241,7 @@ Content is centered within a constrained max-width container with generous horiz
 
 ### 7.2 Responsive Behavior (Inferred)
 
-The site's viewport meta tag confirms standard responsive design (`width=device-width, initial-scale=1`). The custom WordPress theme (`farmform-theme`) handles breakpoints.
+The site's viewport meta tag confirms standard responsive design (`width=device-width, initial-scale=1`). The custom WordPress theme (`groveside-theme`) handles breakpoints.
 
 **Mobile (< ~768px):**
 - Navigation collapses to a hamburger "Menu" button
@@ -291,7 +291,7 @@ Triggered by "Menu" text/button. The expanded state reveals a panel that include
 
 ### 8.2 Active State & Wayfinding
 
-The current page is indicated in the navigation (standard active state). The breadcrumb-equivalent on interior pages uses the `<title>` pattern ("Meeting Spaces — FARMform") to confirm location.
+The current page is indicated in the navigation (standard active state). The breadcrumb-equivalent on interior pages uses the `<title>` pattern ("Meeting Spaces — GROVEside") to confirm location.
 
 **Quick Navigation within interior pages:**  
 Interior pages with multiple sections include an in-page quick-nav element positioned near the top of the content area, styled as an unordered list of anchor links prefixed with "→". This is a distinctive wayfinding device that functions as a page-level table of contents, improving usability on long-scroll pages like Meeting Spaces.
@@ -312,7 +312,7 @@ The site appears to use standard vertical scrolling. The long-page architecture 
 
 ### 9.2 Hero Image Gallery / Slider
 
-The homepage hero contains multiple images (the markup reveals at least 9 lazy-loaded image placeholders in the hero area), suggesting a slideshow or carousel with auto-advance. The images are loaded progressively — one real image URL is visible (`FarmForm-Interieur-4773`) followed by placeholder SVGs that resolve on the client.
+The homepage hero contains multiple images (the markup reveals at least 9 lazy-loaded image placeholders in the hero area), suggesting a slideshow or carousel with auto-advance. The images are loaded progressively — one real image URL is visible (`GroveSide-Interieur-4773`) followed by placeholder SVGs that resolve on the client.
 
 **Inferred hero behavior:** Crossfade between 9+ interior/exterior photos, likely timed automatically with no visible controls (a cinematic approach consistent with the brand's luxury positioning).
 
@@ -361,7 +361,7 @@ This is a custom-built lightbox, not a standard WordPress plugin modal, given th
 ### 10.1 Observed Implementations
 
 - **Skip to content link:** `[Skip to content](#content)` present on all pages — correct implementation of a keyboard navigation accessibility pattern
-- **Alt attributes:** Image alt text is populated for the primary hero image and named room/space photos (e.g., "FarmForm - Interieur, Bowie's Boardroom")
+- **Alt attributes:** Image alt text is populated for the primary hero image and named room/space photos (e.g., "GroveSide - Interieur, Bowie's Boardroom")
 - **Semantic HTML:** Use of proper heading hierarchy (H1 per page → H2 sections → H3 subsections) is observable throughout
 - **`lang` attribute:** Implicit in English-language content; meta og:locale is `en_US`
 - **`viewport` meta:** Correctly configured for mobile scaling
@@ -381,8 +381,8 @@ This is a custom-built lightbox, not a standard WordPress plugin modal, given th
 The site deploys a layered trust architecture:
 
 **Legal & business legitimacy:**
-- Company registered name: "FARMform La Mama BV"
-- Full street address: Stuikberg 135, 1840 Londerzeel
+- Company registered name: "GROVEside La Mama BV"
+- Full street address: 123 Demo Street, 9999 Demoville
 - Belgian VAT number: BE 0742576075
 - These appear in both the navigation panel and the footer — constant reassurance of a real, legally registered business
 
@@ -409,7 +409,7 @@ The site deploys a layered trust architecture:
 - "We intentionally do not support video conferencing" is stated twice (Meeting Spaces, Practical Info). This is a trust move — deliberately naming a limitation before a visitor discovers it, framing it as a philosophy rather than a deficiency
 
 **Tomorrowland proximity mention:**
-- Appearing in room pricing as a special-rate period — this serves as an implicit quality and location credential. Being near one of the world's most prominent music festivals positions FARMform within a recognizable international context
+- Appearing in room pricing as a special-rate period — this serves as an implicit quality and location credential. Being near one of the world's most prominent music festivals positions GROVEside within a recognizable international context
 
 **Privacy Policy:**
 - Privacy Policy link appears in the footer, on both forms, and in the contact form submission consent — correct GDPR compliance signaling for a Belgian business
@@ -437,15 +437,15 @@ These are curiosity-driven micro-copy CTAs designed to draw the user deeper into
 
 ### 12.3 Passive CTAs
 
-**Phone number:** `+32 (0) 475 910 715` is a `tel:` link throughout the site — tappable on mobile.
+**Phone number:** `+1 (0) 555 123 4567` is a `tel:` link throughout the site — tappable on mobile.
 
-**Email address:** `info@farmform.be` is a `mailto:` link throughout — accessible in both navigation panel and footer.
+**Email address:** `info@example.com` is a `mailto:` link throughout — accessible in both navigation panel and footer.
 
 **Social links:** Passive CTAs that extend the brand discovery journey without requiring immediate commitment.
 
 ### 12.4 Newsletter CTA
 
-The "Join Our Community" newsletter form on every page is a long-game conversion tool — capturing leads who are interested but not ready to inquire, enabling email nurture. The supporting copy ("Be the first to experience FARMform") implies the venue is still establishing its reputation — which as of 2025 it is, given the October 2025 content modification dates.
+The "Join Our Community" newsletter form on every page is a long-game conversion tool — capturing leads who are interested but not ready to inquire, enabling email nurture. The supporting copy ("Be the first to experience GROVEside") implies the venue is still establishing its reputation — which as of 2025 it is, given the October 2025 content modification dates.
 
 ---
 
@@ -496,11 +496,11 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 **Content structure:**
 - Rotating/fading gallery of 9+ interior and exterior photos (auto-cycling slideshow)
 - Small eyebrow label: "Where work meets comfort" (or similar)
-- H1: "Welcome to FarmForm" (with "Form" in italic)
+- H1: "Welcome to GroveSide" (with "Form" in italic)
 - H2 sub-headline: "Experience a New Way of Business Stay and Events"
 - No CTA button in the hero — deliberate, forcing the visitor to scroll
 
-**Images:** Large-format professional photography. First visible image: `FarmForm-Interieur-4773-foto©Kwinten-Verspeurt` (interior space shot). Subsequent images load lazily.
+**Images:** Large-format professional photography. First visible image: `GroveSide-Interieur-4773-foto©Kwinten-Verspeurt` (interior space shot). Subsequent images load lazily.
 
 **Interactions:** Auto-advancing crossfade between images. No manual controls visible.
 
@@ -553,7 +553,7 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 
 ---
 
-### Section H-6: Why Choose FARMform?
+### Section H-6: Why Choose GROVEside?
 
 **Purpose:** Systematic objection handling and value proposition articulation. The longest section on the homepage.
 
@@ -589,7 +589,7 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 2. Sustainability — "Building a greener future with eco-conscious choices."
 3. Exclusivity — "Creating tailored, private experiences."
 4. Comfort — "Balancing modern luxury with a homely atmosphere."
-5. Inspiration — "Encouraging creativity and relaxation through our farm-inspired design."
+5. Inspiration — "Encouraging creativity and relaxation through our grove-inspired design."
 
 **Introducing element:** H2 — "Our Values" with subtitle "What drive us at our core"
 
@@ -624,7 +624,7 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 
 **Content structure:**
 - H2: "Join Our Community"
-- Sub-copy: "Be the first to experience FARMform – where work meets comfort. Get inspiration, updates and behind-the-scenes stories."
+- Sub-copy: "Be the first to experience GROVEside – where work meets comfort. Get inspiration, updates and behind-the-scenes stories."
 - Email input field (with "Loading..." placeholder indicating async initialization)
 - Checkbox: "I agree to the Privacy Policy"
 - Submit button
@@ -646,7 +646,7 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 - Column 1 (Company Info): Legal name, address, VAT number, email, phone
 - Column 2 (Social Media): Facebook, Instagram, LinkedIn icon links
 - Column 3 (Navigation): Full site navigation links (mirrors primary nav)
-- Bottom bar: "All rights reserved FARMform®" · "Privacy Policy" · "Code & Design · Studio Scale"
+- Bottom bar: "All rights reserved GROVEside®" · "Privacy Policy" · "Code & Design · Studio Scale"
 
 **Typography:** Small body text, footer-weight.
 
@@ -861,7 +861,7 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 **Content:**
 - H1: "Our Story"
 - Sub-headline: "From Idea to Reality"
-- Full-width panoramic image of the farm/property
+- Full-width panoramic image of the grove/property
 
 ---
 
@@ -870,10 +870,10 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 **Layout:** Alternating or vertical narrative sections. Each section has an H2 with a dated or descriptive title, followed by a body paragraph, and a supporting image (lazy-loaded SVG placeholder in source).
 
 **Chapters:**
-1. "The Beginning (2011)" — farm purchase, corporate motivation
+1. "The Beginning (2011)" — grove purchase, corporate motivation
 2. "A Family Project" — 14-year build, children grew up here
-3. "Discovering a New Way of Living" — personal transformation through farm life
-4. "FARMform Today" — synthesis and brand story conclusion
+3. "Discovering a New Way of Living" — personal transformation through grove life
+4. "GROVEside Today" — synthesis and brand story conclusion
 
 **Notable:** Each chapter appears twice in the markup — once likely for desktop, once for mobile (a common pattern for responsive content reordering via CSS).
 
@@ -886,7 +886,7 @@ The "Join Our Community" newsletter form on every page is a long-game conversion
 **Content:**
 - H2: "A Personal Note"
 - Personal statement from Andra Delanoye about what welcoming guests means to her
-- Signed: "With pride and joy, Andra Delanoye, Co-Founder & Host of FARMform®"
+- Signed: "With pride and joy, Andra Delanoye, Co-Founder & Host of GROVEside®"
 
 ---
 
@@ -908,7 +908,7 @@ Each block has an icon, H2 heading, and content:
 2. **Location and Accessibility** — full address as a Google Maps link, distance table (Brussels Airport 25km, Brussels Center 20km, Antwerp 30km, Mechelen 20km)
 3. **Parking** — Free on-site (10 cars), street parking, EV charging
 4. **Technologies** — Text list (same 6 items as Meeting Spaces grid, but list format here)
-5. **Amenities** — Text list (6 items including Farm Animals, which is not in the Meeting Spaces amenities grid)
+5. **Amenities** — Text list (6 items including Grove Animals, which is not in the Meeting Spaces amenities grid)
 
 ---
 
@@ -1004,7 +1004,7 @@ Each block has an icon, H2 heading, and content:
 
 ### C-05: Feature / Value Block
 
-**Used on:** Why Choose FARMform, Our Values, Technologies, Amenities, Versatile Setup (Business Events), What's Included (Stay the Night)
+**Used on:** Why Choose GROVEside, Our Values, Technologies, Amenities, Versatile Setup (Business Events), What's Included (Stay the Night)
 
 **Elements:**
 - Inline SVG icon
@@ -1109,7 +1109,7 @@ Each block has an icon, H2 heading, and content:
 - Full navigation links (mirrors primary nav)
 
 **Elements (legal bar):**
-- "All rights reserved FARMform®"
+- "All rights reserved GROVEside®"
 - Separator dot "·"
 - Privacy Policy link
 - Separator dot "·"
@@ -1201,15 +1201,15 @@ Each block has an icon, H2 heading, and content:
 - Multi-paragraph personal statement body text
 - Closing salutation: "With pride and joy,"
 - Founder name: "Andra Delanoye"
-- Title: "Co-Founder & Host of FARMform®"
+- Title: "Co-Founder & Host of GROVEside®"
 
 **Behavior:** Static. No image of the founder is present in the markup — a notable design choice that preserves the text-forward storytelling.
 
 ---
 
-*End of FARMform® UX & Design Specification Document*
+*End of GROVEside® UX & Design Specification Document*
 
 ---
 
-**Document prepared by:** Reverse-engineering analysis of all publicly accessible pages of https://farmform.be/ as of June 2026.  
+**Document prepared by:** Reverse-engineering analysis of all publicly accessible pages of https://groveside.be/ as of June 2026.  
 **Note:** Visual details not accessible via source inspection (exact typefaces, precise color hex values, exact pixel dimensions, animation easing curves) are marked as "inferred" and represent educated interpretation based on observed design language, industry standards for premium hospitality websites, and the custom WordPress theme architecture.

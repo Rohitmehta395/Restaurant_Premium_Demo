@@ -92,8 +92,8 @@ export function SiteHeaderClient({
 
   return (
     <>
-      <header role="banner" className="farmform-site-header">
-        <div className="farmform-site-header__inner">
+      <header role="banner" className="groveside-site-header">
+        <div className="groveside-site-header__inner">
           {/* Left Element */}
           <div className="relative flex items-center h-12 w-full">
             {/* Scrolled State: Small Logo Button */}
@@ -163,8 +163,8 @@ export function SiteHeaderClient({
                 "text-[26px] md:text-[34px] tracking-wide font-normal",
                 isLightHeader ? "text-white" : "text-[#111]"
               )}>
-                FARM
-                <span className="italic font-semibold font-display">form</span>
+                GROVE
+                <span className="italic font-semibold font-display">side</span>
               </span>
             </Link>
           </div>

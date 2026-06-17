@@ -17,7 +17,7 @@ import { NotFoundContent } from "@/components/sections/NotFoundContent";
 // this is rendered as a normal page in some contexts.
 export async function generateMetadata(): Promise<Metadata> {
   const identity = await getBusinessIdentity();
-  const businessName = identity?.business_name || "FARMform";
+  const businessName = identity?.business_name || "GROVEside";
 
   return {
     title: `Page Not Found — ${businessName}®`,

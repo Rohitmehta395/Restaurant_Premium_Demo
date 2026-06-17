@@ -9,7 +9,7 @@ function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
       className={cn(
         // Layout
         "flex min-h-[120px] w-full rounded-[var(--radius-base)] px-3 py-2 text-sm resize-y",
-        // Colors — FARMform palette
+        // Colors — GROVEside palette
         "border border-border-subtle bg-surface-default text-text-primary",
         "placeholder:text-text-secondary",
         // Transition

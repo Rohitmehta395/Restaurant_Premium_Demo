@@ -2,26 +2,26 @@
   "feature_groups": [
     {
       "slug": "why-choose",
-      "heading": "Why choose FARMform?",
+      "heading": "Why choose GROVEside?",
       "display_layout": "icon-grid",
       "items": [
         {
           "slug": "freedom",
           "icon_ref": "/images/icons/features/freedom.svg",
           "label": "Freedom to Tailor Your Stay",
-          "body": "From extended business trips to corporate retreats and seminars, FARMform offers the flexibility to match your needs. Enjoy the freedom to work, stay and unwind on your terms – in an exclusive, personalised setting."
+          "body": "From extended business trips to corporate retreats and seminars, GROVEside offers the flexibility to match your needs. Enjoy the freedom to work, stay and unwind on your terms – in an exclusive, personalised setting."
         },
         {
           "slug": "eco-friendly",
           "icon_ref": "/images/icons/features/eco.svg",
           "label": "Eco-Friendly and Sustainable",
-          "body": "Our thoughtfully rebuilt farm reflects a deep commitment to the environment, using sustainable materials and technologies to create a space that respects nature while offering modern comfort."
+          "body": "Our thoughtfully rebuilt grove reflects a deep commitment to the environment, using sustainable materials and technologies to create a space that respects nature while offering modern comfort."
         },
         {
           "slug": "convenient",
           "icon_ref": "/images/icons/features/location.svg",
           "label": "Convenient and Connected",
-          "body": "Located in Londerzeel, FARMform is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
+          "body": "Located in Demoville, GROVEside is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
         },
         {
           "slug": "one-price",
@@ -33,13 +33,13 @@
           "slug": "nature",
           "icon_ref": "/images/icons/features/nature.svg",
           "label": "Nature-Infused Experience",
-          "body": "Step away from the noise! FARMform offers an intimate, peaceful setting with open field views and the calming presence of animals – a pony, a dog, cats, chickens and rabbits — roaming freely around the property. Whether you are taking a break, strolling the grounds or unwinding after a long day, their presence adds a unique and relaxing touch to your stay."
+          "body": "Step away from the noise! GROVEside offers an intimate, peaceful setting with open field views and the calming presence of animals – a pony, a dog, cats, chickens and rabbits — roaming freely around the property. Whether you are taking a break, strolling the grounds or unwinding after a long day, their presence adds a unique and relaxing touch to your stay."
         },
         {
           "slug": "professionals",
           "icon_ref": "/images/icons/features/professional.svg",
           "label": "Equipped for Professionals",
-          "body": "FARMform is designed with professionals in mind. From high-end meeting spaces to private rooms and wellness facilities (fitness and sauna), every detail supports productivity, focus, collaboration and comfort – whether you are working, hosting an event, collaborating with a team or simply recharging after a busy day."
+          "body": "GROVEside is designed with professionals in mind. From high-end meeting spaces to private rooms and wellness facilities (fitness and sauna), every detail supports productivity, focus, collaboration and comfort – whether you are working, hosting an event, collaborating with a team or simply recharging after a busy day."
         },
         {
           "slug": "multilingual",
@@ -53,7 +53,7 @@
       "slug": "technologies",
       "heading": "Technologies",
       "display_layout": "icon-grid",
-      "note": "We intentionally do not support video conferencing. FARMform is designed to foster genuine, in-person interaction in a focused and inspiring environment.",
+      "note": "We intentionally do not support video conferencing. GROVEside is designed to foster genuine, in-person interaction in a focused and inspiring environment.",
       "items": [
         { "slug": "smart-tv", "icon_ref": "Monitor", "label": "Screen Smart TV", "descriptor": "crisp visuals" },
         { "slug": "sound", "icon_ref": "Headphones", "label": "High-Quality Sound", "descriptor": "immersive audio" },
@@ -66,7 +66,7 @@
     {
       "slug": "amenities",
       "heading": "Amenities",
-      "intro": "Each detail is designed to enhance your experience, ensuring comfort, productivity and inspiration throughout your time at FARMform.",
+      "intro": "Each detail is designed to enhance your experience, ensuring comfort, productivity and inspiration throughout your time at GROVEside.",
       "display_layout": "photo-card-grid",
       "items": [
         {
@@ -109,7 +109,7 @@
     {
       "slug": "room-inclusions",
       "heading": "What's Included",
-      "intro": "Our One-Price concept means everything you need is included, with no surprises at checkout. Every stay at FARMform features:",
+      "intro": "Our One-Price concept means everything you need is included, with no surprises at checkout. Every stay at GROVEside features:",
       "display_layout": "inclusion-grid",
       "items": [
         {

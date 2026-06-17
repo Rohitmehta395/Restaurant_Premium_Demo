@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     getSiteConfig()
   ]);
 
-  const businessName = identity?.business_name || "FARMform";
+  const businessName = identity?.business_name || "GROVEside";
   const siteUrl = siteConfig?.url || "";
 
   return {

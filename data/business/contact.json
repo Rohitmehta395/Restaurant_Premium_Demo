@@ -1,12 +1,12 @@
 {
-  "phone": "+32 475 910 715",
-  "phone_uri": "tel:+32475910715",
-  "email": "info@farmform.be",
-  "address_line_1": "Stuikberg 135",
-  "city": "Londerzeel",
-  "postcode": "1840",
-  "country": "Belgium",
-  "country_code": "BE",
+  "phone": "+1 555 123 4567",
+  "phone_uri": "tel:+15551234567",
+  "email": "info@example.com",
+  "address_line_1": "123 Demo Street",
+  "city": "Demoville",
+  "postcode": "9999",
+  "country": "Demoland",
+  "country_code": "DL",
   "maps_link": "https://maps.app.goo.gl/dummy",
   "proximity_points": [
     {

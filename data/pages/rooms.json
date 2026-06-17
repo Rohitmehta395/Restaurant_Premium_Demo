@@ -20,7 +20,7 @@
       "description_long": "A cozy and functional space for solo travelers or colleagues sharing a room.",
       "cover_image_ref": "/images/rooms/standard-room/gallery-01.jpg",
       "gallery_images": [
-        { "image_ref": "/images/rooms/standard-room/gallery-01.jpg", "alt_text": "Standard Room at FARMform" }
+        { "image_ref": "/images/rooms/standard-room/gallery-01.jpg", "alt_text": "Standard Room at GROVEside" }
       ],
       "gallery_trigger_label": "OPEN GALLERY"
     },
@@ -44,7 +44,7 @@
       "description_long": "A spacious and refined room with more comfort and space, ideal for longer stays.",
       "cover_image_ref": "/images/rooms/deluxe-room/gallery-01.jpg",
       "gallery_images": [
-        { "image_ref": "/images/rooms/deluxe-room/gallery-01.jpg", "alt_text": "Deluxe Room at FARMform" }
+        { "image_ref": "/images/rooms/deluxe-room/gallery-01.jpg", "alt_text": "Deluxe Room at GROVEside" }
       ],
       "gallery_trigger_label": "OPEN GALLERY"
     },
@@ -70,7 +70,7 @@
       "description_long": "Our most premium room, featuring a private terrace or bathtub depending on the suite. Perfect for those who want to indulge in a little extra comfort.",
       "cover_image_ref": "/images/rooms/executive-suite/gallery-01.jpg",
       "gallery_images": [
-        { "image_ref": "/images/rooms/executive-suite/gallery-01.jpg", "alt_text": "Executive Suite at FARMform" }
+        { "image_ref": "/images/rooms/executive-suite/gallery-01.jpg", "alt_text": "Executive Suite at GROVEside" }
       ],
       "gallery_trigger_label": "OPEN GALLERY"
     }

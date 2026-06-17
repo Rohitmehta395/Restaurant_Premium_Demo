@@ -1,9 +1,9 @@
 {
-  "meta_title": "FARMform - Where work meets comfort",
-  "meta_description": "Experience a new way of business stay and events at FARMform.",
+  "meta_title": "GROVEside - Where work meets comfort",
+  "meta_description": "Experience a new way of business stay and events at GROVEside.",
   "hero": {
     "eyebrow_text": "Where work meets comfort",
-    "headline": "Welcome to FarmForm",
+    "headline": "Welcome to GroveSide",
     "headline_emphasis": "Form",
     "subheadline": "Experience a New Way of Business Stay and Events"
   },
@@ -11,14 +11,14 @@
     "show_section": true,
     "heading": "A new way to experience business and leisure.",
     "body_paragraphs": [
-      "FARMform® is an innovative hospitality concept bridging the gap between professional productivity and rural tranquility. We believe that great ideas are born when you step away from the noise.",
+      "GROVEside® is an innovative hospitality concept bridging the gap between professional productivity and rural tranquility. We believe that great ideas are born when you step away from the noise.",
       "Our uniquely designed spaces offer everything from highly-equipped boardrooms to relaxing wellness areas, ensuring that whether you're hosting a corporate retreat or an intensive workshop, you have the ideal environment to succeed."
     ]
   },
   "services_section": {
     "show_section": true,
     "heading": "Our Services",
-    "intro_text": "Let FARMform be your space where business meets tranquility. Host strategic meetings, launch products, collaborate with your team or unwind in comfort. With inspiring meeting spaces, private accommodations and serene surroundings, FARMform offers the perfect balance of productivity and relaxation – day and night.",
+    "intro_text": "Let GROVEside be your space where business meets tranquility. Host strategic meetings, launch products, collaborate with your team or unwind in comfort. With inspiring meeting spaces, private accommodations and serene surroundings, GROVEside offers the perfect balance of productivity and relaxation – day and night.",
     "layout_variant": "grid-3"
   }
 }

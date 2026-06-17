@@ -144,12 +144,12 @@ export function HeroSlideshow({ hero }: HeroSlideshowProps) {
         <div className="max-w-[500px]">
           {hero.eyebrow_text && (
             <div className="text-[16px] tracking-[0.15em] text-white/90 mb-2   uppercase font-semibold">
-              {hero.eyebrow_text.split("FORM").map((part, i, arr) => (
+              {hero.eyebrow_text.split("SIDE").map((part, i, arr) => (
                 <span key={i}>
                   {part}
                   {i < arr.length - 1 && (
                     <em className="font-display italic tracking-normal">
-                      FORM
+                      SIDE
                     </em>
                   )}
                 </span>

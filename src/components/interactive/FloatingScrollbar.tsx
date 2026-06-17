@@ -181,7 +181,7 @@ export function FloatingScrollbar() {
 
   return (
     <div
-      className="fixed top-0 right-[2px] bottom-0 w-[20px] pointer-events-none z-[100] flex justify-center"
+      className="fixed top-0 right-[2px] bottom-0 w-[20px] pointer-events-none z-[100] hidden md:flex justify-center"
       aria-hidden="true"
     >
       <div

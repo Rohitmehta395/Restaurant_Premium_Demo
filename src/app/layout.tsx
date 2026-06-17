@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
   const identity = await getBusinessIdentity();
 
-  const businessName = identity?.business_name || "FARMform";
+  const businessName = identity?.business_name || "GROVEside";
   const tagline = identity?.brand_tagline || "Where work meets comfort";
   const description = identity?.brand_description_short || "";
 
@@ -73,8 +73,8 @@ export default async function RootLayout({
   const activeBanner =
     features?.announcement_banner && banners.length > 0 ? banners[0] : null;
 
-  const businessName = identity?.business_name || "FARMform";
-  const siteUrl = siteConfig?.url || "https://farmform.be";
+  const businessName = identity?.business_name || "GROVEside";
+  const siteUrl = siteConfig?.url || "https://groveside.be";
 
   const jsonLd = {
     "@context": "https://schema.org",

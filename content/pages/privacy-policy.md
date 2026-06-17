@@ -1,14 +1,14 @@
 # Privacy Policy
 
-At FARMform (operated by FARMform La Mama BV), we are committed to protecting your privacy and ensuring that your personal data is handled in a safe and responsible manner. This policy outlines how we collect, use, and protect your information in accordance with the General Data Protection Regulation (GDPR).
+At GROVEside (operated by GROVEside La Mama BV), we are committed to protecting your privacy and ensuring that your personal data is handled in a safe and responsible manner. This policy outlines how we collect, use, and protect your information in accordance with the General Data Protection Regulation (GDPR).
 
 ## Who We Are
-FARMform is a professional event and retreat space located in Londerzeel, Belgium.
-**Entity Name:** FARMform La Mama BV
-**Address:** Stuikberg 135, 1840 Londerzeel, Belgium
+GROVEside is a professional event and retreat space located in Demoville, Demoland.
+**Entity Name:** GROVEside La Mama BV
+**Address:** 123 Demo Street, 9999 Demoville, Demoland
 **VAT Number:** BE 0742576075
-**Website:** https://farmform.be
-**Contact Email:** info@farmform.be
+**Website:** https://groveside.be
+**Contact Email:** info@example.com
 
 ## Data We Collect
 We may collect and process the following data about you:
@@ -41,8 +41,8 @@ Our website uses cookies to enhance your browsing experience. Cookies are small 
 
 ## Contact for Privacy Matters
 If you have any questions about this Privacy Policy or our data practices, please contact our data controller:
-**Name:** FARMform La Mama BV
-**Email:** privacy@farmform.be
-**Address:** Stuikberg 135, 1840 Londerzeel, Belgium
+**Name:** GROVEside La Mama BV
+**Email:** privacy@groveside.be
+**Address:** 123 Demo Street, 9999 Demoville, Demoland
 
 If you believe that your data is being handled incorrectly, you have the right to lodge a complaint with the Belgian Data Protection Authority (Gegevensbeschermingsautoriteit).

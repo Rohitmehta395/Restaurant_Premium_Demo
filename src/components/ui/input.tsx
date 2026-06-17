@@ -10,7 +10,7 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       className={cn(
         // Layout & base
         "h-11 w-full min-w-0 rounded-[var(--radius-base)] px-3 py-2 text-sm",
-        // Colors — FARMform palette
+        // Colors — GROVEside palette
         "border border-border-subtle bg-surface-default text-text-primary",
         "placeholder:text-text-secondary",
         // Transition

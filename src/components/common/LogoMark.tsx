@@ -14,7 +14,7 @@ export function LogoMark({
   width = 48,
   height = 48,
   priority = false,
-  businessName = "FARMform",
+  businessName = "GROVEside",
 }: LogoMarkProps) {
   const src = variant === "dark" ? "/images/brand/logo-dark.svg" : "/images/brand/logo.svg";
 

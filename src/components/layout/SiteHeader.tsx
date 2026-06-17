@@ -13,7 +13,7 @@ export async function SiteHeader() {
 
   const navItems = navConfig.main?.filter(item => item.show) || [];
   const socials = socialsData.platforms.filter(p => p.show_in_header);
-  const businessName = identity.business_name || "FARMform";
+  const businessName = identity.business_name || "GROVEside";
   const brandTagline = identity.brand_tagline || "";
   const menuTriggerLabel = navConfig.mobile_navigation?.menu_trigger_label || "Menu";
 

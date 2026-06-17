@@ -1,11 +1,11 @@
 {
   "hero_image_ref": "/images/events/hero-desktop.jpg",
   "hero_mobile_ref": "/images/events/hero-mobile.jpg",
-  "hero_image_alt": "FARMform host welcoming guests at a business event",
+  "hero_image_alt": "GROVEside host welcoming guests at a business event",
   "page_eyebrow": "BUSINESS EVENTS",
   "hero_headline": "Host your next corporate event in a private, nature-infused setting designed to inspire and impress.",
   "page_intro_paragraphs": [
-    "Whether it's a networking event, team-building activity, product launch, seminar, workshop, strategic planning session, brainstorming meeting, client presentation, training program or company celebration, FARMform offers the perfect backdrop for your business needs.",
+    "Whether it's a networking event, team-building activity, product launch, seminar, workshop, strategic planning session, brainstorming meeting, client presentation, training program or company celebration, GROVEside offers the perfect backdrop for your business needs.",
     "Surrounded by tranquil nature, our versatile spaces can be tailored to suit your event, ensuring a productive and memorable experience for you and your guests."
   ],
   "pricing_heading": "Pricing",
@@ -26,7 +26,7 @@
     "press conference"
   ],
   "versatile_setup_heading": "Versatile Setup Across the Entire Property",
-  "versatile_setup_intro": "When you book FARMform for an event, you enjoy exclusive use of the entire property.",
+  "versatile_setup_intro": "When you book GROVEside for an event, you enjoy exclusive use of the entire property.",
   "versatile_setup_items": [
     {
       "image_ref": "/images/events/versatile-setup/setup-indoor.jpg",
@@ -57,15 +57,15 @@
   "tailored_heading": "Tailored Proposals and Personalised Support",
   "tailored_body": "Let us bring your vision to life. We are here to assist with layout, logistics and planning support, ensuring a smooth, stress-free experience. Simply tell us your plans and we will handle the rest.",
   "tailored_image_ref": "/images/events/tailored-support.jpg",
-  "tailored_image_alt": "FARMform team member providing personalised event support",
+  "tailored_image_alt": "GROVEside team member providing personalised event support",
   "gallery_images": [
-    { "image_ref": "/images/events/event-1.jpg", "alt_text": "Business event at FARMform" },
+    { "image_ref": "/images/events/event-1.jpg", "alt_text": "Business event at GROVEside" },
     { "image_ref": "/images/events/event-2.jpg", "alt_text": "Meeting in the Amazons Meadow" },
     { "image_ref": "/images/events/event-3.jpg", "alt_text": "Outdoor corporate reception" },
     { "image_ref": "/images/events/event-4.jpg", "alt_text": "Evening event under the canopy" },
-    { "image_ref": "/images/events/event-5.jpg", "alt_text": "Team workshop at FARMform" },
+    { "image_ref": "/images/events/event-5.jpg", "alt_text": "Team workshop at GROVEside" },
     { "image_ref": "/images/events/event-6.jpg", "alt_text": "Corporate presentation" },
     { "image_ref": "/images/events/event-7.jpg", "alt_text": "Networking reception outdoors" },
-    { "image_ref": "/images/events/event-8.jpg", "alt_text": "FARMform fitness room" }
+    { "image_ref": "/images/events/event-8.jpg", "alt_text": "GROVEside fitness room" }
   ]
 }

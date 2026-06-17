@@ -18,7 +18,7 @@ export async function PreFooterCTA() {
           <div className="w-16 h-16 relative flex items-center justify-center mb-2">
             <Image
               src="/images/brand/logo-icon.svg"
-              alt="FARMform mark"
+              alt="GROVEside mark"
               width={60}
               height={60}
               className="object-contain"

@@ -74,7 +74,7 @@ export function InfoBlock({
 
         {contentType === "distance-table" && Array.isArray(content) && (
           <div>
-            <p className="mb-4">Address: Stuikberg 135, 1840 Londerzeel, Belgium</p>
+            <p className="mb-4">Address: 123 Demo Street, 9999 Demoville, Demoland</p>
             <p className="mb-2">Centrally located near major cities:</p>
             <ul className="list-disc list-inside space-y-2">
               {(content as ProximityPoint[]).map((point, idx) => (
