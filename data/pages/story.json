@@ -1,41 +1,42 @@
 {
   "page_title": "Our Story",
+  "page_eyebrow": "OUR STORY",
   "page_subtitle": "From Idea to Reality",
   "meta_title": "Our Story | FARMform",
   "meta_description": "Discover the story behind FARMform.",
-  "hero_image_ref": "/images/story/story-hero.jpg",
+  "hero_image_ref": null,
   "chapters": [
     {
       "slug": "the-beginning",
-      "heading": "The Seed of an Idea",
-      "date_label": "2018",
+      "heading": "The Beginning (2011)",
       "image_ref": "/images/story/story-1.jpg",
-      "image_alt": "The old farmhouse",
-      "image_position": "left"
+      "image_alt": "The FARMform farm building exterior in 2011",
+      "image_position": "right",
+      "body": "We bought this old farm in July 2011 with a bold idea: not to wait until retirement to build 'our job for later', but to create it now. After 25 years in the corporate world and countless business trips, we wanted to create a place that felt different – where work, rest and freedom could truly come together in a more human way."
     },
     {
-      "slug": "the-renovation",
-      "heading": "Breaking Ground",
-      "date_label": "2020",
+      "slug": "a-family-project",
+      "heading": "A Family Project",
       "image_ref": "/images/story/story-2.jpg",
-      "image_alt": "Renovation process",
-      "image_position": "right"
+      "image_alt": "The family who built FARMform standing in the courtyard",
+      "image_position": "left",
+      "body": "Over the last decade, we rebuilt the farm brick by brick with our own hands. We were architects, builders, designers and dreamers all at once. It became a true family adventure – our kids grew up here, lending their help along the way – and slowly the farm transformed into what it is today: FARMform."
     },
     {
-      "slug": "opening",
-      "heading": "Opening Our Doors",
-      "date_label": "2022",
+      "slug": "discovering-a-new-way",
+      "heading": "Discovering a New Way of Living",
       "image_ref": "/images/story/story-3.jpg",
-      "image_alt": "Grand opening",
-      "image_position": "below"
+      "image_alt": "A horse at FARMform representing nature and farm life",
+      "image_position": "right",
+      "body": "For me personally, raised in a city apartment and always travelling for work, farm life was something completely new. Having animals around, fields outside our windows and nature at our doorstep changed everything. I realised many other professionals, like me, rarely have the chance to experience this."
     },
     {
-      "slug": "today",
+      "slug": "farmform-today",
       "heading": "FARMform Today",
-      "date_label": "Present",
       "image_ref": "/images/story/story-4.jpg",
-      "image_alt": "FARMform currently",
-      "image_position": "right"
+      "image_alt": "FARMform property today – the completed retreat",
+      "image_position": "left",
+      "body": "FARMform is now open to welcome business professionals seeking a different kind of stay. A place where productivity meets peace, where meetings become meaningful, and where every detail has been crafted with care. We are proud to share what we built with you."
     }
   ],
   "founder_note": {

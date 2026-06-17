@@ -16,7 +16,7 @@ export function AboutSection({ data }: AboutSectionProps) {
             Where work meets comfort
           </span>
 
-          <div className="space-y-8 md:space-y-10 text-[20px] md:text-[28px] lg:text-[30px] font-display font-semibold text-text-primary leading-[1.6]">
+          <div className="space-y-8 md:space-y-10 text-[20px] md:text-[20px] lg:text-[30px] font-display font-semibold text-text-primary leading-[1.6]">
             {data.heading && <h2 className="font-display">{data.heading}</h2>}
             {data.body_paragraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

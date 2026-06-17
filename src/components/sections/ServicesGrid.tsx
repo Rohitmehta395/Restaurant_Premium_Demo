@@ -21,23 +21,23 @@ export async function ServicesGrid({ data }: ServicesGridProps) {
   if (publishedServices.length === 0) return null;
 
   return (
-    <section className="bg-surface-alt pb-24 md:pb-[30px]">
+    <section className="bg-surface-alt pb-12 md:pb-[30px]">
       <div className="container-content">
         <div className="bg-white rounded-[10px] md:rounded-[12px] p-6 md:p-12 lg:p-16">
           {data.heading && (
-            <SectionReveal className="text-left mb-10 md:mb-14">
+            <SectionReveal className="text-center lg:text-left mb-10 md:mb-14">
               <h2 className="text-[32px] md:text-[40px] text-[#111] font-display font-semibold mb-6">
                 {data.heading}
               </h2>
               {(data as any).intro_text && (
-                <p className="text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-[50%] ">
+                <p className="text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-full lg:max-w-[50%]">
                   {(data as any).intro_text}
                 </p>
               )}
             </SectionReveal>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-6">
             {publishedServices.map((service, index) => (
               <SectionReveal
                 key={service.slug}

@@ -1,70 +1,89 @@
 import Image from "next/image";
 
 export interface TimelineChapterProps {
-  slug: string;
-  heading: string;
-  dateLabel?: string;
-  bodyHtml: string;
-  imageRef?: string;
-  imageAlt?: string;
-  imagePosition?: "left" | "right" | "below";
+  chapter: {
+    heading: string;
+    image_ref: string;
+    image_alt: string;
+    image_position: "left" | "right";
+    body: string;
+  };
+  side: "left" | "right";
+  isLast?: boolean;
 }
 
-export function TimelineChapter({
-  slug,
-  heading,
-  dateLabel,
-  bodyHtml,
-  imageRef,
-  imageAlt,
-  imagePosition = "right",
-}: TimelineChapterProps) {
-  return (
-    <section aria-label={heading} id={slug} className="py-12 md:py-16">
-      <div className="container-content">
-        <div
-          className={`flex flex-col gap-12 ${imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"}`}
-        >
-          <div className="flex-1 max-w-prose">
-            <h2 className="text-section-h2 font-display text-text-primary mb-6">
-              {heading}
-              {dateLabel && (
-                <span className="ml-3 text-body-base font-normal text-text-secondary tracking-widest uppercase">
-                  ({dateLabel})
-                </span>
-              )}
-            </h2>
-            <div
-              className="prose prose-p:text-text-secondary prose-p:text-body-large prose-headings:font-display prose-headings:text-text-primary prose-a:text-brand-primary prose-a:underline"
-              dangerouslySetInnerHTML={{ __html: bodyHtml }}
-            />
-          </div>
+export function TimelineChapter({ chapter, side, isLast }: TimelineChapterProps) {
+  if (side === "right") {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 relative pb-12 md:pb-20">
+        {/* Dot on the center line at heading level */}
+        <div 
+          className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#111] z-10 hidden md:block"
+          style={{ top: "250px" }} 
+        />
 
-          {imageRef && imagePosition !== "below" && (
-            <div className="flex-1 relative aspect-[4/3] w-full max-w-xl lg:max-w-none mx-auto">
-              <Image
-                fill
-                src={imageRef}
-                alt={imageAlt || heading}
-                className="object-cover rounded-base"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          )}
-        </div>
-
-        {imageRef && imagePosition === "below" && (
-          <div className="relative w-full aspect-[16/9] mt-12 md:mt-16">
-            <Image
-              fill
-              src={imageRef}
-              alt={imageAlt || heading}
-              className="object-cover rounded-base"
-              sizes="100vw"
-            />
-          </div>
+        {/* Mask to hide global line below the last dot */}
+        {isLast && (
+          <div 
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 w-[3px] bg-[#F0EDE8] z-0 -bottom-20"
+            style={{ top: "250px" }} 
+          />
         )}
+
+        {/* Left column — empty */}
+        <div className="hidden md:block" />
+
+        {/* Right column — content */}
+        <div className="md:pl-16 pt-4 px-6 md:px-0">
+          <div className="w-full max-w-[460px] mx-auto md:mx-0">
+            <div className="relative w-full sm:max-w-[460px] md:max-w-[350px] aspect-[4/3] sm:aspect-[16/9] md:aspect-[4/3] rounded-xl md:rounded-lg overflow-hidden mb-6 bg-[#E8E4DC] mx-auto md:mx-0">
+              <Image fill src={chapter.image_ref} alt={chapter.image_alt} className="object-cover" />
+            </div>
+            <h2 className="font-display text-[26px] md:text-[30px] text-[#111] font-semibold mb-3 text-center md:text-left">
+              {chapter.heading}
+            </h2>
+            <p className="text-[15px] text-[#555] leading-relaxed text-center md:text-left">
+              {chapter.body}
+            </p>
+          </div>
+        </div>
       </div>
-    </section>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 relative pb-12 md:pb-20">
+      {/* Dot on the center line at heading level */}
+      <div 
+        className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#111] z-10 hidden md:block" 
+        style={{ top: "250px" }} 
+      />
+
+      {/* Mask to hide global line below the last dot */}
+      {isLast && (
+        <div 
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 w-[3px] bg-[#F0EDE8] z-0 -bottom-20"
+          style={{ top: "250px" }} 
+        />
+      )}
+
+      {/* Left column — content */}
+      <div className="md:pr-16 pt-4 px-6 md:px-0">
+        <div className="w-full max-w-[460px] mx-auto md:ml-auto md:mr-0">
+          <div className="relative w-full sm:max-w-[460px] md:max-w-[350px] aspect-[4/3] sm:aspect-[16/9] md:aspect-[4/3] rounded-xl md:rounded-lg overflow-hidden mb-6 bg-[#E8E4DC] mx-auto md:mx-0">
+            <Image fill src={chapter.image_ref} alt={chapter.image_alt} className="object-cover" />
+          </div>
+          <h2 className="font-display text-[26px] md:text-[30px] text-[#111] font-semibold mb-3 text-center md:text-left">
+            {chapter.heading}
+          </h2>
+          <p className="text-[15px] text-[#555] leading-relaxed text-center md:text-left">
+            {chapter.body}
+          </p>
+        </div>
+      </div>
+
+      {/* Right column — empty */}
+      <div className="hidden md:block" />
+    </div>
   );
 }

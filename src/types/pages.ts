@@ -137,6 +137,7 @@ export interface StoryChapter {
 }
 
 export interface StoryPageData {
+  page_eyebrow: string;
   page_title: string;
   page_subtitle?: string;
   meta_title: string;

@@ -1,18 +1,14 @@
 {
-  "page_title": "Practical Info",
+  "page_title": "Practical Information",
   "meta_title": "Practical Info | FARMform",
   "meta_description": "Find practical information about visiting FARMform.",
   "hero_cta_ref": "primary-contact",
   "info_blocks": [
     {
-      "slug": "languages-spoken",
+      "slug": "languages",
       "heading": "Languages Spoken",
-      "content_type": "list",
-      "content": [
-        "English",
-        "Dutch",
-        "French"
-      ]
+      "content_type": "paragraph",
+      "content": "We speak English, Dutch, French and German to make communication seamless for all our guests."
     },
     {
       "slug": "location",
@@ -22,22 +18,22 @@
         {
           "label": "Brussels Airport",
           "distance_km": 25,
-          "distance_text": "25km"
+          "distance_text": "25 km"
         },
         {
           "label": "Brussels City Center",
           "distance_km": 20,
-          "distance_text": "20km"
+          "distance_text": "20 km"
         },
         {
           "label": "Antwerp",
           "distance_km": 30,
-          "distance_text": "30km"
+          "distance_text": "30 km"
         },
         {
           "label": "Mechelen",
           "distance_km": 20,
-          "distance_text": "20km"
+          "distance_text": "20 km"
         }
       ]
     },
@@ -45,17 +41,21 @@
       "slug": "parking",
       "heading": "Parking",
       "content_type": "paragraph",
-      "content": "Free parking is available. EV charging note included."
+      "content": "Free private parking available on site for up to 10 cars.\n\nAdditional parking is available on the street.\n\nElectrical car charging available."
     },
     {
       "slug": "technologies",
       "heading": "Technologies",
       "content_type": "list",
       "content": [
-        "Smart TV",
+        "Screen Smart TV",
+        "High-Quality Sound",
         "Barco ClickShare",
-        "Wi-Fi"
-      ]
+        "Digital Flipchart",
+        "Super-Fast Wi-Fi",
+        "Power Outlets"
+      ],
+      "note": "We intentionally do not support video conferencing. FARMform is designed to foster genuine, in-person interaction in a focused and inspiring environment."
     },
     {
       "slug": "amenities",
@@ -63,13 +63,16 @@
       "content_type": "list",
       "content": [
         "Coffee Corner",
-        "Terrace",
-        "The Summer House"
+        "Natural Daylight",
+        "Inspiring Views",
+        "Outdoor Terrace",
+        "The Summer House",
+        "Farm Animals"
       ]
     }
   ],
   "services_quicklinks": {
     "heading": "Our Services",
-    "intro": "Explore what FARMform has to offer:"
+    "intro": "Quick access to everything we offer for an exceptional FARMform experience."
   }
 }

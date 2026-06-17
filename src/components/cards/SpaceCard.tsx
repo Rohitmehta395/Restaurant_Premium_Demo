@@ -46,7 +46,7 @@ export function SpaceCard({ space }: SpaceCardProps) {
         className="p-6 md:p-8 -mx-6 md:-mx-8 my-2 md:my-4 rounded-2xl transition-colors duration-300 hover:bg-[#F4F4F4] group cursor-pointer"
         onClick={() => lightbox.open(0)}
       >
-        <div className="flex flex-col md:flex-row gap-12">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12">
           {/* Left Side: Image */}
           <div className="shrink-0 w-full md:w-[320px] lg:w-[380px]">
             <div
@@ -68,9 +68,9 @@ export function SpaceCard({ space }: SpaceCardProps) {
           </div>
 
           {/* Right Side: Content */}
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
             {/* Row 1: Name & Button */}
-            <div className="flex flex-wrap gap-4 justify-between items-start">
+            <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center md:justify-between items-center md:items-start w-full">
               <h2 className="font-display text-[28px] text-[#111] font-semibold">
                 {space.name}
               </h2>
@@ -85,13 +85,13 @@ export function SpaceCard({ space }: SpaceCardProps) {
 
             {/* Row 2: Capacity */}
             {space.capacity_label && (
-              <p className="text-[13px] tracking-[0.12em] uppercase text-[#888] font-medium mt-1">
+              <p className="text-[13px] tracking-[0.12em] uppercase text-[#888] font-medium mt-2 md:mt-1">
                 {space.capacity_label}
               </p>
             )}
 
             {/* Row 3: Specs */}
-            <ul className="flex flex-col gap-[6px] mt-4">
+            <ul className="flex flex-col gap-[6px] mt-4 items-center md:items-start">
               {areaText && (
                 <li className="flex items-center gap-2">
                   <Maximize2 className="size-4 text-[#111]" />

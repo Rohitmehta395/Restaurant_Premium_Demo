@@ -6,7 +6,6 @@ import {
   getBusinessContact,
   getAllServices
 } from "@/lib/data/loaders";
-import { PageHeader } from "@/components/sections/PageHeader";
 import { SectionReveal } from "@/components/animation/SectionReveal";
 import { buildMetadata } from "@/lib/seo";
 import { InfoBlock } from "@/components/common/InfoBlock";
@@ -39,61 +38,77 @@ export default async function PracticalInfoPage() {
     return block;
   });
 
-  // Services quicklinks
-  const services = allServices?.services.filter(s => s.status === "published") || [];
-
   return (
-    <>
-      <PageHeader
-        title={data.page_title}
-        subtitle={data.page_subtitle}
-        ctaRef={data.hero_cta_ref}
-        variant="minimal"
-      />
-
-      <section className="py-section container-content">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-5xl">
-          {infoBlocks.map((block, index) => (
-            <SectionReveal key={block.slug} delay={index * 0.1}>
-              <InfoBlock
-                iconRef={block.icon_ref || block.slug}
-                heading={block.heading}
-                contentType={block.content_type}
-                content={block.content}
-                note={block.note}
-              />
-            </SectionReveal>
-          ))}
-        </div>
-      </section>
-
-      {data.services_quicklinks && services.length > 0 && (
-        <section className="py-section bg-surface-alternate">
-          <div className="container-content">
-            <SectionReveal>
-              <h2 className="text-section-h2 font-display text-text-primary mb-4">
-                {data.services_quicklinks.heading}
-              </h2>
-              {data.services_quicklinks.intro && (
-                <p className="text-body-large text-text-secondary mb-8">
-                  {data.services_quicklinks.intro}
-                </p>
+    <main className="bg-[#F0EDE8] min-h-screen pt-[180px] pb-4">
+      <div className="container-content w-full">
+        <div className="max-w-[950px] mx-auto">
+          
+          {/* Header */}
+          <SectionReveal>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-6">
+              <h1 className="font-display text-[38px] text-[#111] font-semibold">
+                {data.page_title}
+              </h1>
+              {data.hero_cta_ref && (
+                <Link 
+                  href="/contact" 
+                  className="bg-[#111] text-white px-8 py-3 rounded-full text-[12px] uppercase tracking-widest font-semibold hover:bg-black/80 transition-colors flex items-center gap-2"
+                >
+                  GET IN TOUCH <span className="text-[14px]">↗</span>
+                </Link>
               )}
-              <div className="flex flex-wrap gap-4">
-                {services.map(service => (
-                  <Link 
-                    key={service.slug}
-                    href={`/${service.slug}`}
-                    className="inline-block border border-border-strong text-text-primary px-8 py-3 rounded-btn text-sm font-medium tracking-wide hover:bg-surface-dark hover:text-text-on-dark transition-colors duration-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-strong"
-                  >
-                    {service.nav_label}
+            </div>
+            <hr className="border-[#111] mb-12" />
+          </SectionReveal>
+
+          {/* Info Blocks Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {infoBlocks.map((block, index) => (
+              <SectionReveal 
+                key={block.slug} 
+                delay={index * 0.1}
+                className={index === 0 ? "md:col-span-2" : ""}
+              >
+                <InfoBlock
+                  iconRef={block.icon_ref || block.slug}
+                  heading={block.heading}
+                  contentType={block.content_type}
+                  content={block.content}
+                  note={block.note}
+                />
+              </SectionReveal>
+            ))}
+          </div>
+
+          {/* Our Services Quicklinks */}
+          {data.services_quicklinks && (
+            <SectionReveal delay={0.4}>
+              <div className="mt-32 text-center">
+                <h2 className="font-display text-[36px] font-semibold text-[#111] mb-4">
+                  {data.services_quicklinks.heading}
+                </h2>
+                {data.services_quicklinks.intro && (
+                  <p className="text-[16px] text-[#111]/80 mb-8 max-w-[650px] mx-auto">
+                    {data.services_quicklinks.intro}
+                  </p>
+                )}
+                <div className="flex flex-wrap justify-center gap-8 text-[13px] uppercase tracking-[0.12em] font-semibold text-[#111]">
+                  <Link href="/meeting-spaces" className="flex items-center gap-1 border-b border-transparent hover:border-[#111] pb-0.5 transition-all">
+                    MEETING SPACES <span className="text-[14px] font-normal leading-none ml-0.5">↗</span>
                   </Link>
-                ))}
+                  <Link href="/business-events" className="flex items-center gap-1 border-b border-transparent hover:border-[#111] pb-0.5 transition-all">
+                    BUSINESS EVENTS <span className="text-[14px] font-normal leading-none ml-0.5">↗</span>
+                  </Link>
+                  <Link href="/stay-the-night" className="flex items-center gap-1 border-b border-transparent hover:border-[#111] pb-0.5 transition-all">
+                    STAY THE NIGHT <span className="text-[14px] font-normal leading-none ml-0.5">↗</span>
+                  </Link>
+                </div>
               </div>
             </SectionReveal>
-          </div>
-        </section>
-      )}
-    </>
+          )}
+
+        </div>
+      </div>
+    </main>
   );
 }

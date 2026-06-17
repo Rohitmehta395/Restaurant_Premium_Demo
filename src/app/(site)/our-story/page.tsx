@@ -1,16 +1,13 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import path from "path";
-import fs from "fs";
-import { marked } from "marked";
 import { 
   getStoryPageData, 
   getTeamMemberBySlug
 } from "@/lib/data/loaders";
-import { PageHeader } from "@/components/sections/PageHeader";
 import { TimelineChapter } from "@/components/common/TimelineChapter";
 import { FounderSignature } from "@/components/common/FounderSignature";
 import { SectionReveal } from "@/components/animation/SectionReveal";
+import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
 import { buildMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,75 +27,50 @@ export default async function OurStoryPage() {
   
   if (!story) notFound();
 
-  // Read and parse markdown content
-  const mdPath = path.join(process.cwd(), "content", "pages", "story.md");
-  let chapterContents: { heading: string, html: string }[] = [];
-  try {
-    const mdContent = fs.readFileSync(mdPath, "utf-8");
-    const rawChapters = mdContent.split(/(?=^## )/m).filter(Boolean);
-    chapterContents = rawChapters.map(raw => {
-      const lines = raw.split('\n');
-      const headingLine = (lines[0] || '').replace('## ', '').trim();
-      const body = lines.slice(1).join('\n').trim();
-      const html = marked.parse(body, { async: false }) as string;
-      return { heading: headingLine, html };
-    });
-  } catch (error) {
-    console.error("Failed to read or parse story.md", error);
-  }
-
   // Founder details
   const founder = story.founder_note?.show && story.founder_note.member_ref 
     ? await getTeamMemberBySlug(story.founder_note.member_ref)
     : null;
 
-  const heroImage = story.hero_image_ref ? {
-    src: story.hero_image_ref,
-    alt: story.page_title,
-  } : undefined;
-
   return (
-    <>
-      <PageHeader
-        title={story.page_title}
-        subtitle={story.page_subtitle}
-        heroImage={heroImage}
-        variant="standard"
-      />
-
-      <div className="py-8 md:py-16">
-        {story.chapters.map((chapter: any, index: number) => {
-          // Attempt to match markdown chapter by order
-          const mdChapter = chapterContents[index];
-          const bodyHtml = mdChapter ? mdChapter.html : "<p>Content not found</p>";
-          
-          return (
-            <SectionReveal key={chapter.slug} delay={0.2}>
-              <TimelineChapter
-                slug={chapter.slug}
-                heading={chapter.heading}
-                dateLabel={chapter.date_label}
-                bodyHtml={bodyHtml}
-                imageRef={chapter.image_ref}
-                imageAlt={chapter.image_alt}
-                imagePosition={chapter.image_position}
-              />
-            </SectionReveal>
-          );
-        })}
+    <main className="bg-[#F0EDE8]">
+      <div className="pt-32 md:pt-50 pb-8 text-center px-6">
+        <span className="text-[16px] tracking-[0.1em] uppercase text-[#111] font-normal mb-4 block text-center">
+          {story.page_eyebrow || story.page_title}
+        </span>
+        <h1 className="font-display text-[46px] md:text-[42px] text-[#111] font-semibold text-center leading-[1.1]">
+          {story.page_subtitle}
+        </h1>
       </div>
 
-      {founder && story.founder_note?.show && (
+      <section className="relative max-w-6xl mx-auto pt-4 pb-10 md:pt-8 md:pb-20 px-6 md:px-0" id="timeline">
+        {/* The vertical center spine line */}
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#111] -translate-x-1/2" />
+
+        {story.chapters.map((chapter: any, index: number) => (
+          <SectionReveal key={chapter.slug} delay={0.2}>
+            <TimelineChapter
+              chapter={chapter}
+              side={chapter.image_position}
+              isLast={index === story.chapters.length - 1}
+            />
+          </SectionReveal>
+        ))}
+      </section>
+
+      {founder && founder.personal_note && (
         <SectionReveal>
           <FounderSignature
-            heading={story.founder_note.heading}
-            body={founder.bio_long}
-            closingSalutation={story.founder_note.closing_salutation || "Warm regards,"}
+            imageRef={founder.image_ref}
+            imageAlt={founder.image_alt}
+            eyebrow={founder.personal_note.eyebrow}
+            paragraphs={founder.personal_note.paragraphs}
+            closingSalutation={founder.personal_note.closing_salutation}
             signatureName={founder.signature_name}
             signatureTitle={founder.signature_title}
           />
         </SectionReveal>
       )}
-    </>
+    </main>
   );
 }

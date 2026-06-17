@@ -53,14 +53,14 @@ export function FeaturesGrid({ featureGroup, variant }: FeaturesGridProps) {
   if (featureGroup.slug === "why-choose") {
     return (
       <section className="bg-[#F0EDE8] py-12 md:py-[80px]">
-        <div className="bg-[#FFFFFF] container-content p-12">
-          <SectionReveal className="text-left mb-12">
-            <h2 className="text-[36px] text-[#111] font-display font-semibold">
+        <div className="bg-[#FFFFFF] container-content p-6 md:p-8 lg:p-12">
+          <SectionReveal className="text-left mb-8 md:mb-12">
+            <h2 className="text-[28px] md:text-[36px] text-[#111] font-display font-semibold">
               {featureGroup.heading || "Why choose FARMform?"}
             </h2>
           </SectionReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {featureGroup.items.map((item, index) => {
               const Icon = iconMap[item.slug] || Check;
               return (
@@ -90,22 +90,15 @@ export function FeaturesGrid({ featureGroup, variant }: FeaturesGridProps) {
   if (featureGroup.display_layout === "icon-grid") {
     return (
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-3 border border-[#E0DDD8] rounded-[8px] overflow-hidden bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#E0DDD8] border border-[#E0DDD8] rounded-[8px] overflow-hidden">
           {featureGroup.items.map((item, index) => {
             // resolve icon from icon_ref if available, fallback to Check
             const Icon = (item as any).icon_ref ? (iconMap[(item as any).icon_ref] || Check) : Check;
             
-            // compute borders: right border for cols 1 & 2, bottom border for rows 1 & 2
-            const isLastCol = (index + 1) % 3 === 0;
-            const isLastRow = Math.floor(index / 3) === Math.ceil(featureGroup.items.length / 3) - 1;
-            
             return (
               <div 
                 key={item.slug} 
-                className={`py-[32px] px-[24px] text-center
-                  ${!isLastCol ? 'md:border-r border-[#E0DDD8]' : ''}
-                  ${!isLastRow ? 'border-b border-[#E0DDD8]' : ''}
-                `}
+                className="py-[32px] px-[24px] text-center bg-white"
               >
                 <div className="flex flex-col items-center justify-center">
                   <Icon className="size-8 text-[#888] mb-3" />
@@ -123,7 +116,7 @@ export function FeaturesGrid({ featureGroup, variant }: FeaturesGridProps) {
           })}
         </div>
         {featureGroup.note && (
-          <p className="mt-6 text-[13px] text-[#111] max-w-[50%]">
+          <p className="mt-6 text-[15px] md:text-[13px] text-[#111] max-w-full md:max-w-[50%] text-center md:text-left mx-auto md:mx-0">
             {featureGroup.note}
           </p>
         )}

@@ -212,10 +212,16 @@
   .farmform-site-header__inner {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     width: 100%;
     padding: 24px 32px;
+  }
+
+  @media (min-width: 1024px) {
+    .farmform-site-header__inner {
+      grid-template-columns: 1fr auto 1fr;
+    }
   }
 }
 

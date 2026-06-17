@@ -119,7 +119,7 @@ export function SiteHeaderClient({
             <Link
               href={"/" as Route}
               className={cn(
-                "absolute left-0 flex items-center gap-2 transition-all duration-700 ease-out",
+                "absolute left-0 hidden lg:flex items-center gap-2 transition-all duration-700 ease-out",
                 !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
                 isLightHeader ? "text-white" : "text-[#111]"
               )}
@@ -136,12 +136,12 @@ export function SiteHeaderClient({
           </div>
 
           {/* Center Element */}
-          <div className="relative flex items-center justify-center h-12 w-full">
+          <div className="relative flex items-center justify-start lg:justify-center h-12 w-full">
             <Link
               href={"/" as Route}
               aria-label={`${businessName} home`}
               className={cn(
-                "absolute flex items-center gap-2 transition-all duration-700 ease-out",
+                "absolute left-0 lg:left-auto flex items-center gap-2 transition-all duration-700 ease-out",
                 !isScrolled
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-4 pointer-events-none",

@@ -53,7 +53,7 @@ export default async function MeetingSpacesPage() {
       {/* Custom Header Section */}
       <section className="bg-[#F0EDE8] min-h-[50vh] flex flex-col justify-center pt-[180px] pb-[40px]">
         <div className="container-content w-full">
-          <SectionReveal>
+          <SectionReveal className="flex flex-col items-center md:items-start text-center md:text-left">
             <h1 className="font-display text-[38px] text-[#111] font-semibold">
               {service.page_title}
             </h1>
@@ -65,8 +65,10 @@ export default async function MeetingSpacesPage() {
             
             {/* Quick Nav */}
             {features?.quick_navigation && service.quick_nav_items && service.quick_nav_items.length > 0 && (
-              <div className="mt-12">
-                <QuickNavBar items={service.quick_nav_items} />
+              <div className="mt-12 w-full flex justify-center md:justify-start">
+                <div className="text-left w-full md:w-auto">
+                  <QuickNavBar items={service.quick_nav_items} />
+                </div>
               </div>
             )}
           </SectionReveal>

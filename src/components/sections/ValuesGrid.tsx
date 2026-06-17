@@ -10,18 +10,18 @@ export function ValuesGrid({ data }: ValuesGridProps) {
   if (!data || !data.values || data.values.length === 0) return null;
 
   return (
-    <section className="bg-[#F0EDE8] py-12 md:py-[30px]">
+    <section className="bg-[#F0EDE8] py-6 md:py-[30px]">
       <div className="container-content">
-        <SectionReveal className="text-left mb-5">
-          <p className="text-[16px] tracking-[0.18em] uppercase text-[#111] mb-2 font-semibold">
+        <SectionReveal className="text-center md:text-left mb-5">
+          <p className="text-[20px] md:text-[20px] tracking-[0.18em] uppercase text-[#111] mb-2 font-semibold">
             OUR VALUES
           </p>
-          <h2 className="font-display text-[36px] text-[#111] font-semibold">
+          <h2 className="font-display text-[28px] md:text-[36px] text-[#111] font-semibold">
             What drive us at our core
           </h2>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4">
           {data.values.map((value, index) => (
             <SectionReveal key={value.slug} delay={index * 0.1}>
               <div className="border border-[#E0DDD8] rounded-[8px] bg-white h-full flex flex-col group p-2">

@@ -12,7 +12,7 @@ export function WhatsIncludedSection({ inclusions }: WhatsIncludedSectionProps) 
   return (
     <section
       id="whats-included"
-      className="bg-[#F0EDE8] pb-[80px] flex justify-center scroll-mt-24"
+      className="bg-[#F0EDE8] pb-[40px] md:pb-[80px] flex justify-center scroll-mt-24"
     >
       <div className="container-content w-full flex justify-center">
         <SectionReveal direction="up" className="w-full max-w-[950px]">

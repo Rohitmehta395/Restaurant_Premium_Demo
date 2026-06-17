@@ -14,8 +14,8 @@ export function QuickNavBar({ items }: QuickNavBarProps) {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="flex items-center gap-3 flex-wrap">
-      <span className="text-[16px] tracking-[0.12em] uppercase text-[#111] font-semibold mr-2">
+    <div className="flex flex-row items-center gap-3 flex-wrap">
+      <span className="text-[16px] tracking-[0.12em] uppercase text-[#111] font-semibold w-full md:w-auto md:mr-2">
         QUICK NAV →
       </span>
       {items.map((item) => (
