@@ -81,6 +81,12 @@ export function SiteHeaderClient({
             <Link
               href={"/" as Route}
               aria-label={`${businessName} home`}
+              onClick={(e) => {
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className={cn(
                 "absolute left-0 flex size-12 flex-none items-center justify-center rounded-full bg-black text-white transition-all duration-700 ease-out",
                 isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
@@ -99,6 +105,12 @@ export function SiteHeaderClient({
             {/* Unscrolled State: Tagline */}
             <Link
               href={"/" as Route}
+              onClick={(e) => {
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className={cn(
                 "absolute left-0 hidden lg:flex items-center gap-2 transition-all duration-700 ease-out",
                 !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
@@ -121,6 +133,12 @@ export function SiteHeaderClient({
             <Link
               href={"/" as Route}
               aria-label={`${businessName} home`}
+              onClick={(e) => {
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className={cn(
                 "absolute left-0 lg:left-auto flex items-center gap-2 transition-all duration-700 ease-out",
                 !isScrolled
