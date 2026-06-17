@@ -108,43 +108,45 @@
     },
     {
       "slug": "room-inclusions",
-      "display_layout": "icon-grid",
+      "heading": "What's Included",
+      "intro": "Our One-Price concept means everything you need is included, with no surprises at checkout. Every stay at FARMform features:",
+      "display_layout": "inclusion-grid",
       "items": [
         {
           "slug": "breakfast",
-          "label": "Farm-Fresh Breakfast",
-          "descriptor": "served daily",
-          "sort_order": 1
+          "icon_ref": "Utensils",
+          "label": "Breakfast Crafted for You",
+          "body": "Start your day the right way."
+        },
+        {
+          "slug": "drinks",
+          "icon_ref": "Coffee",
+          "label": "Drinks Your Way",
+          "body": "Help yourself – drinks are complimentary."
+        },
+        {
+          "slug": "bathroom",
+          "icon_ref": "Bath",
+          "label": "Private Bathroom",
+          "body": "Walk-in shower (and a bathtub in Executive Suite 2)."
+        },
+        {
+          "slug": "amenities",
+          "icon_ref": "Tv",
+          "label": "Modern Amenities",
+          "body": "Smart TV with easy casting."
         },
         {
           "slug": "wifi",
-          "label": "High-Speed Wi-Fi",
-          "descriptor": "unlimited access",
-          "sort_order": 2
+          "icon_ref": "Wifi",
+          "label": "Free High-Speed Wi-Fi",
+          "body": "Stay connected, indoors and outdoors."
         },
         {
-          "slug": "parking",
-          "label": "Free Parking",
-          "descriptor": "on premises",
-          "sort_order": 3
-        },
-        {
-          "slug": "cleaning",
-          "label": "Daily Housekeeping",
-          "descriptor": "included",
-          "sort_order": 4
-        },
-        {
-          "slug": "toiletries",
-          "label": "Luxury Toiletries",
-          "descriptor": "eco-friendly",
-          "sort_order": 5
-        },
-        {
-          "slug": "coffee-tea",
-          "label": "Coffee & Tea Facilities",
-          "descriptor": "in-room",
-          "sort_order": 6
+          "slug": "facilities",
+          "icon_ref": "Building2",
+          "label": "Access to all Facilities",
+          "body": "Terraces, Spa (fitness & sauna) and Summer House."
         }
       ]
     }

@@ -8,11 +8,10 @@ import {
   getFeatureGroup, 
   getFeaturesConfig 
 } from "@/lib/data/loaders";
-import { PageHeader } from "@/components/sections/PageHeader";
 import { QuickNavBar } from "@/components/interactive/QuickNavBar";
 import { RoomCard } from "@/components/cards/RoomCard";
 import { OnePriceConcept } from "@/components/sections/OnePriceConcept";
-import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
+import { WhatsIncludedSection } from "@/components/sections/WhatsIncludedSection";
 import { SectionReveal } from "@/components/animation/SectionReveal";
 import { buildMetadata } from "@/lib/seo";
 
@@ -46,79 +45,74 @@ export default async function StayTheNightPage() {
 
   if (!service) notFound();
 
-  const heroImage = service.hero_image_ref ? {
-    src: service.hero_image_ref,
-    alt: service.hero_image_alt || service.page_title,
-  } : undefined;
-
   const showPricing = !!features?.pricing_visible;
 
   return (
     <>
-      <PageHeader
-        title={service.page_title}
-        subtitle={service.page_subtitle}
-        heroImage={heroImage}
-        variant="standard"
-      />
-      
-      {features?.quick_navigation && service.quick_nav_items && service.quick_nav_items.length > 0 && (
-        <QuickNavBar items={service.quick_nav_items} />
-      )}
-
-      {/* Our Rooms Section */}
-      {rooms.length > 0 && (
-        <section id="rooms" className="py-section container-content scroll-mt-24">
+      {/* 1. Page Header Section */}
+      <section className="bg-[#F0EDE8] flex flex-col justify-center pt-[140px] pb-[60px]">
+        <div className="container-content w-full">
           <SectionReveal>
-            <h2 className="text-section-h2 font-display text-text-primary mb-16">
-              Our Rooms
-            </h2>
-          </SectionReveal>
-          
-          <div className="flex flex-col gap-12 lg:gap-24">
-            {rooms.map((room: RoomData, index: number) => (
-              <SectionReveal key={room.slug} delay={index * 0.2}>
-                <RoomCard room={room} showPricing={showPricing} />
-              </SectionReveal>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* One Price Concept Section */}
-      {onePriceConcept && (
-        <div id="one-price-concept" className="scroll-mt-24">
-          <OnePriceConcept
-            headline={onePriceConcept.headline}
-            body={onePriceConcept.body}
-            inclusionsHeading={onePriceConcept.inclusions_heading || ""}
-            inclusionsBody={onePriceConcept.inclusions_body || ""}
-            cateringNote={onePriceConcept.catering_note}
-            supportingImageRef={onePriceConcept.supporting_image_ref}
-            supportingImageAlt={onePriceConcept.supporting_image_alt}
-            background="default"
-          />
-        </div>
-      )}
-
-      {/* What's Included Section */}
-      {inclusions && inclusions.items.length > 0 && (
-        <section id="amenities" className="py-section container-content scroll-mt-24">
-          <SectionReveal>
-            <h2 className="text-section-h2 font-display text-text-primary mb-6">
-              {inclusions.heading || "What's Included"}
-            </h2>
-            {inclusions.intro && (
-              <p className="text-body-large text-text-secondary max-w-3xl mb-16">
-                {inclusions.intro}
+            <h1 className="font-display text-[42px] text-[#111] font-normal">
+              {service.page_title}
+            </h1>
+            {service.page_subtitle && (
+              <p className="text-[15px] text-[#111]/80 leading-relaxed max-w-[460px] mt-[16px]">
+                {service.page_subtitle}
               </p>
             )}
+            
+            {/* Quick Nav */}
+            {features?.quick_navigation && service.quick_nav_items && service.quick_nav_items.length > 0 && (
+              <div className="mt-[40px] min-h-[44px]">
+                <QuickNavBar items={service.quick_nav_items} />
+              </div>
+            )}
           </SectionReveal>
-          
-          <div className={!inclusions.intro ? "mt-16" : ""}>
-            <FeaturesGrid featureGroup={inclusions} variant="expanded" />
+        </div>
+      </section>
+
+      {/* 2. Horizontal separator */}
+      <hr className="border-[#E0DDD8]" />
+
+      {/* 3. Room Cards Section */}
+      {rooms.length > 0 && (
+        <section id="our-rooms" className="bg-[#FFFFFF] py-[60px] scroll-mt-24">
+          <div className="container-content">
+            <div className="flex flex-col">
+              {rooms.map((room: RoomData, index: number) => (
+                <div key={room.slug}>
+                  <SectionReveal delay={index * 0.2}>
+                    <RoomCard room={room} showPricing={showPricing} />
+                  </SectionReveal>
+                  {index < rooms.length - 1 && (
+                    <hr className="border-[#E0DDD8]" />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
+      )}
+
+      {/* 4. One Price Concept Section */}
+      {onePriceConcept && (
+        <OnePriceConcept
+          headline={onePriceConcept.headline}
+          body={onePriceConcept.body}
+          inclusionsHeading={onePriceConcept.inclusions_heading || ""}
+          inclusionsBody={onePriceConcept.inclusions_body || ""}
+          cateringNote={onePriceConcept.catering_note}
+          supportingImageRef={onePriceConcept.supporting_image_ref}
+          supportingImageAlt={onePriceConcept.supporting_image_alt}
+          showTailoredSection={onePriceConcept.show_tailored_section ?? true}
+          background="alternate"
+        />
+      )}
+
+      {/* 5. What's Included Section */}
+      {inclusions && inclusions.items.length > 0 && (
+        <WhatsIncludedSection inclusions={inclusions} />
       )}
     </>
   );

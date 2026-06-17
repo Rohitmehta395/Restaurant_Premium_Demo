@@ -19,13 +19,13 @@ export function QuickNavBar({ items }: QuickNavBarProps) {
         QUICK NAV →
       </span>
       {items.map((item) => (
-        <Link
-          key={item.id}
+          <Link
+            key={item.id}
           href={`#${item.id}` as Route}
           className="bg-white text-[#111] border border-[#111]/30 rounded-full px-4 py-1.5 text-[12px] tracking-[0.1em] uppercase transition-colors cursor-pointer hover:border-[#111]/60 font-semibold"
-        >
-          {item.label}
-        </Link>
+          >
+            {item.label}
+          </Link>
       ))}
     </div>
   );

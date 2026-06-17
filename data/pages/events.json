@@ -1,4 +1,17 @@
 {
+  "hero_image_ref": "/images/events/hero.jpg",
+  "hero_image_alt": "FARMform host welcoming guests at a business event",
+  "page_eyebrow": "BUSINESS EVENTS",
+  "hero_headline": "Host your next corporate event in a private, nature-infused setting designed to inspire and impress.",
+  "page_intro_paragraphs": [
+    "Whether it's a networking event, team-building activity, product launch, seminar, workshop, strategic planning session, brainstorming meeting, client presentation, training program or company celebration, FARMform offers the perfect backdrop for your business needs.",
+    "Surrounded by tranquil nature, our versatile spaces can be tailored to suit your event, ensuring a productive and memorable experience for you and your guests."
+  ],
+  "pricing_heading": "Pricing",
+  "pricing_paragraphs": [
+    "We provide a custom offer based on your event's specific needs and setup – just let us know what you are planning and we will take care of the rest.",
+    "Catering options are available for your convenience and can be tailored to suit your needs, with any catering services billed separately."
+  ],
   "event_types": [
     "networking event",
     "team-building activity",
@@ -11,57 +24,47 @@
     "strategy session",
     "press conference"
   ],
-  "pricing": {
-    "heading": "Custom Quotes for Tailored Events",
-    "body": "Every business event is unique. Our dedicated team will work closely with you to tailor our spaces, catering, and services to match your exact requirements and vision.",
-    "catering_note": "In-house culinary excellence, adaptable from light networking bites to formal seated dinners."
-  },
-  "setup": {
-    "heading": "Versatile Setup Options",
-    "items": [
-      {
-        "icon": "Users",
-        "title": "Theater Style",
-        "description": "Ideal for presentations and seminars, accommodating large groups."
-      },
-      {
-        "icon": "Table",
-        "title": "Boardroom",
-        "description": "Perfect for executive meetings and focused discussions."
-      },
-      {
-        "icon": "LayoutGrid",
-        "title": "U-Shape",
-        "description": "Encourages interaction and open communication."
-      },
-      {
-        "icon": "GlassWater",
-        "title": "Banquet",
-        "description": "Elegant round tables for dining and gala events."
-      },
-      {
-        "icon": "Coffee",
-        "title": "Cocktail",
-        "description": "Standing reception setup for networking and socializing."
-      },
-      {
-        "icon": "Mic",
-        "title": "Cabaret",
-        "description": "Mixed seating for workshops and collaborative sessions."
-      }
-    ]
-  },
-  "tailored_proposals": "We believe in creating events that resonate. From the initial concept to the final execution, we offer tailored proposals that ensure your corporate gathering is nothing short of exceptional.",
+  "versatile_setup_heading": "Versatile Setup Across the Entire Property",
+  "versatile_setup_intro": "When you book FARMform for an event, you enjoy exclusive use of the entire property.",
+  "versatile_setup_items": [
+    {
+      "image_ref": "/images/events/versatile-setup/setup-indoor.jpg",
+      "alt_text": "Indoor meeting space",
+      "caption": "Indoor spaces customisable for presentations, receptions or corporate parties."
+    },
+    {
+      "image_ref": "/images/events/versatile-setup/setup-breakout.jpg",
+      "alt_text": "Breakout lounge area",
+      "caption": "Breakout zones, lounges and outdoor areas ready for informal sessions."
+    },
+    {
+      "image_ref": "/images/events/versatile-setup/setup-summerhouse.jpg",
+      "alt_text": "The Summer House",
+      "caption": "Access to the Summer House for private calls or focused moments."
+    },
+    {
+      "image_ref": "/images/events/versatile-setup/setup-terrace.jpg",
+      "alt_text": "Private terrace",
+      "caption": "Direct connection to the private terraces for fresh-air networking and relaxed conversations."
+    },
+    {
+      "image_ref": "/images/events/versatile-setup/setup-kitchen.jpg",
+      "alt_text": "Kitchen facilities",
+      "caption": "Kitchen access."
+    }
+  ],
+  "tailored_heading": "Tailored Proposals and Personalised Support",
+  "tailored_body": "Let us bring your vision to life. We are here to assist with layout, logistics and planning support, ensuring a smooth, stress-free experience. Simply tell us your plans and we will handle the rest.",
+  "tailored_image_ref": "/images/events/tailored-support.jpg",
+  "tailored_image_alt": "FARMform team member providing personalised event support",
   "gallery_images": [
-    { "image_ref": "/images/events/event-1.jpg", "alt_text": "Event setup 1" },
-    { "image_ref": "/images/events/event-2.jpg", "alt_text": "Event setup 2" },
-    { "image_ref": "/images/events/event-3.jpg", "alt_text": "Event setup 3" },
-    { "image_ref": "/images/events/event-4.jpg", "alt_text": "Event setup 4" },
-    { "image_ref": "/images/events/event-5.jpg", "alt_text": "Event setup 5" },
-    { "image_ref": "/images/events/event-6.jpg", "alt_text": "Event setup 6" },
-    { "image_ref": "/images/events/event-7.jpg", "alt_text": "Event setup 7" },
-    { "image_ref": "/images/events/event-8.jpg", "alt_text": "Event setup 8" },
-    { "image_ref": "/images/events/event-9.jpg", "alt_text": "Event setup 9" },
-    { "image_ref": "/images/events/event-10.jpg", "alt_text": "Event setup 10" }
+    { "image_ref": "/images/events/event-1.jpg", "alt_text": "Business event at FARMform" },
+    { "image_ref": "/images/events/event-2.jpg", "alt_text": "Meeting in the Amazons Meadow" },
+    { "image_ref": "/images/events/event-3.jpg", "alt_text": "Outdoor corporate reception" },
+    { "image_ref": "/images/events/event-4.jpg", "alt_text": "Evening event under the canopy" },
+    { "image_ref": "/images/events/event-5.jpg", "alt_text": "Team workshop at FARMform" },
+    { "image_ref": "/images/events/event-6.jpg", "alt_text": "Corporate presentation" },
+    { "image_ref": "/images/events/event-7.jpg", "alt_text": "Networking reception outdoors" },
+    { "image_ref": "/images/events/event-8.jpg", "alt_text": "FARMform fitness room" }
   ]
 }

@@ -54,11 +54,12 @@ export interface OnePriceConcept {
   service_slug: string;
   headline: string;
   body: string;
-  inclusions_heading?: string;
+  inclusions_heading?: string | null;
   inclusions_body?: string;
-  catering_note?: string;
-  supporting_image_ref?: string;
+  catering_note?: string | null;
+  supporting_image_ref?: string | null;
   supporting_image_alt?: string;
+  show_tailored_section?: boolean;
 }
 
 export interface ServiceData {
@@ -198,17 +199,30 @@ export interface EventsSetupItem {
 }
 
 export interface EventsPageData {
+  hero_image_ref?: string;
+  hero_image_alt?: string;
+  page_eyebrow?: string;
+  hero_headline?: string;
+  page_intro_paragraphs?: string[];
+  pricing_heading?: string;
+  pricing_paragraphs?: string[];
   event_types: string[];
   pricing: {
     heading: string;
     body: string;
     catering_note: string;
   };
-  setup: {
-    heading: string;
-    items: EventsSetupItem[];
-  };
-  tailored_proposals: string;
+  versatile_setup_heading?: string;
+  versatile_setup_intro?: string;
+  versatile_setup_items?: {
+    image_ref: string;
+    alt_text: string;
+    caption: string;
+  }[];
+  tailored_heading?: string;
+  tailored_body?: string;
+  tailored_image_ref?: string;
+  tailored_image_alt?: string;
   gallery_images: {
     image_ref: string;
     alt_text: string;

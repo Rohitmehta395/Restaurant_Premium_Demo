@@ -33,6 +33,7 @@
       "card_image_alt": "Professional business events at FARMform",
       "meta_title": "Business Events | FARMform",
       "meta_description": "Host your corporate events.",
+      "hero_image_ref": "/images/events/hero.jpg",
       "sort_order": 2
     },
     {
@@ -47,9 +48,11 @@
       "card_image_alt": "Comfortable overnight stay at FARMform",
       "meta_title": "Stay the Night | FARMform",
       "meta_description": "Relax in our comfortable rooms.",
+      "page_subtitle": "At FARMform, every stay is designed for comfort, productivity and relaxation. Whether you are here for a short business trip or an extended stay, our thoughtfully designed rooms provide everything you need to feel at home.",
       "quick_nav_items": [
-        { "label": "Rooms", "id": "rooms" },
-        { "label": "Amenities", "id": "amenities" }
+        { "label": "OUR ROOMS", "id": "our-rooms" },
+        { "label": "ONE PRICE CONCEPT", "id": "one-price-concept" },
+        { "label": "WHAT'S INCLUDED", "id": "whats-included" }
       ]
     }
   ],
@@ -66,11 +69,13 @@
     },
     {
       "service_slug": "stay-the-night",
-      "headline": "Simple & Transparent Pricing",
-      "body": "Our room rates include everything you need for a comfortable stay. No hidden resort fees or surprise charges.",
-      "inclusions_heading": "What's included in every stay?",
-      "inclusions_body": "Farm-fresh breakfast, daily housekeeping, high-speed Wi-Fi, premium toiletries, and free parking.",
-      "catering_note": "Dinner reservations at our on-site restaurant can be made separately."
+      "headline": "One-Price Concept",
+      "body": "Our approach simplifies your experience: enjoy your time with us without worrying about hidden fees.",
+      "inclusions_heading": null,
+      "inclusions_body": "Everything you need to work, relax and recharge is available to you, all with one transparent price (see section What's Included).",
+      "catering_note": "Catering options are available for your convenience and can be tailored to suit your needs, with any catering services billed separately.",
+      "show_tailored_section": false,
+      "supporting_image_ref": null
     }
   ]
 }
