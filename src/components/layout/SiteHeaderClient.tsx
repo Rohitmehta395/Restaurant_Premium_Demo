@@ -76,7 +76,7 @@ export function SiteHeaderClient({
       <header role="banner" className="groveside-site-header">
         <div className="groveside-site-header__inner">
           {/* Left Element */}
-          <div className="relative flex items-center h-12 w-full">
+          <div className="relative z-10 flex items-center h-12 w-full">
             {/* Scrolled State: Small Logo Button */}
             <Link
               href={"/" as Route}
