@@ -97,6 +97,7 @@ export default async function RootLayout({
     <html
       lang={siteConfig?.locale || "en"}
       className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
+      suppressHydrationWarning
     >
       <head>
         <script
@@ -104,7 +105,10 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-body text-text-primary bg-surface-default antialiased">
+      <body
+        className="min-h-screen flex flex-col font-body text-text-primary bg-surface-default antialiased"
+        suppressHydrationWarning
+      >
         <SmoothScrollProvider>
           <SkipToContent />
           {activeBanner && <AnnouncementBanner banner={activeBanner} />}
