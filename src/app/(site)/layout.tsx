@@ -5,6 +5,7 @@ import { NewsletterSection } from "@/components/sections/NewsletterSection";
 import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
 import { getFeaturesConfig } from "@/lib/data/loaders";
 import { GsapReveal } from "@/components/animation/GsapReveal";
+import { ConditionalPreFooter } from "@/components/layout/ConditionalPreFooter";
 
 export default async function SiteLayout({
   children,
@@ -21,9 +22,11 @@ export default async function SiteLayout({
         {children}
       </main>
 
-      <GsapReveal direction="up" distance={40} triggerOffset="top 90%">
-        <PreFooterCTA />
-      </GsapReveal>
+      <ConditionalPreFooter>
+        <GsapReveal direction="up" distance={40} triggerOffset="top 90%">
+          <PreFooterCTA />
+        </GsapReveal>
+      </ConditionalPreFooter>
 
       <div className="bg-[#F0EDE8] pb-6 md:pb-8">
         <div className="container-content">

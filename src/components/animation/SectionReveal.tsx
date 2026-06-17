@@ -51,7 +51,7 @@ export function SectionReveal({
     <motion.div
       initial={initial}
       whileInView={whileInView}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-20px" }}
       transition={{
         duration: prefersReducedMotion ? 0 : 0.7,
         ease: [0.4, 0, 0.2, 1],

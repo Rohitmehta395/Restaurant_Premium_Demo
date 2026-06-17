@@ -19,15 +19,11 @@ export function SmoothScrollProvider({
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
+    if (typeof window !== "undefined" && "scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    const lenis = new Lenis();
 
     lenisRef.current = lenis;
 
@@ -39,7 +35,19 @@ export function SmoothScrollProvider({
 
     gsap.ticker.lagSmoothing(0);
 
+    // Refresh ScrollTrigger when body height changes (e.g., lazy images load)
+    // Debounced to prevent excessive refresh calls that can stop Lenis scrolling
+    let resizeTimeout: NodeJS.Timeout;
+    const resizeObserver = new ResizeObserver(() => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 150);
+    });
+    resizeObserver.observe(document.body);
+
     return () => {
+      resizeObserver.disconnect();
       lenis.destroy();
       gsap.ticker.remove(lenis.raf);
     };
@@ -50,6 +58,13 @@ export function SmoothScrollProvider({
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });
     }
+    
+    // Refresh ScrollTrigger after a short delay to account for React rendering new page
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 150);
+    
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return <>{children}</>;

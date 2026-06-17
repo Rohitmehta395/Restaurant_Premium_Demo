@@ -71,7 +71,7 @@ export function GsapReveal({
           scrollTrigger: {
             trigger: containerRef.current,
             start: triggerOffset,
-            toggleActions: "play none none reverse", // Play when enter, reverse when scroll back up (optional: you can use "play none none none" to run once)
+            toggleActions: "play none none none",
           },
         }
       );
