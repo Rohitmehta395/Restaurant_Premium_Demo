@@ -8,6 +8,7 @@ import type { Route } from "next";
 import { NavItem, BusinessContact, SocialPlatform } from "@/types";
 import { cn } from "@/lib/utils";
 import { MobileNavOverlay } from "./MobileNavOverlay";
+import { TreePalm } from "lucide-react";
 
 interface SiteHeaderClientProps {
   navItems: NavItem[];
@@ -19,26 +20,6 @@ interface SiteHeaderClientProps {
   menuTriggerLabel: string;
   showContactInMenu: boolean;
   showSocialInMenu: boolean;
-}
-
-function DecorativeStar({ className }: { className?: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      width="24"
-      height="24"
-      viewBox="0 0 14 14"
-      fill="none"
-      className={cn("size-[24px] shrink-0", className)}
-    >
-      <path
-        d="M7 1.25L8.32 5.68L12.75 7L8.32 8.32L7 12.75L5.68 8.32L1.25 7L5.68 5.68L7 1.25Z"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
 }
 
 function HamburgerIcon({ className }: { className?: string }) {
@@ -125,7 +106,7 @@ export function SiteHeaderClient({
               )}
               aria-label={`${brandTagline} - ${businessName} home`}
             >
-              <DecorativeStar className={isLightHeader ? "text-white" : "text-[#111]"} />
+              <TreePalm strokeWidth={1.5} className={cn("size-[22px] shrink-0", isLightHeader ? "text-white" : "text-[#111]")} />
               <span className={cn(
                 "text-[14px] font-semibold uppercase tracking-[0.15em]",
                 isLightHeader ? "text-white" : "text-[#111]"
