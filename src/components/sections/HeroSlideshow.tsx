@@ -171,7 +171,7 @@ export function HeroSlideshow({ hero }: HeroSlideshowProps) {
 
       {/* Slide Indicators */}
       {images.length > 1 && (
-        <div className="absolute z-30 bottom-[48px] right-6 md:right-[60px] flex gap-[12px] items-center pointer-events-auto">
+        <div className="absolute z-30 bottom-[48px] right-6 md:right-[60px] hidden md:flex gap-[12px] items-center pointer-events-auto">
           {images.map((_, index) => {
             const isActive = index === currentIndex;
             return (
