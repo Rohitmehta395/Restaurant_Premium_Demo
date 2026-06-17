@@ -80,15 +80,38 @@ export function HeroSlideshow({ hero }: HeroSlideshowProps) {
                   )}
                   style={{ "--ken-burns-duration": "10000ms" } as React.CSSProperties}
                 >
-                  <Image
-                    src={image.image_ref}
-                    alt={image.alt_text || "Hero image"}
-                    fill
-                    priority={index === 0}
-                    loading={index === 0 ? undefined : "lazy"}
-                    className="object-cover object-center"
-                    sizes="100vw"
-                  />
+                  {image.mobile_image_ref ? (
+                    <>
+                      <Image
+                        src={image.mobile_image_ref}
+                        alt={image.alt_text || "Hero image"}
+                        fill
+                        priority={index === 0}
+                        loading={index === 0 ? undefined : "lazy"}
+                        className="object-cover object-center md:hidden"
+                        sizes="100vw"
+                      />
+                      <Image
+                        src={image.image_ref}
+                        alt={image.alt_text || "Hero image"}
+                        fill
+                        priority={index === 0}
+                        loading={index === 0 ? undefined : "lazy"}
+                        className="object-cover object-center hidden md:block"
+                        sizes="100vw"
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={image.image_ref}
+                      alt={image.alt_text || "Hero image"}
+                      fill
+                      priority={index === 0}
+                      loading={index === 0 ? undefined : "lazy"}
+                      className="object-cover object-center"
+                      sizes="100vw"
+                    />
+                  )}
                 </div>
               </div>
             )}

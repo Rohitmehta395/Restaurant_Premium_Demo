@@ -54,6 +54,7 @@ export default async function BusinessEventsPage() {
   if (!service || !eventsData) notFound();
 
   const heroImageRef = eventsData.hero_image_ref || service.hero_image_ref;
+  const heroMobileRef = eventsData.hero_mobile_ref;
   const heroImageAlt = eventsData.hero_image_alt || service.hero_image_alt || "Business Events";
   const eyebrow = eventsData.page_eyebrow || "BUSINESS EVENTS";
   const headline = eventsData.hero_headline || "Host your next corporate event in a private, nature-infused setting designed to inspire and impress.";
@@ -71,13 +72,35 @@ export default async function BusinessEventsPage() {
       <section className="relative w-full h-[100svh] overflow-hidden bg-[#2A2520]">
         {heroImageRef && (
           <>
-            <Image
-              src={heroImageRef}
-              alt={heroImageAlt}
-              fill
-              className="object-cover object-top"
-              priority
-            />
+            {heroMobileRef ? (
+              <>
+                <Image
+                  src={heroMobileRef}
+                  alt={heroImageAlt}
+                  fill
+                  className="object-cover object-top md:hidden"
+                  priority
+                  sizes="100vw"
+                />
+                <Image
+                  src={heroImageRef}
+                  alt={heroImageAlt}
+                  fill
+                  className="object-cover object-top hidden md:block"
+                  priority
+                  sizes="100vw"
+                />
+              </>
+            ) : (
+              <Image
+                src={heroImageRef}
+                alt={heroImageAlt}
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="100vw"
+              />
+            )}
             <div className="absolute inset-0 bg-black/30" />
           </>
         )}

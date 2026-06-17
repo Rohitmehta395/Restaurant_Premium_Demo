@@ -9,7 +9,7 @@ interface Item {
   label: string;
   descriptor?: string;
   body?: string;
-  icon_ref: string;
+  icon_ref?: string;
 }
 
 interface AccordionInfoCardProps {
@@ -49,7 +49,7 @@ export function AccordionInfoCard({ title, items, type }: AccordionInfoCardProps
           >
             <div className="px-[28px] pb-[28px] flex flex-col">
               {items.map((item, index) => {
-                const IconComponent = (LucideIcons as any)[item.icon_ref] || LucideIcons.Check;
+                const IconComponent = (item.icon_ref ? (LucideIcons as any)[item.icon_ref] : null) || LucideIcons.Check;
                 const isLast = index === items.length - 1;
 
                 return (

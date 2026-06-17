@@ -99,7 +99,7 @@ export async function FAQSection() {
                                 __html:
                                   preRenderedAnswers[
                                     `${group.slug}-${itemIdx}`
-                                  ],
+                                  ] || "",
                               }}
                             />
                           </div>
@@ -121,7 +121,7 @@ export async function FAQSection() {
                           <AccordionContent className="text-text-secondary text-body-base pb-4 pt-0 leading-relaxed">
                             <ProseContent
                               html={
-                                preRenderedAnswers[`${group.slug}-${itemIdx}`]
+                                preRenderedAnswers[`${group.slug}-${itemIdx}`] || ""
                               }
                             />
                           </AccordionContent>

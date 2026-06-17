@@ -10,7 +10,7 @@ export function FloatingScrollbar() {
 
   const scrollPos = useRef({ target: 0, current: 0 });
   const isScrolling = useRef<NodeJS.Timeout | null>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | undefined>(undefined);
   const isInitialized = useRef(false);
 
   const [isScrollable, setIsScrollable] = useState(true);

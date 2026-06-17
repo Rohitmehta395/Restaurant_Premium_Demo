@@ -2,6 +2,7 @@ import { ProximityPoint } from "./business";
 
 export interface HeroImage {
   image_ref: string;
+  mobile_image_ref?: string;
   alt_text: string;
   caption?: string;
 }
@@ -201,6 +202,7 @@ export interface EventsSetupItem {
 
 export interface EventsPageData {
   hero_image_ref?: string;
+  hero_mobile_ref?: string;
   hero_image_alt?: string;
   page_eyebrow?: string;
   hero_headline?: string;

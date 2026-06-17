@@ -1,5 +1,6 @@
 {
-  "hero_image_ref": "/images/events/hero.jpg",
+  "hero_image_ref": "/images/events/hero-desktop.jpg",
+  "hero_mobile_ref": "/images/events/hero-mobile.jpg",
   "hero_image_alt": "FARMform host welcoming guests at a business event",
   "page_eyebrow": "BUSINESS EVENTS",
   "hero_headline": "Host your next corporate event in a private, nature-infused setting designed to inspire and impress.",

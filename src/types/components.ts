@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export interface CTABlock {
   slug: string;
   heading: string;
@@ -24,7 +26,7 @@ export interface FeatureGroup {
   heading?: string;
   intro?: string;
   note?: string;
-  display_layout?: "icon-grid" | "icon-list" | "card-grid";
+  display_layout?: "icon-grid" | "icon-list" | "card-grid" | "photo-card-grid";
   items: FeatureItem[];
 }
 

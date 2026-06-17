@@ -214,7 +214,7 @@ export function ContactForm({ formConfig, privacyPolicyUrl }: ContactFormProps) 
               <div className="flex flex-col items-start gap-2">
                 <Button 
                   type="button" 
-                  variant="outline" 
+                  variant="secondary" 
                   onClick={() => fileInputRef.current?.click()}
                   aria-controls={`${field.name}-input`}
                   className="h-10 px-6 rounded-full border border-border-subtle text-xs uppercase tracking-wider text-text-primary hover:border-text-primary bg-transparent"

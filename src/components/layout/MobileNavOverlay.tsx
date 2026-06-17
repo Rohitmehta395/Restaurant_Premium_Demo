@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Route } from "next";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { BusinessContact, NavItem, SocialPlatform } from "@/types";
 import { SocialIconLink } from "@/components/common/SocialIconLink";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -121,7 +121,7 @@ export function MobileNavOverlay({
     };
   }, [isOpen, onClose]);
 
-  const backdropVariants = {
+  const backdropVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -133,7 +133,7 @@ export function MobileNavOverlay({
     },
   };
 
-  const panelVariants = {
+  const panelVariants: Variants = {
     hidden: { opacity: 0, y: -10, scale: 0.98 },
     visible: {
       opacity: 1,

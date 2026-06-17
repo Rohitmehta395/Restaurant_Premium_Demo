@@ -2,6 +2,7 @@
 import { cache } from "react";
 import fs from "fs";
 import path from "path";
+// @ts-ignore
 import matter from "gray-matter";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
